@@ -1,0 +1,52 @@
+---
+title: "Syllabus"
+format: html
+---
+
+## Course Learning Objectives
+
+By the end of the course, you will...
+
+- TKTK
+- TKTK
+
+## Reading List
+
+| Title                              | Authors           | Publisher        |
+|------------------------------------|------------------|------------------|
+| [R for Data Science](http://r4ds.had.co.nz/)   | Grolemund, Wickham   | O'Reilly, 1st edition, 2016  |
+| [Splitting the Bill](https://bellwether.org/publications/splitting-the-bill/) | Spurrier, Dammu, O'Keefe, O'Neal Schiess | Bellwether, 2022 |
+| TKTK | TKTK | Bellwether |
+
+
+## Communication
+
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website.
+
+Announcements will be emailed periodically. Please check your email regularly to ensure you have the latest announcements for the course.
+
+## Activities & Assessment
+
+### Lectures
+
+During lectures, you will learn and apply key principles of school finance policy and data analysis.
+
+### Homework
+
+Homework assignments will present an opportunity to apply what you've learned during lecture to your state's school finance context.
+
+### Capstone Project
+
+The purpose of the [capstone project](/project/) is to apply what you've learned throughout the course to model school finance policy reforms in your state.
+
+
+## Course policies
+
+### Late work & extensions
+
+The due dates for assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline. If this happens, please communicate with the instructor team in a timely manner to ensure you stay on-track in the course.
+
+## Important dates
+
+-   **June 6:** Classes begin
+-   **August 29**: Capstone project due

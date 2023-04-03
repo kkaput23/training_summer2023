@@ -1,0 +1,28 @@
+---
+title: "Week 00"
+subtitle: "Pre-class set-up"
+description: "May 22 - June 2"
+author: ""
+date: ""
+format: html
+---
+
+## Lecture
+
+Instead of a lecture, the teaching team will set up 1:1 check-ins with course participants.
+
+## Assignment
+
+-   Download and install the following to your computer:
+
+    -   [R and RStudio](https://happygitwithr.com/install-r-rstudio.html)
+
+    -   [Git](https://happygitwithr.com/install-git.html)
+
+-   [Register an account](https://happygitwithr.com/github-acct.html) with [GitHub](www.github.com)
+
+-   Share your GitHub username with the teaching team
+
+## Readings
+
+-   [Happy Git with R](https://happygitwithr.com/index.html)

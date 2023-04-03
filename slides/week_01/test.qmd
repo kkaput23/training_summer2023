@@ -1,0 +1,24 @@
+---
+title: "Intro to R, RStudio, and GitHub"
+date: "June 6, 2023"
+format: 
+  revealjs
+execute:
+  freeze: auto
+  echo: true
+---
+
+# Welcome!
+
+## Bullet point list
+
+## Test slide
+
+## the next slide
+
+-   here we go!
+
+## one more slide
+
+-   are we having fun yet?
+
