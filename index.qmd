@@ -4,20 +4,36 @@ editor: visual
 format: html
 ---
 
-## About this course
+## About this training
 
-TKTK
+This intensive virtual training over the summer of 2023 will build data analysis and modeling skills in R, demystify education funding policy, and accelerate advocacy on behalf of underserved students. Participants will be equipped with the content knowledge and technical skills to analyze K-12 education finance data, understand their state\'s funding formula, and begin to create interactive tools to model and visualize change.
 
-## Learning Goals
+The training will prepare advocates to understand and advocate effectively for school finance reforms that can improve the educational success of historically underserved students --- especially students of color, multilingual learners, students with disabilities, and/or economically disadvantaged students --- and on ensuring that they attend equitably and sufficiently funded schools to provide them with an excellent education.
 
-TKTK
+## Learning goals
+
+This hands-on training covers how to use [**R**, an open-source software package](https://cran.r-project.org/), for education research and modeling, with an emphasis on education finance data. It also covers key policy knowledge needed to advocate for equitable and effective state education finance systems.
+
+Participants will:
+
+-   Learn key policy elements of a state school finance system and best practices for equity.
+
+-   Learn best practices for importing and cleaning data and processing it into datasets. 
+
+-   Develop techniques for answering common research questions. 
+
+-   Visualize the analysis, and export the results as static or interactive tables, plots, and maps. 
+
+-   Complete and visualize their own data project through a capstone project in small teams. 
+
+-   Learn principles of how to leverage [census](https://walker-data.com/tidycensus/) and [NCES data](https://nces.ed.gov/ccd/) to assess and compare equity in education revenue and model the impact of changes in revenue.
 
 ## Instructors
 
--   Alex Spurrier
+-   [Alex Spurrier](https://bellwether.org/experts/alex-spurrier/)
 
--   Krista Kaput
+-   [Krista Kaput](https://bellwether.org/experts/krista-kaput/)
 
--   Jennifer Schiess
+-   [Jennifer O'Neal Schiess](https://bellwether.org/leaders/jennifer-oneal-schiess/)
 
--   Bonnie O'Keefe
+-   [Bonnie O'Keefe](https://bellwether.org/experts/bonnie-okeefe/)
