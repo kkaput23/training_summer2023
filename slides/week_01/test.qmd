@@ -5,14 +5,29 @@ format:
   revealjs
 execute:
   freeze: auto
-  echo: true
+  echo: false
 ---
+
 
 # Welcome!
 
 ## Bullet point list
 
+- item 1
+- item 2
+- item 3
+
 ## Test slide
+
+```{r}
+#| echo: true
+
+library(tidyverse)
+ggplot(mtcars, aes( x= hp, y = mpg)) +
+  geom_point() + 
+  theme_bw()
+
+```
 
 ## the next slide
 

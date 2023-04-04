@@ -228,14 +228,14 @@
     "href": "slides/week_01/test.html#bullet-point-list",
     "title": "Intro to R, RStudio, and GitHub",
     "section": "Bullet point list",
-    "text": "Bullet point list"
+    "text": "Bullet point list\n\nitem 1\nitem 2\nitem 3"
   },
   {
     "objectID": "slides/week_01/test.html#test-slide",
     "href": "slides/week_01/test.html#test-slide",
     "title": "Intro to R, RStudio, and GitHub",
     "section": "Test slide",
-    "text": "Test slide"
+    "text": "Test slide\n\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()"
   },
   {
     "objectID": "slides/week_01/test.html#the-next-slide",
