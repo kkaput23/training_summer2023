@@ -131,5 +131,26 @@
     "title": "Intro to R, RStudio, and GitHub",
     "section": "",
     "text": "item 1\nitem 2\nitem 3\n\n\n\n\n\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n\n\n\n\n\n\n\n\nhere we go!\n\n\n\n\n\nare we having fun yet?"
+  },
+  {
+    "objectID": "index.html#about-this-course",
+    "href": "index.html#about-this-course",
+    "title": "School Finance Equity Training, Summer 2023",
+    "section": "",
+    "text": "TKTK"
+  },
+  {
+    "objectID": "schedule.html#class-schedule",
+    "href": "schedule.html#class-schedule",
+    "title": "Course Schedule",
+    "section": "",
+    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 00\n\n\nMay 22 - June 2\n\n\nPre-class set-up\n\n\n\n\nWeek 01\n\n\nJune 6\n\n\nIntroduction to School Finance Equity\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "syllabus.html#course-learning-objectives",
+    "href": "syllabus.html#course-learning-objectives",
+    "title": "Syllabus",
+    "section": "",
+    "text": "By the end of the course, you will…\n\nTKTK\nTKTK"
   }
 ]
