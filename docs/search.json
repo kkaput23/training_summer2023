@@ -152,5 +152,33 @@
     "title": "Syllabus",
     "section": "",
     "text": "By the end of the course, you will…\n\nTKTK\nTKTK"
+  },
+  {
+    "objectID": "slides/week_01/test.html#bullet-point-list",
+    "href": "slides/week_01/test.html#bullet-point-list",
+    "title": "Intro to R, RStudio, and GitHub",
+    "section": "Bullet point list",
+    "text": "Bullet point list\n\nitem 1\nitem 2\nitem 3"
+  },
+  {
+    "objectID": "slides/week_01/test.html#test-slide",
+    "href": "slides/week_01/test.html#test-slide",
+    "title": "Intro to R, RStudio, and GitHub",
+    "section": "Test slide",
+    "text": "Test slide\n\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()"
+  },
+  {
+    "objectID": "slides/week_01/test.html#the-next-slide",
+    "href": "slides/week_01/test.html#the-next-slide",
+    "title": "Intro to R, RStudio, and GitHub",
+    "section": "the next slide",
+    "text": "the next slide\n\nhere we go!"
+  },
+  {
+    "objectID": "slides/week_01/test.html#one-more-slide",
+    "href": "slides/week_01/test.html#one-more-slide",
+    "title": "Intro to R, RStudio, and GitHub",
+    "section": "one more slide",
+    "text": "one more slide\n\nare we having fun yet?"
   }
 ]
