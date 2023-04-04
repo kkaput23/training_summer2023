@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "School Finance Equity Training, Summer 2023",
+    "section": "",
+    "text": "TKTK"
+  },
+  {
+    "objectID": "index.html#learning-goals",
+    "href": "index.html#learning-goals",
+    "title": "School Finance Equity Training, Summer 2023",
+    "section": "Learning Goals",
+    "text": "Learning Goals\nTKTK"
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "School Finance Equity Training, Summer 2023",
+    "section": "Instructors",
+    "text": "Instructors\n\nAlex Spurrier\nKrista Kaput\nJennifer Schiess\nBonnie O’Keefe"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "By the end of the course, you will…\n\nTKTK\nTKTK"
+  },
+  {
+    "objectID": "syllabus.html#reading-list",
+    "href": "syllabus.html#reading-list",
+    "title": "Syllabus",
+    "section": "Reading List",
+    "text": "Reading List\n\n\n\nTitle\nAuthors\nPublisher\n\n\n\n\nR for Data Science\nGrolemund, Wickham\nO’Reilly, 1st edition, 2016\n\n\nSplitting the Bill\nSpurrier, Dammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nTKTK\nTKTK\nBellwether"
+  },
+  {
+    "objectID": "syllabus.html#communication",
+    "href": "syllabus.html#communication",
+    "title": "Syllabus",
+    "section": "Communication",
+    "text": "Communication\nAll lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website.\nAnnouncements will be emailed periodically. Please check your email regularly to ensure you have the latest announcements for the course."
+  },
+  {
+    "objectID": "syllabus.html#activities-assessment",
+    "href": "syllabus.html#activities-assessment",
+    "title": "Syllabus",
+    "section": "Activities & Assessment",
+    "text": "Activities & Assessment\n\nLectures\nDuring lectures, you will learn and apply key principles of school finance policy and data analysis.\n\n\nHomework\nHomework assignments will present an opportunity to apply what you’ve learned during lecture to your state’s school finance context.\n\n\nCapstone Project\nThe purpose of the capstone project is to apply what you’ve learned throughout the course to model school finance policy reforms in your state."
+  },
+  {
+    "objectID": "syllabus.html#course-policies",
+    "href": "syllabus.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course policies",
+    "text": "Course policies\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline. If this happens, please communicate with the instructor team in a timely manner to ensure you stay on-track in the course."
+  },
+  {
+    "objectID": "syllabus.html#important-dates",
+    "href": "syllabus.html#important-dates",
+    "title": "Syllabus",
+    "section": "Important dates",
+    "text": "Important dates\n\nJune 6: Classes begin\nAugust 29: Capstone project due"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Course Schedule",
+    "section": "",
+    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 00\n\n\nMay 22 - June 2\n\n\nPre-class set-up\n\n\n\n\nWeek 01\n\n\nJune 6\n\n\nIntroduction to School Finance Equity\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "schedule.html#homework",
+    "href": "schedule.html#homework",
+    "title": "Course Schedule",
+    "section": "Homework",
+    "text": "Homework\nHomework will be due by 12pm Eastern time on the Monday following a lecture."
+  },
+  {
+    "objectID": "schedule.html#capstone-project",
+    "href": "schedule.html#capstone-project",
+    "title": "Course Schedule",
+    "section": "Capstone Project",
+    "text": "Capstone Project\nCourse participants will have several weeks to complete their capstone project. The teaching team will host office hours to provide targeted support to course participants as they work on their capstone projects."
+  },
+  {
+    "objectID": "weeks/week_00.html",
+    "href": "weeks/week_00.html",
+    "title": "Week 00",
+    "section": "",
+    "text": "Instead of a lecture, the teaching team will set up 1:1 check-ins with course participants."
+  },
+  {
+    "objectID": "weeks/week_00.html#assignment",
+    "href": "weeks/week_00.html#assignment",
+    "title": "Week 00",
+    "section": "Assignment",
+    "text": "Assignment\n\nDownload and install the following to your computer:\n\nR and RStudio\nGit\n\nRegister an account with GitHub\nShare your GitHub username with the teaching team"
+  },
+  {
+    "objectID": "weeks/week_00.html#readings",
+    "href": "weeks/week_00.html#readings",
+    "title": "Week 00",
+    "section": "Readings",
+    "text": "Readings\n\nHappy Git with R"
+  },
+  {
+    "objectID": "weeks/week_01.html",
+    "href": "weeks/week_01.html",
+    "title": "Week 01",
+    "section": "",
+    "text": "Topic\n\n\nDate\n\n\n\n\n\n\nIntro to R, RStudio, and GitHub\n\n\nJun 6, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "weeks/week_01.html#assignment",
+    "href": "weeks/week_01.html#assignment",
+    "title": "Week 01",
+    "section": "Assignment",
+    "text": "Assignment"
+  },
+  {
+    "objectID": "weeks/week_01.html#readings",
+    "href": "weeks/week_01.html#readings",
+    "title": "Week 01",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "slides/week_01/test.html",
+    "href": "slides/week_01/test.html",
+    "title": "Intro to R, RStudio, and GitHub",
+    "section": "",
+    "text": "item 1\nitem 2\nitem 3\n\n\n\n\n\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n\n\n\n\n\n\n\n\nhere we go!\n\n\n\n\n\nare we having fun yet?"
+  }
+]
