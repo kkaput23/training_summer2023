@@ -7,17 +7,27 @@ format: html
 
 By the end of the course, you will...
 
-- TKTK
-- TKTK
+-   Learn key policy elements of a state school finance system and best practices for equity.
+
+-   Learn best practices for importing and cleaning data and processing it into datasets.
+
+-   Develop techniques for answering common research questions.
+
+-   Visualize analysis of education finance data and export the results as static or interactive tables, plots, and maps.
+
+-   Learn principles of how to leverage [NCES](https://nces.ed.gov/ccd/) and [census](https://walker-data.com/tidycensus/) data to assess and compare equity in education revenue and model the impact of changes in revenue.
+
+-   Complete a capstone project that shows the potential impact of changes to the school funding formula in participants' states.
 
 ## Reading List
 
-| Title                              | Authors           | Publisher        |
-|------------------------------------|------------------|------------------|
-| [R for Data Science](http://r4ds.had.co.nz/)   | Grolemund, Wickham   | O'Reilly, 1st edition, 2016  |
-| [Splitting the Bill](https://bellwether.org/publications/splitting-the-bill/) | Spurrier, Dammu, O'Keefe, O'Neal Schiess | Bellwether, 2022 |
-| TKTK | TKTK | Bellwether |
-
+| Title                                                                                                                                                  | Authors                                  | Publisher                   |
+|----------------------------------|-------------------|-------------------|
+| [R for Data Science](http://r4ds.had.co.nz/)                                                                                                           | Grolemund, Wickham                       | O'Reilly, 1st edition, 2016 |
+| [Splitting the Bill: Understanding Education Finance Equity](https://bellwether.org/publications/splitting-the-bill/)                                  | Spurrier, Dammu, O'Keefe, O'Neal Schiess | Bellwether, 2022            |
+| [Balancing Act: How States Can Address Local Wealth Inequity in Education Finance](https://bellwether.org/publications/balancing-act/)                 | Dammu, O'Keefe, O'Neal Schiess           | Bellwether, 2022            |
+| [Making Change: A State Advocacy Playbook for Equitable Education Finance](https://bellwether.org/publications/making-change/)                         | Dammu, O'Keefe                           | Bellwether, 2023            |
+| [Priced Out of Public Education: District Lines, Housing Access, and Inequitable Educational Options](https://bellwether.org/publications/priced-out/) | Spurrier, Hodges, O'Neal Schiess         | Bellwether, 2021            |
 
 ## Communication
 
@@ -38,7 +48,6 @@ Homework assignments will present an opportunity to apply what you've learned du
 ### Capstone Project
 
 The purpose of the [capstone project](/project/) is to apply what you've learned throughout the course to model school finance policy reforms in your state.
-
 
 ## Course policies
 

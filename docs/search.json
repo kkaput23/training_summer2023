@@ -11,7 +11,7 @@
     "href": "index.html#learning-goals",
     "title": "School Finance Equity Training, Summer 2023",
     "section": "Learning goals",
-    "text": "Learning goals\nThis hands-on training covers how to use R, an open-source software package, for education research and modeling, with an emphasis on education finance data. It also covers key policy knowledge needed to advocate for equitable and effective state education finance systems.\nParticipants will:\n\nLearn key policy elements of a state school finance system and best practices for equity.\nLearn best practices for importing and cleaning data and processing it into datasets. \nDevelop techniques for answering common research questions. \nVisualize the analysis, and export the results as static or interactive tables, plots, and maps. \nComplete and visualize their own data project through a capstone project in small teams. \nLearn principles of how to leverage census and NCES data to assess and compare equity in education revenue and model the impact of changes in revenue."
+    "text": "Learning goals\nThis hands-on training covers how to use R, an open-source software package, for education research and modeling, with an emphasis on education finance data. It also covers key policy knowledge needed to advocate for equitable and effective state education finance systems.\nParticipants will:\n\nLearn key policy elements of a state school finance system and best practices for equity.\nLearn best practices for importing and cleaning data and processing it into datasets.\nDevelop techniques for answering common research questions.\nVisualize analysis of education finance data and export the results as static or interactive tables, plots, and maps.\nLearn principles of how to leverage NCES and census data to assess and compare equity in education revenue and model the impact of changes in revenue.\nComplete a capstone project that shows the potential impact of changes to the school funding formula in participants' states."
   },
   {
     "objectID": "index.html#instructors",
@@ -25,14 +25,14 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "By the end of the course, you will…\n\nTKTK\nTKTK"
+    "text": "By the end of the course, you will…\n\nLearn key policy elements of a state school finance system and best practices for equity.\nLearn best practices for importing and cleaning data and processing it into datasets.\nDevelop techniques for answering common research questions.\nVisualize analysis of education finance data and export the results as static or interactive tables, plots, and maps.\nLearn principles of how to leverage NCES and census data to assess and compare equity in education revenue and model the impact of changes in revenue.\nComplete a capstone project that shows the potential impact of changes to the school funding formula in participants’ states."
   },
   {
     "objectID": "syllabus.html#reading-list",
     "href": "syllabus.html#reading-list",
     "title": "Syllabus",
     "section": "Reading List",
-    "text": "Reading List\n\n\n\nTitle\nAuthors\nPublisher\n\n\n\n\nR for Data Science\nGrolemund, Wickham\nO’Reilly, 1st edition, 2016\n\n\nSplitting the Bill\nSpurrier, Dammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nTKTK\nTKTK\nBellwether"
+    "text": "Reading List\n\n\n\nTitle\nAuthors\nPublisher\n\n\n\n\nR for Data Science\nGrolemund, Wickham\nO’Reilly, 1st edition, 2016\n\n\nSplitting the Bill: Understanding Education Finance Equity\nSpurrier, Dammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nBalancing Act: How States Can Address Local Wealth Inequity in Education Finance\nDammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nMaking Change: A State Advocacy Playbook for Equitable Education Finance\nDammu, O’Keefe\nBellwether, 2023\n\n\nPriced Out of Public Education: District Lines, Housing Access, and Inequitable Educational Options\nSpurrier, Hodges, O’Neal Schiess\nBellwether, 2021"
   },
   {
     "objectID": "syllabus.html#communication",
@@ -151,7 +151,7 @@
     "href": "syllabus.html#course-learning-objectives",
     "title": "Syllabus",
     "section": "",
-    "text": "By the end of the course, you will…\n\nTKTK\nTKTK"
+    "text": "By the end of the course, you will…\n\nLearn key policy elements of a state school finance system and best practices for equity.\nLearn best practices for importing and cleaning data and processing it into datasets.\nDevelop techniques for answering common research questions.\nVisualize analysis of education finance data and export the results as static or interactive tables, plots, and maps.\nLearn principles of how to leverage NCES and census data to assess and compare equity in education revenue and model the impact of changes in revenue.\nComplete a capstone project that shows the potential impact of changes to the school funding formula in participants’ states."
   },
   {
     "objectID": "slides/week_01/test.html#bullet-point-list",

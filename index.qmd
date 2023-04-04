@@ -18,15 +18,15 @@ Participants will:
 
 -   Learn key policy elements of a state school finance system and best practices for equity.
 
--   Learn best practices for importing and cleaning data and processing it into datasets. 
+-   Learn best practices for importing and cleaning data and processing it into datasets.
 
--   Develop techniques for answering common research questions. 
+-   Develop techniques for answering common research questions.
 
--   Visualize the analysis, and export the results as static or interactive tables, plots, and maps. 
+-   Visualize analysis of education finance data and export the results as static or interactive tables, plots, and maps.
 
--   Complete and visualize their own data project through a capstone project in small teams. 
+-   Learn principles of how to leverage [NCES](https://nces.ed.gov/ccd/) and [census](https://walker-data.com/tidycensus/) data to assess and compare equity in education revenue and model the impact of changes in revenue.
 
--   Learn principles of how to leverage [census](https://walker-data.com/tidycensus/) and [NCES data](https://nces.ed.gov/ccd/) to assess and compare equity in education revenue and model the impact of changes in revenue.
+-   Complete a capstone project that shows the potential impact of changes to the school funding formula in participants\' states.
 
 ## Instructors
 
