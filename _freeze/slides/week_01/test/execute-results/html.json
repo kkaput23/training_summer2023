@@ -1,7 +1,7 @@
 {
-  "hash": "81168db732a5176e7da28f16566ab84e",
+  "hash": "bb96efd9cb5d39fcd9701a64be5eb560",
   "result": {
-    "markdown": "---\ntitle: \"Intro to R, RStudio, and GitHub\"\ndate: \"June 6, 2023\"\nformat: \n  revealjs\nexecute:\n  freeze: auto\n  echo: false\n---\n\n\n\n# Welcome!\n\n## Bullet point list\n\n- item 1\n- item 2\n- item 3\n\n## Test slide\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n```\n\n::: {.cell-output-display}\n![](test_files/figure-revealjs/unnamed-chunk-1-1.png){width=960}\n:::\n:::\n\n\n## the next slide\n\n-   here we go!\n\n## one more slide\n\n-   are we having fun yet?\n\n",
+    "markdown": "---\ntitle: \"Intro to R, RStudio, and GitHub\"\ndate: \"June 6, 2023\"\nformat: \n  revealjs:\n    chalkboard: true\nexecute:\n  freeze: auto\n  echo: false\n---\n\n\n\n# Welcome!\n\n## Bullet point list\n\n- item 1\n- item 2\n- item 3\n\n## Test slide\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n```\n\n::: {.cell-output-display}\n![](test_files/figure-revealjs/unnamed-chunk-1-1.png){width=960}\n:::\n:::\n\n\n## the next slide\n\n-   here we go!\n\n## one more slide\n\n-   are we having fun yet?\n\n",
     "supporting": [
       "test_files"
     ],

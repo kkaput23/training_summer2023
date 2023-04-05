@@ -2,7 +2,8 @@
 title: "Intro to R, RStudio, and GitHub"
 date: "June 6, 2023"
 format: 
-  revealjs
+  revealjs:
+    chalkboard: true
 execute:
   freeze: auto
   echo: false
