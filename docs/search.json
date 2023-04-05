@@ -187,5 +187,61 @@
     "title": "School Finance Equity Training, Summer 2023",
     "section": "",
     "text": "This intensive virtual training over the summer of 2023 will build data analysis and modeling skills in R, demystify education funding policy, and accelerate advocacy on behalf of underserved students. Participants will be equipped with the content knowledge and technical skills to analyze K-12 education finance data, understand their state’s funding formula, and begin to create interactive tools to model and visualize proposed policy changes.\nThe training will prepare advocates to understand and advocate effectively for school finance reforms that can improve the educational success of historically underserved students — especially students of color, multilingual learners, students with disabilities, and/or economically disadvantaged students — and on ensuring that they attend equitably and sufficiently funded schools to provide them with an excellent education."
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#what-to-expect-in-this-class",
+    "href": "slides/week_00/setup_instructions.html#what-to-expect-in-this-class",
+    "title": "Bellwether Education Finance R Training",
+    "section": "What to expect in this class",
+    "text": "What to expect in this class"
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#software-to-download",
+    "href": "slides/week_00/setup_instructions.html#software-to-download",
+    "title": "Bellwether Education Finance R Training",
+    "section": "Software to download",
+    "text": "Software to download"
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#installing-r-and-rstudio",
+    "href": "slides/week_00/setup_instructions.html#installing-r-and-rstudio",
+    "title": "Bellwether Education Finance R Training",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio"
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#installing-git",
+    "href": "slides/week_00/setup_instructions.html#installing-git",
+    "title": "Bellwether Education Finance R Training",
+    "section": "Installing Git",
+    "text": "Installing Git"
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#register-for-github",
+    "href": "slides/week_00/setup_instructions.html#register-for-github",
+    "title": "Bellwether Education Finance R Training",
+    "section": "Register for GitHub",
+    "text": "Register for GitHub"
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#connecting-rstudio-and-github",
+    "href": "slides/week_00/setup_instructions.html#connecting-rstudio-and-github",
+    "title": "Bellwether Education Finance R Training",
+    "section": "Connecting RStudio and GitHub",
+    "text": "Connecting RStudio and GitHub"
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#joining-our-github-classroom",
+    "href": "slides/week_00/setup_instructions.html#joining-our-github-classroom",
+    "title": "Bellwether Education Finance R Training",
+    "section": "Joining our GitHub Classroom",
+    "text": "Joining our GitHub Classroom"
+  },
+  {
+    "objectID": "slides/week_00/setup_instructions.html#meet-your-instructors",
+    "href": "slides/week_00/setup_instructions.html#meet-your-instructors",
+    "title": "Bellwether Education Finance R Training",
+    "section": "Meet your instructors",
+    "text": "Meet your instructors"
   }
 ]

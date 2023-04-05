@@ -1,0 +1,26 @@
+---
+title: "Bellwether Education Finance R Training"
+date: "May 29, 2023"
+format: 
+  revealjs
+execute:
+  freeze: auto
+  echo: false
+---
+
+## Meet your instructors
+
+## What to expect in this class
+
+## Software to download
+
+## Installing R and RStudio
+
+## Installing Git
+
+## Register for GitHub
+
+## Connecting RStudio and GitHub
+
+## Joining our GitHub Classroom
+
