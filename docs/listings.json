@@ -11,5 +11,11 @@
     "items": [
       "/slides/week_01/test.html"
     ]
+  },
+  {
+    "listing": "/weeks/week_00.html",
+    "items": [
+      "/slides/week_00/setup_instructions.html"
+    ]
   }
 ]
