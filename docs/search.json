@@ -32,7 +32,7 @@
     "href": "syllabus.html#reading-list",
     "title": "Syllabus",
     "section": "Reading List",
-    "text": "Reading List\n\n\n\nTitle\nAuthors\nPublisher\n\n\n\n\nR for Data Science\nGrolemund, Wickham\nO’Reilly, 1st edition, 2016\n\n\nSplitting the Bill: Understanding Education Finance Equity\nSpurrier, Dammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nBalancing Act: How States Can Address Local Wealth Inequity in Education Finance\nDammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nMaking Change: A State Advocacy Playbook for Equitable Education Finance\nDammu, O’Keefe\nBellwether, 2023\n\n\nPriced Out of Public Education: District Lines, Housing Access, and Inequitable Educational Options\nSpurrier, Hodges, O’Neal Schiess\nBellwether, 2021"
+    "text": "Reading List\n\n\n\nTitle\nAuthors\nPublisher\n\n\n\n\nR for Data Science\nWickham, Grolemund\nO’Reilly, 1st edition, 2016\n\n\nSplitting the Bill: Understanding Education Finance Equity\nSpurrier, Dammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nBalancing Act: How States Can Address Local Wealth Inequity in Education Finance\nDammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nMaking Change: A State Advocacy Playbook for Equitable Education Finance\nDammu, O’Keefe\nBellwether, 2023\n\n\nPriced Out of Public Education: District Lines, Housing Access, and Inequitable Educational Options\nSpurrier, Hodges, O’Neal Schiess\nBellwether, 2021"
   },
   {
     "objectID": "syllabus.html#communication",
@@ -130,7 +130,7 @@
     "href": "slides/week_01/test.html",
     "title": "Intro to R, RStudio, and GitHub",
     "section": "",
-    "text": "item 1\nitem 2\nitem 3\n\n\n\n\n\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n\n\n\n\n\n\n\n\nhere we go!\n\n\n\n\n\nare we having fun yet?"
+    "text": "item 1\nitem 2\nitem 3\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.1     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n\n\n\n\n\n\nhere we go!\n\n\nare we having fun yet?"
   },
   {
     "objectID": "index.html#about-this-course",
