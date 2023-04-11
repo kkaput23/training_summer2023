@@ -1,0 +1,123 @@
+---
+title: "Basic Data Analysis and Visualization in R"
+date: "June 13, 2023"
+format: 
+  revealjs:
+    chalkboard: true
+execute:
+  freeze: auto
+  echo: false
+---
+
+
+# Homework Review
+
+## Solving a common problem with the homework
+
+
+# Introduction to the tidyverse
+
+## R is a functional programming language - most of what you will do in R is work with functions 
+
+A function: 
+
+-  Takes a specified input
+-  Performs an operation 
+-  Returns an output
+
+Functions are helpful tools to reduce repetition in typing and improves your code's 
+consistency, reliability and readability. 
+
+## The tidyverse is a powerful collection of R packages - collections of functions - that work well together (1/2)
+
+- The most popular packages in the R community are past of what is called the "tidyverse," which includes packages like ggplot2, tidyr, stringr, tibble, purrr
+- Tidyverse packages are built to work together. Every tidyverse package contains functons that can manipulate or visualize data that lives in data frames. 
+
+## The tidyverse is a powerful collection of R packages - collections of functions - that work well together (2/2)
+
+- Most functions in the tidyverse require a data frame (R's version of a table) as the first argument in each function. The functions can be "chained" together with other functions. 
+
+We will explore the tidyverse by looking at the finance data from NCES's Common Core of Data for the 2018-19 school year. 
+
+## To read NCES' finance data into our working environment we will use functions from the readr pacakage 
+
+The readr package contains functions to read "flat" files, like .csv and .txt files 
+
+The functions from readr are fairly similar to base R functions like 'read.csv()' but they do contain some helpful features: 
+
+- Prints helpful output to console when reading in the data 
+- Does not convert character variables to factors 
+
+## The glimpse() function from the tibble package is a helpful way to examine the contents of a data frame 
+
+The tibble package contains functions that create and examine simple data frames. 
+
+The standard R function to create data frames - 'data.frame()' can do some unhelpful things to your data. This is not an issue with functions in the tibble. 
+
+## The dplyr() package provides many functions to manipulate your data frames' columns and rows 
+
+The functions you'll most frequently use from the dplyr packages are: 
+
+- select(): names columns to keep from a data frame
+- rename(): name columns to keep from a data frame 
+- filter(): remove rows that do not meet the condition in the logical statement from the output
+- mutate(): create a new column that will be added to the end of your data frame. 
+
+# Iterative exploratory analysis 
+
+## LIVE CODING EXAMPLE: exploring_the_tidyverse.R 
+
+# Introduction to the pipe operator 
+
+## We can execute multiple functions in a single line by nesting - embedding the result of one function in another 
+
+## Nesting functions can get very unruly, very quickly...
+
+## A special operator - the pipe - can make nesting functions more readable 
+
+## One mroe RStudio setting adjustment! 
+
+# Exploratory analysis with the pipe operator 
+
+## LIVE CODING EXAMPLE: exploring_the_tidyverse.R 
+
+# BREAK 
+
+# Visual exploratory analysis 
+
+## Summarizing columns can be helpful, but it can hide nuance in your data that can be better seen via plotting 
+
+The ggplot2 package is the most widely-used data visualization approach in the R ecosystem. 
+
+- ggplot plots are created by starting with your data, then building up layers 
+- Once your specify your data, you can add layers of "geoms" to create your plot 
+- Today we will use geom_histogram() and geom_point()
+
+## LIVE CODING EXAMPLE: exploring_the_tidyverse.R  
+
+# Summarizing your data 
+
+## Summarizing data frames is made easy by the use of summarise() and group_by() 
+
+- summarise(): creates a new data frame with specified variables that run functions on every row 
+- group_by(): allows summarise() to run on group of rows, based on unique variables in a specified column 
+
+## How summarise() works with and without group_by() 
+
+## LIVE CODING EXAMPLE: exploring_the_tidyverse.R  
+
+# Using the edbuildr package 
+
+## The edbuildr package provides access to clean district data on funding, student demographics, and wealth
+
+The masterpull() function provides access to a wide range of school district data from FY13 to FY2019
+
+## LIVE CODING EXAMPLE: exploring_the_tidyverse.R  
+
+
+# Homework assignment 
+
+
+
+
+
