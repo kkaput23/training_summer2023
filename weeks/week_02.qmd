@@ -1,0 +1,33 @@
+---
+title: "Week 02"
+subtitle: "Introduction to School Finance Equity"
+description: "June 13"
+author: ""
+date: ""
+listing:
+  - id: slides
+    contents:
+      - ../slides/week_02/*.qmd
+    type: table
+    fields: [title, date]
+    field-display-names:
+      title: "Topic"
+      date: "Date"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+tbl-colwidths: [10,50,40]
+format: html
+
+---
+
+## Lecture
+
+::: {}
+:::
+
+## Assignment
+
+## Readings
+
+---
