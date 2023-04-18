@@ -32,7 +32,7 @@
     "href": "syllabus.html#reading-list",
     "title": "Syllabus",
     "section": "Reading List",
-    "text": "Reading List\n\n\n\nTitle\nAuthors\nPublisher\n\n\n\n\nR for Data Science\nWickham, Grolemund\nO’Reilly, 1st edition, 2016\n\n\nSplitting the Bill: Understanding Education Finance Equity\nSpurrier, Dammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nBalancing Act: How States Can Address Local Wealth Inequity in Education Finance\nDammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nMaking Change: A State Advocacy Playbook for Equitable Education Finance\nDammu, O’Keefe\nBellwether, 2023\n\n\nPriced Out of Public Education: District Lines, Housing Access, and Inequitable Educational Options\nSpurrier, Hodges, O’Neal Schiess\nBellwether, 2021"
+    "text": "Reading List\n\n\n\nTitle\nAuthors\nSource\n\n\n\n\nR for Data Science\nWickham, Grolemund, Çetinkaya-Rundel\nGitHub, 2023\n\n\nSplitting the Bill: Understanding Education Finance Equity\nSpurrier, Dammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nBalancing Act: How States Can Address Local Wealth Inequity in Education Finance\nDammu, O’Keefe, O’Neal Schiess\nBellwether, 2022\n\n\nMaking Change: A State Advocacy Playbook for Equitable Education Finance\nDammu, O’Keefe\nBellwether, 2023\n\n\nPriced Out of Public Education: District Lines, Housing Access, and Inequitable Educational Options\nSpurrier, Hodges, O’Neal Schiess\nBellwether, 2021"
   },
   {
     "objectID": "syllabus.html#communication",
@@ -67,7 +67,7 @@
     "href": "schedule.html",
     "title": "Course Schedule",
     "section": "",
-    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 00\n\n\nMay 22 - June 2\n\n\nPre-class set-up\n\n\n\n\nWeek 01\n\n\nJune 6\n\n\nIntroduction to School Finance Equity\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 00\n\n\nMay 22 - June 2\n\n\nPre-class set-up\n\n\n\n\nWeek 01\n\n\nJune 6\n\n\nIntroduction to School Finance Equity\n\n\n\n\nWeek 02\n\n\nJune 13\n\n\nIntroduction to School Finance Equity\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "schedule.html#homework",
@@ -130,7 +130,7 @@
     "href": "slides/week_01/test.html",
     "title": "Intro to R, RStudio, and GitHub",
     "section": "",
-    "text": "item 1\nitem 2\nitem 3\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.1     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.1     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n\n\n\n\n\n\nhere we go!\n\n\nare we having fun yet?"
+    "text": "item 1\nitem 2\nitem 3\n\n\n\n\n\nlibrary(tidyverse)\nggplot(mtcars, aes( x= hp, y = mpg)) +\n  geom_point() + \n  theme_bw()\n\n\n\n\n\n\n\n\nhere we go!\n\n\n\n\n\nare we having fun yet?"
   },
   {
     "objectID": "index.html#about-this-course",
@@ -144,7 +144,7 @@
     "href": "schedule.html#class-schedule",
     "title": "Course Schedule",
     "section": "",
-    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 00\n\n\nMay 22 - June 2\n\n\nPre-class set-up\n\n\n\n\nWeek 01\n\n\nJune 6\n\n\nIntroduction to School Finance Equity\n\n\n\n\n\n\nNo matching items"
+    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 00\n\n\nMay 22 - June 2\n\n\nPre-class set-up\n\n\n\n\nWeek 01\n\n\nJune 6\n\n\nIntroduction to School Finance Equity\n\n\n\n\nWeek 02\n\n\nJune 13\n\n\nIntroduction to School Finance Equity\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "syllabus.html#course-learning-objectives",
@@ -259,27 +259,148 @@
     "text": "Topic\n\n\nDate\n\n\n\n\n\n\nIntro to R, RStudio, and GitHub\n\n\nJun 6, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#solving-a-common-problem-with-the-homework",
     "href": "slides/week_02/week_02_ggplot_slides.html#solving-a-common-problem-with-the-homework",
+=======
+    "objectID": "weeks/week_02.html",
+    "href": "weeks/week_02.html",
+    "title": "Week 02",
+    "section": "",
+    "text": "Topic\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "weeks/week_02.html#lecture",
+    "href": "weeks/week_02.html#lecture",
+    "title": "Week 02",
+    "section": "",
+    "text": "Topic\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "weeks/week_02.html#assignment",
+    "href": "weeks/week_02.html#assignment",
+    "title": "Week 02",
+    "section": "Assignment",
+    "text": "Assignment"
+  },
+  {
+    "objectID": "weeks/week_02.html#readings",
+    "href": "weeks/week_02.html#readings",
+    "title": "Week 02",
+    "section": "Readings",
+    "text": "Readings"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#introduction-to-the-tidyverse",
+    "href": "slides/week_02/week_02_slides.html#introduction-to-the-tidyverse",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Introduction to the tidyverse",
+    "text": "Introduction to the tidyverse"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#iterative-exploratory-analysis",
+    "href": "slides/week_02/week_02_slides.html#iterative-exploratory-analysis",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Iterative exploratory analysis",
+    "text": "Iterative exploratory analysis"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#introduction-to-the-pipe-operator",
+    "href": "slides/week_02/week_02_slides.html#introduction-to-the-pipe-operator",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Introduction to the pipe operator",
+    "text": "Introduction to the pipe operator"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#visual-exploratory-analysis",
+    "href": "slides/week_02/week_02_slides.html#visual-exploratory-analysis",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Visual exploratory analysis",
+    "text": "Visual exploratory analysis"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#summarizing-your-data",
+    "href": "slides/week_02/week_02_slides.html#summarizing-your-data",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Summarizing your data",
+    "text": "Summarizing your data"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#using-the-edbuildr-package",
+    "href": "slides/week_02/week_02_slides.html#using-the-edbuildr-package",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Using the edbuildr package",
+    "text": "Using the edbuildr package"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#homework-assignment",
+    "href": "slides/week_02/week_02_slides.html#homework-assignment",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Homework assignment",
+    "text": "Homework assignment"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#one-more-slide",
+    "href": "slides/week_02/week_02_slides.html#one-more-slide",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "one more slide",
+    "text": "one more slide"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#solving-a-common-problem-with-the-homework",
+    "href": "slides/week_02/week_02_slides.html#solving-a-common-problem-with-the-homework",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "Solving a common problem with the homework",
     "text": "Solving a common problem with the homework"
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work-with-functions",
     "href": "slides/week_02/week_02_ggplot_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work-with-functions",
+=======
+    "objectID": "slides/week_02/week_02_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work",
+    "href": "slides/week_02/week_02_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "R is a functional programming language - most of what you will do in R is work",
+    "text": "R is a functional programming language - most of what you will do in R is work"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#with-functions",
+    "href": "slides/week_02/week_02_slides.html#with-functions",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "with functions",
+    "text": "with functions\nA function: - Takes a specified input - Performs an operation - Returns an output\nFunctions are helpful tools to reduce repetition in typing and improves your code’s consistency, reliability and readability."
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work-with-functions",
+    "href": "slides/week_02/week_02_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work-with-functions",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "R is a functional programming language - most of what you will do in R is work with functions",
     "text": "R is a functional programming language - most of what you will do in R is work with functions\nA function:\n\nTakes a specified input\nPerforms an operation\nReturns an output\n\nFunctions are helpful tools to reduce repetition in typing and improves your code’s consistency, reliability and readability."
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-12",
     "href": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-12",
+=======
+    "objectID": "slides/week_02/week_02_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together",
+    "href": "slides/week_02/week_02_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together",
+    "text": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together\n\nThe most popular packages in the R community are past of what is called the “tidyverse,” which includes packages like ggplot2, tidyr, stringr, tibble, purrr\nTidyverse packages are built to work together. Every tidyverse package contains functons that can manipulate or visualize data that lives in dataframes.\nMost functions in the tidyverse require a dataframe (R’s version of a table) as the first argument in each function. The functions can be “chained” together with other functions.\n\nWe will explore the tidyverse by looking at the finance data from NCES’s Common Core of Data for the 2018-19 school year."
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-12",
+    "href": "slides/week_02/week_02_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-12",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (1/2)",
     "text": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (1/2)\n\nThe most popular packages in the R community are past of what is called the “tidyverse,” which includes packages like ggplot2, tidyr, stringr, tibble, purrr\nTidyverse packages are built to work together. Every tidyverse package contains functons that can manipulate or visualize data that lives in data frames."
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-22",
     "href": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-22",
     "title": "Basic Data Analysis and Visualization in R",
@@ -296,11 +417,37 @@
   {
     "objectID": "slides/week_02/week_02_ggplot_slides.html#the-dplyr-package-provides-many-functions-to-manipulate-your-data-frames-columns-and-rows",
     "href": "slides/week_02/week_02_ggplot_slides.html#the-dplyr-package-provides-many-functions-to-manipulate-your-data-frames-columns-and-rows",
+=======
+    "objectID": "slides/week_02/week_02_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-22",
+    "href": "slides/week_02/week_02_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-22",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (2/2)",
+    "text": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (2/2)\n\nMost functions in the tidyverse require a data frame (R’s version of a table) as the first argument in each function. The functions can be “chained” together with other functions.\n\nWe will explore the tidyverse by looking at the finance data from NCES’s Common Core of Data for the 2018-19 school year."
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#to-read-nces-finance-data-into-our-working-environment-we-will-use-functions-from-the-readr-pacakage",
+    "href": "slides/week_02/week_02_slides.html#to-read-nces-finance-data-into-our-working-environment-we-will-use-functions-from-the-readr-pacakage",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "To read NCES’ finance data into our working environment we will use functions from the readr pacakage",
+    "text": "To read NCES’ finance data into our working environment we will use functions from the readr pacakage\nThe readr package contains functions to read “flat” files, like .csv and .txt files\nThe functions from readr are fairly similar to base R functions like ‘read.csv()’ but they do contain some helpful features:\n\nPrints helpful output to console when reading in the data\nDoes not convert character variables to factors"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#the-glimpse-function-from-the-tibble-package-is-a-helpful-way-to-examine-the-contents-of-a-data-frame",
+    "href": "slides/week_02/week_02_slides.html#the-glimpse-function-from-the-tibble-package-is-a-helpful-way-to-examine-the-contents-of-a-data-frame",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "The glimpse() function from the tibble package is a helpful way to examine the contents of a data frame",
+    "text": "The glimpse() function from the tibble package is a helpful way to examine the contents of a data frame\nThe tibble package contains functions that create and examine simple data frames.\nThe standard R function to create data frames - ‘data.frame()’ can do some unhelpful things to your data. This is not an issue with functions in the tibble."
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#the-dplyr-package-provides-many-functions-to-manipulate-your-data-frames-columns-and-rows",
+    "href": "slides/week_02/week_02_slides.html#the-dplyr-package-provides-many-functions-to-manipulate-your-data-frames-columns-and-rows",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "The dplyr() package provides many functions to manipulate your data frames’ columns and rows",
     "text": "The dplyr() package provides many functions to manipulate your data frames’ columns and rows\nThe functions you’ll most frequently use from the dplyr packages are:\n\nselect(): names columns to keep from a data frame\nrename(): name columns to keep from a data frame\nfilter(): remove rows that do not meet the condition in the logical statement from the output\nmutate(): create a new column that will be added to the end of your data frame."
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#live-coding-example-exploring_the_tidyverse.r",
     "href": "slides/week_02/week_02_ggplot_slides.html#live-coding-example-exploring_the_tidyverse.r",
     "title": "Basic Data Analysis and Visualization in R",
@@ -310,36 +457,119 @@
   {
     "objectID": "slides/week_02/week_02_ggplot_slides.html#we-can-execute-multiple-functions-in-a-single-line-by-nesting---embedding-the-result-of-one-function-in-another",
     "href": "slides/week_02/week_02_ggplot_slides.html#we-can-execute-multiple-functions-in-a-single-line-by-nesting---embedding-the-result-of-one-function-in-another",
+=======
+    "objectID": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r",
+    "href": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R",
+    "text": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#we-can-execute-multiple-functions-in-a-single-line-by-nesting---embedding-the-result-of-one-function-in-another",
+    "href": "slides/week_02/week_02_slides.html#we-can-execute-multiple-functions-in-a-single-line-by-nesting---embedding-the-result-of-one-function-in-another",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "We can execute multiple functions in a single line by nesting - embedding the result of one function in another",
     "text": "We can execute multiple functions in a single line by nesting - embedding the result of one function in another"
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#nesting-functions-can-get-very-unruly-very-quickly",
     "href": "slides/week_02/week_02_ggplot_slides.html#nesting-functions-can-get-very-unruly-very-quickly",
+=======
+    "objectID": "slides/week_02/week_02_slides.html#nesting-functions-can-get-very-unruly-very-quickly",
+    "href": "slides/week_02/week_02_slides.html#nesting-functions-can-get-very-unruly-very-quickly",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "Nesting functions can get very unruly, very quickly…",
     "text": "Nesting functions can get very unruly, very quickly…"
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#a-special-operator---the-pipe---can-make-nesting-functions-more-readable",
     "href": "slides/week_02/week_02_ggplot_slides.html#a-special-operator---the-pipe---can-make-nesting-functions-more-readable",
+=======
+    "objectID": "slides/week_02/week_02_slides.html#a-special-operator---the-pipe---can-make-nesting-functions-more-readable",
+    "href": "slides/week_02/week_02_slides.html#a-special-operator---the-pipe---can-make-nesting-functions-more-readable",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "A special operator - the pipe - can make nesting functions more readable",
     "text": "A special operator - the pipe - can make nesting functions more readable"
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#summarizing-columns-can-be-helpful-but-it-can-hide-nuance-in-your-data-that-can-be-better-seen-via-plotting",
     "href": "slides/week_02/week_02_ggplot_slides.html#summarizing-columns-can-be-helpful-but-it-can-hide-nuance-in-your-data-that-can-be-better-seen-via-plotting",
+=======
+    "objectID": "slides/week_02/week_02_slides.html#one-mroe-rstudio-setting-adjustment",
+    "href": "slides/week_02/week_02_slides.html#one-mroe-rstudio-setting-adjustment",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "One mroe RStudio setting adjustment!",
+    "text": "One mroe RStudio setting adjustment!"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-1",
+    "href": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-1",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R",
+    "text": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#summarizing-columns-can-be-helpful-but-it-can-hide-nuance-in-your-data-that-can-be-better-seen-via-plotting",
+    "href": "slides/week_02/week_02_slides.html#summarizing-columns-can-be-helpful-but-it-can-hide-nuance-in-your-data-that-can-be-better-seen-via-plotting",
+>>>>>>> Stashed changes
     "title": "Basic Data Analysis and Visualization in R",
     "section": "Summarizing columns can be helpful, but it can hide nuance in your data that can be better seen via plotting",
     "text": "Summarizing columns can be helpful, but it can hide nuance in your data that can be better seen via plotting\nThe ggplot2 package is the most widely-used data visualization approach in the R ecosystem.\n\nggplot plots are created by starting with your data, then building up layers\nOnce your specify your data, you can add layers of “geoms” to create your plot\nToday we will use geom_histogram() and geom_point()"
   },
   {
+<<<<<<< Updated upstream
     "objectID": "slides/week_02/week_02_ggplot_slides.html#step-1-create-a-basic-plot",
     "href": "slides/week_02/week_02_ggplot_slides.html#step-1-create-a-basic-plot",
     "title": "Basic Data Analysis and Visualization in R",
     "section": "Step 1: Create a basic plot",
     "text": "Step 1: Create a basic plot\n\nlibrary(tidyverse)\n\n#first plot \n\nggplot(mn_ed_data, aes(x = bipoc_pct, y = pov_pct)) +\n  geom_point()"
+=======
+    "objectID": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-2",
+    "href": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-2",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R",
+    "text": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#summarizing-data-frames-is-made-easy-by-the-use-of-summarise-and-group_by",
+    "href": "slides/week_02/week_02_slides.html#summarizing-data-frames-is-made-easy-by-the-use-of-summarise-and-group_by",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Summarizing data frames is made easy by the use of summarise() and group_by()",
+    "text": "Summarizing data frames is made easy by the use of summarise() and group_by()\n\nsummarise(): creates a new data frame with specified variables that run functions on every row\ngroup_by(): allows summarise() to run on group of rows, based on unique variables in a specified column"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#how-summarise-works-with-and-without-group_by",
+    "href": "slides/week_02/week_02_slides.html#how-summarise-works-with-and-without-group_by",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "How summarise() works with and without group_by()",
+    "text": "How summarise() works with and without group_by()"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-3",
+    "href": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-3",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R",
+    "text": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#the-edbuildr-package-provides-access-to-clean-district-data-on-funding-student-demographics-and-wealth",
+    "href": "slides/week_02/week_02_slides.html#the-edbuildr-package-provides-access-to-clean-district-data-on-funding-student-demographics-and-wealth",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "The edbuildr package provides access to clean district data on funding, student demographics, and wealth",
+    "text": "The edbuildr package provides access to clean district data on funding, student demographics, and wealth\nThe masterpull() function provides access to a wide range of school district data from FY13 to FY2019"
+  },
+  {
+    "objectID": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-4",
+    "href": "slides/week_02/week_02_slides.html#live-coding-example-exploring_the_tidyverse.r-4",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R",
+    "text": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R"
+>>>>>>> Stashed changes
   }
 ]
