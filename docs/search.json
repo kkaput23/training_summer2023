@@ -257,5 +257,89 @@
     "title": "Week 01",
     "section": "",
     "text": "Topic\n\n\nDate\n\n\n\n\n\n\nIntro to R, RStudio, and GitHub\n\n\nJun 6, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#solving-a-common-problem-with-the-homework",
+    "href": "slides/week_02/week_02_ggplot_slides.html#solving-a-common-problem-with-the-homework",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Solving a common problem with the homework",
+    "text": "Solving a common problem with the homework"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work-with-functions",
+    "href": "slides/week_02/week_02_ggplot_slides.html#r-is-a-functional-programming-language---most-of-what-you-will-do-in-r-is-work-with-functions",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "R is a functional programming language - most of what you will do in R is work with functions",
+    "text": "R is a functional programming language - most of what you will do in R is work with functions\nA function:\n\nTakes a specified input\nPerforms an operation\nReturns an output\n\nFunctions are helpful tools to reduce repetition in typing and improves your code’s consistency, reliability and readability."
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-12",
+    "href": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-12",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (1/2)",
+    "text": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (1/2)\n\nThe most popular packages in the R community are past of what is called the “tidyverse,” which includes packages like ggplot2, tidyr, stringr, tibble, purrr\nTidyverse packages are built to work together. Every tidyverse package contains functons that can manipulate or visualize data that lives in data frames."
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-22",
+    "href": "slides/week_02/week_02_ggplot_slides.html#the-tidyverse-is-a-powerful-collection-of-r-packages---collections-of-functions---that-work-well-together-22",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (2/2)",
+    "text": "The tidyverse is a powerful collection of R packages - collections of functions - that work well together (2/2)\n\nMost functions in the tidyverse require a data frame (R’s version of a table) as the first argument in each function. The functions can be “chained” together with other functions.\n\nWe will explore the tidyverse by looking at EdBuild’s FY2019 education data compiled from the F33 survey, SAIPE, EDGE, and CCD. The edbuildr package provides access to clean district data on funding, student demographics, and wealth."
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#to-read-edbuilds-finance-data-into-our-working-environment-we-will-use-the-masterpull-function",
+    "href": "slides/week_02/week_02_ggplot_slides.html#to-read-edbuilds-finance-data-into-our-working-environment-we-will-use-the-masterpull-function",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "To read EdBuild’s finance data into our working environment we will use the masterpull() function",
+    "text": "To read EdBuild’s finance data into our working environment we will use the masterpull() function\nmasterpull(data_year = 2019, data_type = “fin”): Downloads a clean dataset from EdBuild’s server. There are three options for the data_type argument:\n\n“geo”: only includes districts with geographic boundaries (no charter/special school districts) that meet EdBuild’s criteria for fiscal analysis\n“fin”: includes all districts that meet EdBuild’s criteria for fiscal analysis\n“full”: includes all districts – TO BE USED WITH CAUTION"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#the-dplyr-package-provides-many-functions-to-manipulate-your-data-frames-columns-and-rows",
+    "href": "slides/week_02/week_02_ggplot_slides.html#the-dplyr-package-provides-many-functions-to-manipulate-your-data-frames-columns-and-rows",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "The dplyr() package provides many functions to manipulate your data frames’ columns and rows",
+    "text": "The dplyr() package provides many functions to manipulate your data frames’ columns and rows\nThe functions you’ll most frequently use from the dplyr packages are:\n\nselect(): names columns to keep from a data frame\nrename(): name columns to keep from a data frame\nfilter(): remove rows that do not meet the condition in the logical statement from the output\nmutate(): create a new column that will be added to the end of your data frame."
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#live-coding-example-exploring_the_tidyverse.r",
+    "href": "slides/week_02/week_02_ggplot_slides.html#live-coding-example-exploring_the_tidyverse.r",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R",
+    "text": "LIVE CODING EXAMPLE: exploring_the_tidyverse.R\n\n# load ----------\n\noptions(scipen = 999)\n\nlibrary(tidyverse)\nlibrary(edbuildr)\n\n# Krista likes to denote which spreadsheet is raw for transparency \ndist_fy19_raw &lt;- masterpull(data_type = \"geo\")\n\n# filter Minnesota data and clean -----\n\n# filter, rename, and mutate data for Minnesota \nmn_ed_data &lt;- dist_fy19_raw |&gt;\n  filter(State == \"Minnesota\") |&gt;\n  rename(district = NAME,\n         county = County,\n         enroll = ENROLL, \n         total_local_rev = LR,\n         total_state_rev = SR,\n         total_state_local_rev = SLR, \n         urbanicity = dUrbanicity, \n         operational_schools = dOperational_schools, \n         white_enroll = dWhite, \n         sped_enroll = dIEP, \n         ell_enroll = dLEP, \n         econ_dis_enroll = StPov,\n         bipoc_pct = pctNonwhite, \n         pov_pct = StPovRate,\n         median_house_income = MHI, \n         median_prop_value = MPV) |&gt;\n  mutate(bipoc_enroll = enroll - white_enroll,\n         ell_pct = ell_enroll/enroll, \n         sped_pct = sped_enroll/enroll, \n         loc_rev_pp = total_local_rev/enroll,\n         state_rev_pp = total_state_rev/enroll,\n         local_state_rev_pp = total_state_local_rev/enroll) |&gt;\n  select(district, county, enroll, loc_rev_pp, state_rev_pp, local_state_rev_pp, \n         total_local_rev, total_state_rev, total_state_local_rev, urbanicity, \n         operational_schools, pov_pct, bipoc_pct, ell_pct, sped_pct)"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#we-can-execute-multiple-functions-in-a-single-line-by-nesting---embedding-the-result-of-one-function-in-another",
+    "href": "slides/week_02/week_02_ggplot_slides.html#we-can-execute-multiple-functions-in-a-single-line-by-nesting---embedding-the-result-of-one-function-in-another",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "We can execute multiple functions in a single line by nesting - embedding the result of one function in another",
+    "text": "We can execute multiple functions in a single line by nesting - embedding the result of one function in another"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#nesting-functions-can-get-very-unruly-very-quickly",
+    "href": "slides/week_02/week_02_ggplot_slides.html#nesting-functions-can-get-very-unruly-very-quickly",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Nesting functions can get very unruly, very quickly…",
+    "text": "Nesting functions can get very unruly, very quickly…"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#a-special-operator---the-pipe---can-make-nesting-functions-more-readable",
+    "href": "slides/week_02/week_02_ggplot_slides.html#a-special-operator---the-pipe---can-make-nesting-functions-more-readable",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "A special operator - the pipe - can make nesting functions more readable",
+    "text": "A special operator - the pipe - can make nesting functions more readable"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#summarizing-columns-can-be-helpful-but-it-can-hide-nuance-in-your-data-that-can-be-better-seen-via-plotting",
+    "href": "slides/week_02/week_02_ggplot_slides.html#summarizing-columns-can-be-helpful-but-it-can-hide-nuance-in-your-data-that-can-be-better-seen-via-plotting",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Summarizing columns can be helpful, but it can hide nuance in your data that can be better seen via plotting",
+    "text": "Summarizing columns can be helpful, but it can hide nuance in your data that can be better seen via plotting\nThe ggplot2 package is the most widely-used data visualization approach in the R ecosystem.\n\nggplot plots are created by starting with your data, then building up layers\nOnce your specify your data, you can add layers of “geoms” to create your plot\nToday we will use geom_histogram() and geom_point()"
+  },
+  {
+    "objectID": "slides/week_02/week_02_ggplot_slides.html#step-1-create-a-basic-plot",
+    "href": "slides/week_02/week_02_ggplot_slides.html#step-1-create-a-basic-plot",
+    "title": "Basic Data Analysis and Visualization in R",
+    "section": "Step 1: Create a basic plot",
+    "text": "Step 1: Create a basic plot\n\nlibrary(tidyverse)\n\n#first plot \n\nggplot(mn_ed_data, aes(x = bipoc_pct, y = pov_pct)) +\n  geom_point()"
   }
 ]
