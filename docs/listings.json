@@ -3,7 +3,8 @@
     "listing": "/schedule.html",
     "items": [
       "/weeks/week_00.html",
-      "/weeks/week_01.html"
+      "/weeks/week_01.html",
+      "/weeks/week_02.html"
     ]
   },
   {
@@ -17,5 +18,9 @@
     "items": [
       "/slides/week_00/setup_instructions.html"
     ]
+  },
+  {
+    "listing": "/weeks/week_02.html",
+    "items": []
   }
 ]
