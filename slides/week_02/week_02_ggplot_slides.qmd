@@ -501,7 +501,7 @@ ggplot(data = state_summary) +
 
 ```
 # Homework assignment 
-
+Use edbuildr data to create scatter plots for your states that shows the relationship between property wealth, income, and per-pupil revenue. 
 
 
 
