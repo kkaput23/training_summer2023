@@ -37,22 +37,21 @@ consistency, reliability and readability.
 
 - Most functions in the tidyverse require a data frame (R's version of a table) as the first argument in each function. The functions can be "chained" together with other functions. 
 
-We will explore the tidyverse by looking at the finance data from NCES's Common Core of Data for the 2018-19 school year. 
+We will explore the tidyverse by looking at EdBuild's FY2019 education data compiled from the F33 survey, SAIPE, EDGE, and CCD. The edbuildr package provides access to clean district
+data on funding, student demographics, and wealth.
 
-## To read NCES' finance data into our working environment we will use functions from the readr pacakage 
+## To read EdBuild's finance data into our working environment we will use the masterpull() function 
 
-The readr package contains functions to read "flat" files, like .csv and .txt files 
+masterpull(data_year = 2019, data_type = “fin”): Downloads a clean dataset from EdBuild’s server. There are three options for the data_type argument:
 
-The functions from readr are fairly similar to base R functions like 'read.csv()' but they do contain some helpful features: 
+- “geo”: only includes districts with geographic boundaries
+(no charter/special school districts) that meet EdBuild’s
+criteria for fiscal analysis
+- “fin”: includes all districts that meet EdBuild’s criteria
+for fiscal analysis
+- “full”: includes all districts – TO BE USED WITH
+CAUTION
 
-- Prints helpful output to console when reading in the data 
-- Does not convert character variables to factors 
-
-## The glimpse() function from the tibble package is a helpful way to examine the contents of a data frame 
-
-The tibble package contains functions that create and examine simple data frames. 
-
-The standard R function to create data frames - 'data.frame()' can do some unhelpful things to your data. This is not an issue with functions in the tibble. 
 
 ## The dplyr() package provides many functions to manipulate your data frames' columns and rows 
 
@@ -67,15 +66,58 @@ The functions you'll most frequently use from the dplyr packages are:
 
 ## LIVE CODING EXAMPLE: exploring_the_tidyverse.R 
 
-# Introduction to the pipe operator 
+```{r}
+#| echo: true
 
-## We can execute multiple functions in a single line by nesting - embedding the result of one function in another 
+# load ----------
 
-## Nesting functions can get very unruly, very quickly...
+options(scipen = 999)
 
-## A special operator - the pipe - can make nesting functions more readable 
+library(tidyverse)
+library(edbuildr)
 
-# BREAK 
+# Krista likes to denote which spreadsheet is raw for transparency 
+dist_fy19_raw <- masterpull(data_type = "geo")
+
+# filter Minnesota data and clean -----
+
+# filter, rename, and mutate data for Minnesota 
+mn_ed_data <- dist_fy19_raw |>
+  filter(State == "Minnesota") |>
+  rename(district = NAME,
+         county = County,
+         enroll = ENROLL, 
+         total_local_rev = LR,
+         total_state_rev = SR,
+         total_state_local_rev = SLR, 
+         urbanicity = dUrbanicity,
+         operational_schools = dOperational_schools, 
+         district_type = dType, 
+         white_enroll = dWhite, 
+         sped_enroll = dIEP, 
+         ell_enroll = dLEP, 
+         econ_dis_enroll = StPov,
+         bipoc_pct = pctNonwhite, 
+         pov_pct = StPovRate,
+         median_house_income = MHI, 
+         median_prop_value = MPV) |>
+  mutate(bipoc_enroll = enroll - white_enroll,
+         ell_pct = ell_enroll/enroll, 
+         sped_pct = sped_enroll/enroll, 
+         loc_rev_pp = total_local_rev/enroll,
+         state_rev_pp = total_state_rev/enroll,
+         local_state_rev_pp = total_state_local_rev/enroll) |>
+  select(district, county, enroll, loc_rev_pp, state_rev_pp, local_state_rev_pp, 
+         total_local_rev, total_state_rev, total_state_local_rev, urbanicity, 
+         operational_schools, district_type, pov_pct, bipoc_pct, ell_pct, sped_pct)
+
+```
+
+
+## Exploring Data with Histograms 
+
+
+# Break 
 
 # Visual exploratory analysis 
 
@@ -87,7 +129,7 @@ The ggplot2 package is the most widely-used data visualization approach in the R
 - Once your specify your data, you can add layers of "geoms" to create your plot 
 - Today we will use geom_histogram() and geom_point()
 
-# Iterating your way to beauty with ggplot2 
+# Iterating your way to beauty with ggplot2 using Minnesota data
 
 ## Step 1: Create a basic plot 
 
@@ -95,16 +137,326 @@ The ggplot2 package is the most widely-used data visualization approach in the R
 #| echo: true
 library(tidyverse)
 
+# first minnesota plot 
+ggplot(mn_ed_data, aes(x = pov_pct, y = state_rev_pp)) +
+  geom_point()
+
+```
+
+## Step 2: Address missing values
+
+We need to figure out what’s going on with our missing values before we go any further!
 
 
-ggplot(mtcars, aes( x= hp, y = mpg)) +
-  geom_point() + 
+```{r}
+#| echo: true
+# investigate missing values 
+mn_na_dist <- mn_ed_data |>
+  filter(is.na(state_rev_pp) | is.na(pov_pct)) |>
+  arrange(district_type) 
+
+view(mn_na_dist)
+
+```
+
+The missing data makes sense. All eight of the rows don't have any available data. 
+
+## Step 3: Clean up formatting of chart elements (1/5)
+
+Now that we understand our missing data, we can create an updated dataframe and re-plot our newly cleaned data.
+
+```{r}
+#| echo: true
+# create tidy df
+mn_ed_clean <- mn_ed_data |>
+  filter(!is.na(state_rev_pp), 
+         !is.na(pov_pct))
+
+view(mn_ed_clean)
+
+# Drop the 2 districts that have no enrollment
+mn_ed_clean <- mn_ed_clean |>
+  filter(enroll > 0)
+
+# first minnesota plot w/ clean data
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp)) +
+  geom_point()
+
+
+```
+
+## Step 3: Clean up formatting of chart elements (2/5)
+
+We see some overlap in the points. Reducing the opacity of the points can be accomplished by setting the alpha parameter in geom_point() to a value less than 1. Setting it to .5 will make data points 50% translucent.
+
+```{r}
+#| echo: true
+# reduce opacity of points
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp)) +
+  geom_point(alpha = .5)
+
+
+```
+
+## Step 3: Clean up formatting of chart elements (3/5)
+Let’s take care of some formatting issues. Our axes don’t look great - the decimals ought to be percentages. Here, the scales package provides some help.
+
+```{r}
+#| echo: true
+# format axes 
+library(scales)
+
+# format the x and y axes
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp)) +
+  geom_point(alpha = .5) + 
+# make sure you have the `scales` package loaded!
+  scale_x_continuous(labels = percent_format(accuracy = 1)) 
+
+
+```
+
+## Step 3: Clean up formatting of chart elements (4/5)
+Next, we should add some labels to our axes that make sense, along with a title for our plot and a caption that details our data sources.
+
+```{r}
+#| echo: true
+
+# add data labels 
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp)) +
+  geom_point(alpha = .5) + 
+# make sure you have the `scales` package loaded!
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019") 
+
+```
+## Step 3: Clean up formatting of chart elements (5/5)
+Themes can be used to change the appearance of elements in your plot. There are many stock options, but I prefer theme_bw() for its clean appearance and helpful and unobtrusive grid lines.
+
+```{r}
+#| echo: true
+
+# change theme
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp)) +
+  geom_point(alpha = .5) + 
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019") +
+  theme_bw()
+
+
+```
+
+## Step 4: Add a new layer of data 
+Now that we have a decent-looking graph, let’s add in a new data element to vary point size by enrollment.
+
+```{r}
+#| echo: true
+
+# add size element 
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll)) +
+  geom_point(alpha = .5) + 
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019") +
+  theme_bw()
+
+
+```
+
+## Step 5: Tidy up formatting (1/2)
+Adding a new variable for size creates a legend. We need to tidy the legend’s labels and the title.
+```{r}
+#| echo: true
+
+# clean up the legend
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll)) +
+  geom_point(alpha = .5) + 
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  # change legend label formatting
+  scale_size(labels = comma) +
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
+  theme_bw()
+
+
+```
+## Step 5: Tidy up formatting (2/2)
+We can also adjust some paramenters to allow for more visual contrast in size. By default, ggplot2 will adjust points’ radii based on the size variable. Using area is a more visually honest way to represent the data, so let’s make that change.
+
+```{r}
+#| echo: true
+
+# create more contrast in size
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll)) +
+  geom_point(alpha = .5) + 
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  # change size scaling to vary by area, not radius + change max size
+  scale_size_area(labels = comma, max_size = 10) + 
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
   theme_bw()
 
 ```
 
+## Step 6: Repeat steps 4-5 as needed (1/5)
+Adding color can be helpful. Let's add color based on urbanicity. 
+```{r}
+#| echo: true
+
+# add in color based on urbanicity
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll,
+                        color = urbanicity)) +
+  geom_point(alpha = .5) + 
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  scale_size_area(labels = comma, max_size = 10) + 
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
+  theme_bw()
+
+```
+## Step 6: Repeat steps 4-5 as needed (2/5)
+That doesn't look great. Let’s clean up the data a little more to reduce 11 urbanicity levels to four, then tidy up the legend label.
+```{r}
+#| echo: true
+
+# clean up the unicorn vomit
+mn_ed_clean <- mn_ed_clean |>
+  mutate(urbanicity = fct_collapse(as.factor(urbanicity),
+                                   City = c("11-City: Large", 
+                                            "12-City: Mid-size",
+                                            "13-City: Small"),
+                                   Suburb = c("21-Suburb: Large",
+                                              "22-Suburb: Mid-size",
+                                             "23-Suburb: Small"),
+                                   Town = c("31-Town: Fringe",
+                                            "32-Town: Distant",
+                                            "33-Town: Remote"),
+                                   Rural = c("41-Rural: Fringe",
+                                             "42-Rural: Distant",
+                                             "43-Rural: Remote")))
+
+# better colors and tidy legend label
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll,
+                        color = urbanicity)) +
+  geom_point(alpha = .5) + 
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  scale_size_area(labels = comma, max_size = 10) + 
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
+  theme_bw()
 
 
+```
+
+## Step 6: Repeat steps 4-5 as needed (3/5)
+We can and should adjust the colors used. R recognizes some pretty funky color names, which can be found in this helpful cheat sheet.
+```{r}
+#| echo: true
+# adjust colors manually
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll,
+                        color = urbanicity)) +
+  geom_point(alpha = .5) + 
+    # create manual color palette
+  # color names pulled from a pdf y'all should bookmark
+  # http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
+  scale_color_manual(values = c("tomato3", "steelblue2",
+                                "seagreen3", "orchid1")) +
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  scale_size_area(labels = comma, max_size = 10) + 
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
+  theme_bw()
+
+
+```
+
+
+## Step 6: Repeat steps 4-5 as needed (4/5)
+We should strive to make our analyses as accessible as possible. The viridis package includes some color palettes that are friendly for folks with color blindness, which affects 5-10 percent of the US population.
+```{r}
+#| echo: true
+# use colors better for visual impairments
+library(viridis)
+# adjust colors manually
+
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll,
+                        color = urbanicity)) +
+  geom_point(alpha = .5) + 
+  # use a colorblind-friendly palette
+  scale_color_viridis_d() +
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  scale_size_area(labels = comma, max_size = 10) + 
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
+  theme_bw()
+
+
+```
+## Step 6: Repeat steps 4-5 as needed (5/5)
+Let’s adjust the range of colors used to exclude that hard-to-see yellow.
+```{r}
+#| echo: true
+# that yellow is hard to see - let's adjust the range
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll,
+                        color = urbanicity)) +
+  geom_point(alpha = .5) + 
+  # adjust color range
+  scale_color_viridis_d(end = .8) +
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  scale_size_area(labels = comma, max_size = 10) + 
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
+  theme_bw()
+
+
+```
+## Step 7: Replace a layer of data
+Sometimes color isn’t the answer - let’s try facets instead.
+```{r}
+#| echo: true
+# use facets instead of color
+ggplot(mn_ed_clean, aes(x = pov_pct, y = state_rev_pp, size = enroll,
+                        color = urbanicity)) +
+  geom_point(alpha = .5) + 
+  # add facet by urbanicity
+  facet_wrap(~urbanicity) +
+  scale_x_continuous(labels = percent_format(accuracy = 1)) +
+  scale_size_area(labels = comma, max_size = 10) + 
+    labs(x = "Student Poverty Rate", y = "State Per-Pupil Revenue",
+       title = "State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts",
+       caption = "Source: Edbuild Data, 2019",
+       # add nice label for size element
+  size = "Enrollment") +
+  theme_bw()
+
+
+```
+# Histograms 
 
 # Homework assignment 
 
