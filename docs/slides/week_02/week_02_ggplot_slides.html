@@ -484,29 +484,30 @@
 <span id="cb1-19"><a href="#cb1-19"></a>         <span class="at">total_local_rev =</span> LR,</span>
 <span id="cb1-20"><a href="#cb1-20"></a>         <span class="at">total_state_rev =</span> SR,</span>
 <span id="cb1-21"><a href="#cb1-21"></a>         <span class="at">total_state_local_rev =</span> SLR, </span>
-<span id="cb1-22"><a href="#cb1-22"></a>         <span class="at">urbanicity =</span> dUrbanicity, </span>
+<span id="cb1-22"><a href="#cb1-22"></a>         <span class="at">urbanicity =</span> dUrbanicity,</span>
 <span id="cb1-23"><a href="#cb1-23"></a>         <span class="at">operational_schools =</span> dOperational_schools, </span>
-<span id="cb1-24"><a href="#cb1-24"></a>         <span class="at">white_enroll =</span> dWhite, </span>
-<span id="cb1-25"><a href="#cb1-25"></a>         <span class="at">sped_enroll =</span> dIEP, </span>
-<span id="cb1-26"><a href="#cb1-26"></a>         <span class="at">ell_enroll =</span> dLEP, </span>
-<span id="cb1-27"><a href="#cb1-27"></a>         <span class="at">econ_dis_enroll =</span> StPov,</span>
-<span id="cb1-28"><a href="#cb1-28"></a>         <span class="at">bipoc_pct =</span> pctNonwhite, </span>
-<span id="cb1-29"><a href="#cb1-29"></a>         <span class="at">pov_pct =</span> StPovRate,</span>
-<span id="cb1-30"><a href="#cb1-30"></a>         <span class="at">median_house_income =</span> MHI, </span>
-<span id="cb1-31"><a href="#cb1-31"></a>         <span class="at">median_prop_value =</span> MPV) <span class="sc">|&gt;</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a>  <span class="fu">mutate</span>(<span class="at">bipoc_enroll =</span> enroll <span class="sc">-</span> white_enroll,</span>
-<span id="cb1-33"><a href="#cb1-33"></a>         <span class="at">ell_pct =</span> ell_enroll<span class="sc">/</span>enroll, </span>
-<span id="cb1-34"><a href="#cb1-34"></a>         <span class="at">sped_pct =</span> sped_enroll<span class="sc">/</span>enroll, </span>
-<span id="cb1-35"><a href="#cb1-35"></a>         <span class="at">loc_rev_pp =</span> total_local_rev<span class="sc">/</span>enroll,</span>
-<span id="cb1-36"><a href="#cb1-36"></a>         <span class="at">state_rev_pp =</span> total_state_rev<span class="sc">/</span>enroll,</span>
-<span id="cb1-37"><a href="#cb1-37"></a>         <span class="at">local_state_rev_pp =</span> total_state_local_rev<span class="sc">/</span>enroll) <span class="sc">|&gt;</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a>  <span class="fu">select</span>(district, county, enroll, loc_rev_pp, state_rev_pp, local_state_rev_pp, </span>
-<span id="cb1-39"><a href="#cb1-39"></a>         total_local_rev, total_state_rev, total_state_local_rev, urbanicity, </span>
-<span id="cb1-40"><a href="#cb1-40"></a>         operational_schools, pov_pct, bipoc_pct, ell_pct, sped_pct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-24"><a href="#cb1-24"></a>         <span class="at">district_type =</span> dType, </span>
+<span id="cb1-25"><a href="#cb1-25"></a>         <span class="at">white_enroll =</span> dWhite, </span>
+<span id="cb1-26"><a href="#cb1-26"></a>         <span class="at">sped_enroll =</span> dIEP, </span>
+<span id="cb1-27"><a href="#cb1-27"></a>         <span class="at">ell_enroll =</span> dLEP, </span>
+<span id="cb1-28"><a href="#cb1-28"></a>         <span class="at">econ_dis_enroll =</span> StPov,</span>
+<span id="cb1-29"><a href="#cb1-29"></a>         <span class="at">bipoc_pct =</span> pctNonwhite, </span>
+<span id="cb1-30"><a href="#cb1-30"></a>         <span class="at">pov_pct =</span> StPovRate,</span>
+<span id="cb1-31"><a href="#cb1-31"></a>         <span class="at">median_house_income =</span> MHI, </span>
+<span id="cb1-32"><a href="#cb1-32"></a>         <span class="at">median_prop_value =</span> MPV) <span class="sc">|&gt;</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a>  <span class="fu">mutate</span>(<span class="at">bipoc_enroll =</span> enroll <span class="sc">-</span> white_enroll,</span>
+<span id="cb1-34"><a href="#cb1-34"></a>         <span class="at">ell_pct =</span> ell_enroll<span class="sc">/</span>enroll, </span>
+<span id="cb1-35"><a href="#cb1-35"></a>         <span class="at">sped_pct =</span> sped_enroll<span class="sc">/</span>enroll, </span>
+<span id="cb1-36"><a href="#cb1-36"></a>         <span class="at">loc_rev_pp =</span> total_local_rev<span class="sc">/</span>enroll,</span>
+<span id="cb1-37"><a href="#cb1-37"></a>         <span class="at">state_rev_pp =</span> total_state_rev<span class="sc">/</span>enroll,</span>
+<span id="cb1-38"><a href="#cb1-38"></a>         <span class="at">local_state_rev_pp =</span> total_state_local_rev<span class="sc">/</span>enroll) <span class="sc">|&gt;</span></span>
+<span id="cb1-39"><a href="#cb1-39"></a>  <span class="fu">select</span>(district, county, enroll, loc_rev_pp, state_rev_pp, local_state_rev_pp, </span>
+<span id="cb1-40"><a href="#cb1-40"></a>         total_local_rev, total_state_rev, total_state_local_rev, urbanicity, </span>
+<span id="cb1-41"><a href="#cb1-41"></a>         operational_schools, district_type, pov_pct, bipoc_pct, ell_pct, sped_pct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section id="break" class="title-slide slide level1 center">
-<h1>BREAK</h1>
+<h1>Break</h1>
 
 </section>
 
@@ -525,8 +526,8 @@
 </ul>
 </section></section>
 <section>
-<section id="iterating-your-way-to-beauty-with-ggplot2" class="title-slide slide level1 center">
-<h1>Iterating your way to beauty with ggplot2</h1>
+<section id="iterating-your-way-to-beauty-with-ggplot2-using-minnesota-data" class="title-slide slide level1 center">
+<h1>Iterating your way to beauty with ggplot2 using Minnesota data</h1>
 
 </section>
 <section id="step-1-create-a-basic-plot" class="slide level2">
@@ -534,13 +535,325 @@
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="co">#first plot </span></span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">ggplot</span>(mn_ed_data, <span class="fu">aes</span>(<span class="at">x =</span> bipoc_pct, <span class="at">y =</span> pov_pct)) <span class="sc">+</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># first minnesota plot </span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">ggplot</span>(mn_ed_data, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp)) <span class="sc">+</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section></section>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="step-2-address-missing-values" class="slide level2">
+<h2>Step 2: Address missing values</h2>
+<p>We need to figure out what’s going on with our missing values before we go any further!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># investigate missing values </span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>mn_na_dist <span class="ot">&lt;-</span> mn_ed_data <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(state_rev_pp) <span class="sc">|</span> <span class="fu">is.na</span>(pov_pct)) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">arrange</span>(district_type) </span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">view</span>(mn_na_dist)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The missing data makes sense. All eight of the rows don’t have any available data.</p>
+</section>
+<section id="step-3-clean-up-formatting-of-chart-elements-15" class="slide level2">
+<h2>Step 3: Clean up formatting of chart elements (1/5)</h2>
+<p>Now that we understand our missing data, we can create an updated dataframe and re-plot our newly cleaned data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># create tidy df</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>mn_ed_clean <span class="ot">&lt;-</span> mn_ed_data <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(state_rev_pp), </span>
+<span id="cb4-4"><a href="#cb4-4"></a>         <span class="sc">!</span><span class="fu">is.na</span>(pov_pct))</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">view</span>(mn_ed_clean)</span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co"># Drop the 2 districts that have no enrollment</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>mn_ed_clean <span class="ot">&lt;-</span> mn_ed_clean <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="fu">filter</span>(enroll <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb4-11"><a href="#cb4-11"></a></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="co"># first minnesota plot w/ clean data</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp)) <span class="sc">+</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="step-3-clean-up-formatting-of-chart-elements-25" class="slide level2">
+<h2>Step 3: Clean up formatting of chart elements (2/5)</h2>
+<p>We see some overlap in the points. Reducing the opacity of the points can be accomplished by setting the alpha parameter in geom_point() to a value less than 1. Setting it to .5 will make data points 50% translucent.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># reduce opacity of points</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp)) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="step-3-clean-up-formatting-of-chart-elements-35" class="slide level2">
+<h2>Step 3: Clean up formatting of chart elements (3/5)</h2>
+<p>Let’s take care of some formatting issues. Our axes don’t look great - the decimals ought to be percentages. Here, the scales package provides some help.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># format axes </span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(scales)</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># format the x and y axes</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp)) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co"># make sure you have the `scales` package loaded!</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="step-3-clean-up-formatting-of-chart-elements-45" class="slide level2">
+<h2>Step 3: Clean up formatting of chart elements (4/5)</h2>
+<p>Next, we should add some labels to our axes that make sense, along with a title for our plot and a caption that details our data sources.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># add data labels </span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp)) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># make sure you have the `scales` package loaded!</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="step-3-clean-up-formatting-of-chart-elements-55" class="slide level2">
+<h2>Step 3: Clean up formatting of chart elements (5/5)</h2>
+<p>Themes can be used to change the appearance of elements in your plot. There are many stock options, but I prefer theme_bw() for its clean appearance and helpful and unobtrusive grid lines.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># change theme</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="break-1" class="title-slide slide level1 center">
+<h1>Break</h1>
+
+</section>
+<section id="step-4-add-a-new-layer-of-data" class="slide level2">
+<h2>Step 4: Add a new layer of data</h2>
+<p>Now that we have a decent-looking graph, let’s add in a new data element to vary point size by enrollment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># add size element </span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll)) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb9-6"><a href="#cb9-6"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="step-5-tidy-up-formatting-12" class="slide level2">
+<h2>Step 5: Tidy up formatting (1/2)</h2>
+<p>Adding a new variable for size creates a legend. We need to tidy the legend’s labels and the title.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># clean up the legend</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="co"># change legend label formatting</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">scale_size</span>(<span class="at">labels =</span> comma) <span class="sc">+</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb10-8"><a href="#cb10-8"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb10-9"><a href="#cb10-9"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb10-10"><a href="#cb10-10"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="step-5-tidy-up-formatting-22" class="slide level2">
+<h2>Step 5: Tidy up formatting (2/2)</h2>
+<p>We can also adjust some paramenters to allow for more visual contrast in size. By default, ggplot2 will adjust points’ radii based on the size variable. Using area is a more visually honest way to represent the data, so let’s make that change.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># create more contrast in size</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll)) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="co"># change size scaling to vary by area, not radius + change max size</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="fu">scale_size_area</span>(<span class="at">labels =</span> comma, <span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb11-7"><a href="#cb11-7"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb11-8"><a href="#cb11-8"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb11-9"><a href="#cb11-9"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb11-10"><a href="#cb11-10"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="step-6-repeat-steps-4-5-as-needed-15" class="slide level2">
+<h2>Step 6: Repeat steps 4-5 as needed (1/5)</h2>
+<p>Adding color can be helpful. Let’s add color based on urbanicity.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># add in color based on urbanicity</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll,</span>
+<span id="cb12-3"><a href="#cb12-3"></a>                        <span class="at">color =</span> urbanicity)) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">scale_size_area</span>(<span class="at">labels =</span> comma, <span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb12-8"><a href="#cb12-8"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb12-10"><a href="#cb12-10"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="step-6-repeat-steps-4-5-as-needed-25" class="slide level2">
+<h2>Step 6: Repeat steps 4-5 as needed (2/5)</h2>
+<p>That doesn’t look great. Let’s clean up the data a little more to reduce 11 urbanicity levels to four, then tidy up the legend label.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># clean up the unicorn vomit</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>mn_ed_clean <span class="ot">&lt;-</span> mn_ed_clean <span class="sc">|&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">mutate</span>(<span class="at">urbanicity =</span> <span class="fu">fct_collapse</span>(<span class="fu">as.factor</span>(urbanicity),</span>
+<span id="cb13-4"><a href="#cb13-4"></a>                                   <span class="at">City =</span> <span class="fu">c</span>(<span class="st">"11-City: Large"</span>, </span>
+<span id="cb13-5"><a href="#cb13-5"></a>                                            <span class="st">"12-City: Mid-size"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>                                            <span class="st">"13-City: Small"</span>),</span>
+<span id="cb13-7"><a href="#cb13-7"></a>                                   <span class="at">Suburb =</span> <span class="fu">c</span>(<span class="st">"21-Suburb: Large"</span>,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>                                              <span class="st">"22-Suburb: Mid-size"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>                                             <span class="st">"23-Suburb: Small"</span>),</span>
+<span id="cb13-10"><a href="#cb13-10"></a>                                   <span class="at">Town =</span> <span class="fu">c</span>(<span class="st">"31-Town: Fringe"</span>,</span>
+<span id="cb13-11"><a href="#cb13-11"></a>                                            <span class="st">"32-Town: Distant"</span>,</span>
+<span id="cb13-12"><a href="#cb13-12"></a>                                            <span class="st">"33-Town: Remote"</span>),</span>
+<span id="cb13-13"><a href="#cb13-13"></a>                                   <span class="at">Rural =</span> <span class="fu">c</span>(<span class="st">"41-Rural: Fringe"</span>,</span>
+<span id="cb13-14"><a href="#cb13-14"></a>                                             <span class="st">"42-Rural: Distant"</span>,</span>
+<span id="cb13-15"><a href="#cb13-15"></a>                                             <span class="st">"43-Rural: Remote"</span>)))</span>
+<span id="cb13-16"><a href="#cb13-16"></a></span>
+<span id="cb13-17"><a href="#cb13-17"></a><span class="co"># better colors and tidy legend label</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll,</span>
+<span id="cb13-19"><a href="#cb13-19"></a>                        <span class="at">color =</span> urbanicity)) <span class="sc">+</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb13-21"><a href="#cb13-21"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb13-22"><a href="#cb13-22"></a>  <span class="fu">scale_size_area</span>(<span class="at">labels =</span> comma, <span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb13-23"><a href="#cb13-23"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb13-24"><a href="#cb13-24"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb13-25"><a href="#cb13-25"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb13-26"><a href="#cb13-26"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb13-27"><a href="#cb13-27"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb13-28"><a href="#cb13-28"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<section id="step-6-repeat-steps-4-5-as-needed-35" class="slide level2">
+<h2>Step 6: Repeat steps 4-5 as needed (3/5)</h2>
+<p>We can and should adjust the colors used. R recognizes some pretty funky color names, which can be found in this helpful cheat sheet.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># adjust colors manually</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll,</span>
+<span id="cb14-3"><a href="#cb14-3"></a>                        <span class="at">color =</span> urbanicity)) <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb14-5"><a href="#cb14-5"></a>    <span class="co"># create manual color palette</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a>  <span class="co"># color names pulled from a pdf y'all should bookmark</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a>  <span class="co"># http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"tomato3"</span>, <span class="st">"steelblue2"</span>,</span>
+<span id="cb14-9"><a href="#cb14-9"></a>                                <span class="st">"seagreen3"</span>, <span class="st">"orchid1"</span>)) <span class="sc">+</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a>  <span class="fu">scale_size_area</span>(<span class="at">labels =</span> comma, <span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb14-12"><a href="#cb14-12"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb14-13"><a href="#cb14-13"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb14-14"><a href="#cb14-14"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb14-15"><a href="#cb14-15"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="step-6-repeat-steps-4-5-as-needed-45" class="slide level2">
+<h2>Step 6: Repeat steps 4-5 as needed (4/5)</h2>
+<p>We should strive to make our analyses as accessible as possible. The viridis package includes some color palettes that are friendly for folks with color blindness, which affects 5-10 percent of the US population.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># use colors better for visual impairments</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="co"># adjust colors manually</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll,</span>
+<span id="cb15-6"><a href="#cb15-6"></a>                        <span class="at">color =</span> urbanicity)) <span class="sc">+</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb15-8"><a href="#cb15-8"></a>  <span class="co"># use a colorblind-friendly palette</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a>  <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb15-11"><a href="#cb15-11"></a>  <span class="fu">scale_size_area</span>(<span class="at">labels =</span> comma, <span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb15-12"><a href="#cb15-12"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb15-13"><a href="#cb15-13"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb15-14"><a href="#cb15-14"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb15-15"><a href="#cb15-15"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb15-16"><a href="#cb15-16"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="step-6-repeat-steps-4-5-as-needed-55" class="slide level2">
+<h2>Step 6: Repeat steps 4-5 as needed (5/5)</h2>
+<p>Let’s adjust the range of colors used to exclude that hard-to-see yellow.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># that yellow is hard to see - let's adjust the range</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll,</span>
+<span id="cb16-3"><a href="#cb16-3"></a>                        <span class="at">color =</span> urbanicity)) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb16-5"><a href="#cb16-5"></a>  <span class="co"># adjust color range</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>  <span class="fu">scale_color_viridis_d</span>(<span class="at">end =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>  <span class="fu">scale_size_area</span>(<span class="at">labels =</span> comma, <span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb16-9"><a href="#cb16-9"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb16-10"><a href="#cb16-10"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb16-11"><a href="#cb16-11"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb16-12"><a href="#cb16-12"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb16-13"><a href="#cb16-13"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb16-14"><a href="#cb16-14"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="step-7-replace-a-layer-of-data" class="slide level2">
+<h2>Step 7: Replace a layer of data</h2>
+<p>Sometimes color isn’t the answer - let’s try facets instead.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># use facets instead of color</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">ggplot</span>(mn_ed_clean, <span class="fu">aes</span>(<span class="at">x =</span> pov_pct, <span class="at">y =</span> state_rev_pp, <span class="at">size =</span> enroll,</span>
+<span id="cb17-3"><a href="#cb17-3"></a>                        <span class="at">color =</span> urbanicity)) <span class="sc">+</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="co"># add facet by urbanicity</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>urbanicity) <span class="sc">+</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a>  <span class="fu">scale_size_area</span>(<span class="at">labels =</span> comma, <span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> </span>
+<span id="cb17-9"><a href="#cb17-9"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Student Poverty Rate"</span>, <span class="at">y =</span> <span class="st">"State Per-Pupil Revenue"</span>,</span>
+<span id="cb17-10"><a href="#cb17-10"></a>       <span class="at">title =</span> <span class="st">"State Per-Pupil Revenue by Student Povert Rate in Minnesota School Districts"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11"></a>       <span class="at">caption =</span> <span class="st">"Source: Edbuild Data, 2019"</span>,</span>
+<span id="cb17-12"><a href="#cb17-12"></a>       <span class="co"># add nice label for size element</span></span>
+<span id="cb17-13"><a href="#cb17-13"></a>  <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb17-14"><a href="#cb17-14"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="using-histograms-to-compare-state-and-local-revenue" class="title-slide slide level1 center">
+<h1>Using histograms to compare state and local revenue</h1>
+
+</section>
+<section id="use-edbuildr-data-to-create-state-summaries" class="slide level2">
+<h2>Use Edbuildr data to create state summaries</h2>
+</section>
+<section id="create-histograms" class="slide level2">
+<h2>Create histograms</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+</div>
+<div class="cell-output-display">
+<p><img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-19-2.png" width="960"></p>
+</div>
+<div class="cell-output-display">
+<p><img data-src="week_02_ggplot_slides_files/figure-revealjs/unnamed-chunk-19-3.png" width="960"></p>
+</div>
+</div>
+</section></section>
 <section id="homework-assignment" class="title-slide slide level1 center">
 <h1>Homework assignment</h1>
 
