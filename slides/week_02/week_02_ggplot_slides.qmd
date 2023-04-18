@@ -113,7 +113,6 @@ mn_ed_data <- dist_fy19_raw |>
 
 ```
 
-# Break 
 
 # Visual exploratory analysis 
 
@@ -476,15 +475,25 @@ state_summary <- dist_fy19_raw |>
 
 ```
 
-## Create histograms 
+## Create histograms (1/3)
 ```{r}
 # histogram of median property value
 ggplot(data = state_summary) +
   geom_histogram(mapping = aes(x = mpv_med), binwidth = 40000)
 
+```
+
+## Create histograms (2/3)
+```{r}
 # histogram of median household income
 ggplot(data = state_summary) +
   geom_histogram(mapping = aes(x = mhi_med), binwidth = 3000)
+
+
+```
+
+## Create histograms (3/3)
+```{r}
 
 # histogram of state + local pp rev
 ggplot(data = state_summary) +
