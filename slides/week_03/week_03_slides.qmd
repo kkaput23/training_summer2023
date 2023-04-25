@@ -13,7 +13,7 @@ execute:
 
 ## Solving a common problem with the homework
 
-# Reintroducations and Icebreaker
+# Reintroductions and Icebreaker
 
 ## Icebreaker
 
@@ -58,24 +58,49 @@ Our working framework for assessing state finance policies considers four princi
 
 ## How are we defining these four policies?
 
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Principle      | Key Question                                                                                                                                                                 | Detail                                                                                                                                                                                                                                                                                                                                              |
-|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
++================+==============================================================================================================================================================================+=====================================================================================================================================================================================================================================================================================================================================================+
 | Adequacy       | Is there enough money in the system? How do we know?                                                                                                                         | An adequate school finance system provides sufficient funding through the state's formula to support a rigorous, high-quality education for all students.                                                                                                                                                                                           |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Equity         | Is funding distributed fairly across communities? Is funding distributed through mechanisms that target more funding to greater student needs?                               | An equitable school finance system targets funding to districts based on the educational needs of students, resulting in comparable funding in districts with comparable student populations.                                                                                                                                                       |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Responsibility | Do local leaders have the responsibility for making the best spending decisions to meet student needs? Are state leaders able to make needed adjustments with relative ease? | A state school finance system ensures that every district has the resources required to meet the needs of every student, but the responsibility for determining how to spend resources to meet those needs rests with district (and school) leaders, with accountability measures and guardrails to support success and protect equity.             |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Transparency   | Are formulas only as complex as they need to be? Does reporting of revenue and expenditures create a feedback loop between student needs and state funding?                  | If adequacy and equity criteria are met, then revenues should reflect student populations and needs. If the responsibility criterion is met, then expenditures should also track student need. Transparency ensures that reporting on both sides supports accountability at both the state and local levels and clarity for community stakeholders. |
++----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## There are 3 major types of funding formulas currently used by states
 
-| Category       | Definition                                                                                                                                                                                                                                                                                                                                                   |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Category**   | **Definition**                                                                                                                                                                                                                                                                                                                                               |
++================+==============================================================================================================================================================================================================================================================================================================================================================+
 | Student-Based  | School districts receive funding based on the number of students enrolled or in attendance. In many cases, districts may additionally receive funding weights or supplement based on anticipated student learning needs, with extra funds tied to characteristics of enrolled students, such as low income, disability, and/or status as an English learner. |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Resource-Based | School districts receive funding based on the anticipated cost of resources and inputs, such as staff salaries and instructional materials.                                                                                                                                                                                                                  |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Program-Based  | This system allocates dollars to school districts based on the cost of educational programs within those districts.                                                                                                                                                                                                                                          |
++----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Every funding formula has its flaws, but student-based formulas are best-aligned in all four principles
 
-NEED TO ADD IN THE TABLE THAT IS ON SLIDE 11 of the DECK FROM LAST SUMMER
++----------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| **Principle**  | **Student-Based**                                                                        | **Resource-Based**                                                                        | **Program-Based**                                                                    |
++================+==========================================================================================+===========================================================================================+======================================================================================+
+| Adequacy       | Straightforward mechanisms to adjust funding to match student needs                      | High potential to ensure funding matches costs                                            | Lower potential to ensure funding matches costs or needs                             |
+|                |                                                                                          |                                                                                           |                                                                                      |
+|                |                                                                                          | Depends on costs mapping to needs                                                         | Programs have to map both to costs to deliver and to needs                           |
++----------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| Equity         | Highest potential to target funding to students in need of additional resources/supports | Lower potential to target funding to students in need of additional resources/supports    | Lowest potential to target funding to need at the student level                      |
++----------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| Responsibility | Most opportunity for flexibility in spending decisions                                   | Flexibility can be hampered by cost assumptions or spending limitations                   | Least flexible for local decision-making                                             |
+|                |                                                                                          |                                                                                           |                                                                                      |
+|                | Clearest through line for accountability                                                 |                                                                                           |                                                                                      |
++----------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
+| Transparency   | Requires clear reporting structures/requirements                                         | Often intuitive from a financial planning POV, but can be disconnected from student needs | Often the simplest to understand                                                     |
+|                |                                                                                          |                                                                                           |                                                                                      |
+|                | Clearest connection to student needs                                                     |                                                                                           | Revenues and expenditures likely to track, but potentially not with need or outcomes |
++----------------+------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+
 
 # Good, Better, Best -- Common Features of Student-Based Funding Formulas
 
@@ -101,11 +126,127 @@ The base amount should reflect the cost of educating a single student and should
 
 ## The type of student characteristics that receive weights and the size of those weights vary by state
 
-NEED TO ADD IN A TABLE FROM SLIDE 16 FROM LAST YEAR'S CLASS
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Student Characteristic         | Recommended Policy Considerations                                                                                                                                              |
++================================+================================================================================================================================================================================+
+| Economic Disadvantage          | -   Base eligibility on direct counts of students enrolled in existing programs (TANF, SNAP, Medicaid, FRL) and designated as homeless, in foster care, or with refugee status |
+|                                |                                                                                                                                                                                |
+|                                | -   Increase funding based on concentrations of economic disadvantage, perhaps with a starting point cutoff (e.g. through census data)                                         |
+|                                |                                                                                                                                                                                |
+|                                | -   Add option for districts to certify eligibility through a home survey or certifying based on actual household income data                                                  |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| English Language Learners      | -   Include a weight for every ELL                                                                                                                                             |
+|                                |                                                                                                                                                                                |
+|                                | -   Tier funding based on English proficiency, newcomer status, and potentially age                                                                                            |
+|                                |                                                                                                                                                                                |
+|                                | -   Consider diseconomies of scale in districts with low enrollment among ELL and/or lower prevalence home languages                                                           |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Special Education              | -   Tier funding based on student diagnoses/services                                                                                                                           |
+|                                |                                                                                                                                                                                |
+|                                | -   Maintain a high cost fund to support low incidence needs that are particularly high cost                                                                                   |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Grade Level                    | -   Fully fund pre-K and full-day kindergarten in the formula                                                                                                                  |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Gifted and Talented            | -   Funding based on "census" assumption (assume a percentage of the student population is gifted and fund that percentage)                                                    |
+|                                |                                                                                                                                                                                |
+|                                | -   Fold it the funding into the base per-pupil amount                                                                                                                         |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Career and Technical Education | -   Many states have a weight or programmatic funding stream to incentivize participation and cover equipment and partnership costs for specialized CTE                        |
++--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Some state formulas adjust for district characteristics that can create differences in costs
+
+Two common types of district adjustments are:
+
+-   Adjustments for small enrollment/sparsely populated districts designed to compensate for diseconomies of scale or disadvantage linked to sparseness or geographic remoteness
+-   Adjustments for Cost of Living differences within states
+
++------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| District Characteristic      | Recommended Policy Considerations                                                                                                                                                                                                |
++==============================+==================================================================================================================================================================================================================================+
+| Sparsity or scale adjustment | -   Create a sliding scale weight for each student enrolled in a sparse district that is higher where student population density is lower and phases out at greater density                                                      |
+|                              |                                                                                                                                                                                                                                  |
+|                              | -   Differentiating through two weights \-- one sliding scale sparsity weight and one flat rate for enrollment in isolated districts                                                                                             |
+|                              |                                                                                                                                                                                                                                  |
+|                              | -   Customizing the policy based on the state geography and context                                                                                                                                                              |
++------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Cost of Living               | -   Avoid within-state cost of living adjustments because higher cost communities tend to also be higher wealth, which means directing more funding through a cost of living weight can undermine other equity-based adjustments |
++------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## State overview: Funding for student and district characteristics
+
+ADD IN A TABLE THAT HAS THE CHARACTERISTICS FOR THE STATES THAT ARE IN THE COHORT
+
+## How are student or district characteristics considered in your state's funding formula?
+
+-   Are there any categories of student or district your state does not have weights or funding streams for that you wish you did?
+-   Would you characterize funding allocated for low-income students, English language learners, and/or students with disabilities as adequate and equitably distributed? Why or why not?
+
+## Addressing state/local revenue share is essential to protecting all the pro-equity elements of a funding formula
+
+Nearly all states require local districts to contribute local revenues to fund at least a portion of their formula entitlement-- often referred to as the local share
+
+Many states also limit the extent to which local districts can raise additional local funds.
+
+A well-constructed policy will achieve two goals:
+
+-   Requires a proportional contribution from local districts that aligns with each district's ability to generate funds based on the local tax base
+-   Prevents districts from generating substantial funding above their expected contribution that creates inequity among district resources for education, and results in inefficient state funding
+
+## Characteristics of a good local share policy
+
+-   Set a uniform required local share tax rate statewide, the amount raised locally at that rate determines the local share of the formula, with state funds filling in any gaps.
+-   If the local revenue raised exceeds the formula expectations (for example, through voter approval), redistributes some or all excess local revenues.
+-   If districts are permitted to levy additional local taxes, allocate "equalizing" state dollars to less property-wealthy districts.
+
+## State overview: local revenue
+
+ADD IN A TABLE WITH THE STATES THAT ARE IN THE COHORT
+
+## How do our example states treat local taxes in their state funding systems?
+
+-   How are you thinking about the role of local funds in your systems? What's your ideal?
+-   What practical or political challenges do you anticipate around potentially changing the role of local funds?
+
+## States often have different funding rules for public schools of choice (e.g. charters & magnets) 
+
+Funding policies for schools of choice a lot from state to state, and issues like facilities, transportation, and access to local funds can be highly contentious. Often one key factor is state authorizing laws -- is the school its own LEA, is it authorized by a traditional district, or some other structure (multidistrict regional schools, etc.)?
+
+One advantage of a student-based weighted funding system for schools of choice is that they can usually be funded through the same student-based mechanisms. But, schools of choice don't always have direct access to local revenue, and district/community-based measures like sparsity may not apply.
+
++------------------------+--------------------------------------------------------------------------------------+
+| Topic                  | Recommended Policy Considerations                                                    |
++========================+======================================================================================+
+| Local/State Revenue    | -   Requiring pass-through of local and state revenue from districts to local        |
+|                        |     schools of choice that are not district-authorized creates an antagonistic       |
+|                        |     relationship between those schools and the home district, and can create         |
+|                        |     a misleading perception of district funding.                                     |
+|                        |                                                                                      |
+|                        | -   Where schools are state authorized or independently authorized, full             |
+|                        |     state funding is likely the most transparent funding structure.                  |
++------------------------+--------------------------------------------------------------------------------------+
+| Student-Based Funding  | -   Wherever applicable, schools of choice should have access to the same            |
+|                        |     student-based funding mechanisms as traditional districts.                       |
++------------------------+--------------------------------------------------------------------------------------+
+| Other Considerations   | -   Transportation and facilities funding are two common pain-points for             |
+|                        |     schools of choice. If it\'s not feasible to apply a version of district rules, a |
+|                        |     programmatic fund might be a solution.                                           |
++------------------------+--------------------------------------------------------------------------------------+
+
+## State overview: charter school funding 
+
+ADD IN TABLE WTIH THE CHARTER SCHOOL FUNDING FOR THE STATES IN THE COHORT 
+
+## How are schools of choice funded differently in your states? 
+
+- Is funding for schools of choice a major concern for your state or your organizations? 
+- How would you like to see schools of choice funded differently, if at all? 
 
 # Break
 
 # Advocacy Considerations
+
+
 
 # Group Discussions
 
