@@ -208,47 +208,52 @@ ADD IN A TABLE WITH THE STATES THAT ARE IN THE COHORT
 -   How are you thinking about the role of local funds in your systems? What's your ideal?
 -   What practical or political challenges do you anticipate around potentially changing the role of local funds?
 
-## States often have different funding rules for public schools of choice (e.g. charters & magnets) 
+## States often have different funding rules for public schools of choice (e.g. charters & magnets)
 
 Funding policies for schools of choice a lot from state to state, and issues like facilities, transportation, and access to local funds can be highly contentious. Often one key factor is state authorizing laws -- is the school its own LEA, is it authorized by a traditional district, or some other structure (multidistrict regional schools, etc.)?
 
 One advantage of a student-based weighted funding system for schools of choice is that they can usually be funded through the same student-based mechanisms. But, schools of choice don't always have direct access to local revenue, and district/community-based measures like sparsity may not apply.
 
-+------------------------+--------------------------------------------------------------------------------------+
-| Topic                  | Recommended Policy Considerations                                                    |
-+========================+======================================================================================+
-| Local/State Revenue    | -   Requiring pass-through of local and state revenue from districts to local        |
-|                        |     schools of choice that are not district-authorized creates an antagonistic       |
-|                        |     relationship between those schools and the home district, and can create         |
-|                        |     a misleading perception of district funding.                                     |
-|                        |                                                                                      |
-|                        | -   Where schools are state authorized or independently authorized, full             |
-|                        |     state funding is likely the most transparent funding structure.                  |
-+------------------------+--------------------------------------------------------------------------------------+
-| Student-Based Funding  | -   Wherever applicable, schools of choice should have access to the same            |
-|                        |     student-based funding mechanisms as traditional districts.                       |
-+------------------------+--------------------------------------------------------------------------------------+
-| Other Considerations   | -   Transportation and facilities funding are two common pain-points for             |
-|                        |     schools of choice. If it\'s not feasible to apply a version of district rules, a |
-|                        |     programmatic fund might be a solution.                                           |
-+------------------------+--------------------------------------------------------------------------------------+
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Topic                 | Recommended Policy Considerations                                                                                                                                                                                                                                              |
++=======================+================================================================================================================================================================================================================================================================================+
+| Local/State Revenue   | -   Requiring pass-through of local and state revenue from districts to local schools of choice that are not district-authorized creates an antagonistic relationship between those schools and the home district, and can create a misleading perception of district funding. |
+|                       |                                                                                                                                                                                                                                                                                |
+|                       | -   Where schools are state authorized or independently authorized, full state funding is likely the most transparent funding structure.                                                                                                                                       |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Student-Based Funding | -   Wherever applicable, schools of choice should have access to the same student-based funding mechanisms as traditional districts.                                                                                                                                           |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Other Considerations  | -   Transportation and facilities funding are two common pain-points for schools of choice. If it's not feasible to apply a version of district rules, a programmatic fund might be a solution.                                                                                |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-## State overview: charter school funding 
+## State overview: charter school funding
 
-ADD IN TABLE WTIH THE CHARTER SCHOOL FUNDING FOR THE STATES IN THE COHORT 
+ADD IN TABLE WTIH THE CHARTER SCHOOL FUNDING FOR THE STATES IN THE COHORT
 
-## How are schools of choice funded differently in your states? 
+## How are schools of choice funded differently in your states?
 
-- Is funding for schools of choice a major concern for your state or your organizations? 
-- How would you like to see schools of choice funded differently, if at all? 
+-   Is funding for schools of choice a major concern for your state or your organizations?
+-   How would you like to see schools of choice funded differently, if at all?
 
 # Break
 
 # Advocacy Considerations
 
+Understanding context is essential. Advocates should consider the following questions:
 
+-   **What is driving the will to change?** The circumstances may dictate what's possible or what's probable -- a funding reform effort driven by a court mandate might look different than one that's trying to stave off a lawsuit or one that's driven by principle or availability of revenue to spend. The driver of change can affect the political will, timing and urgency, and magnitude of possible change.
+-   **What are the political dynamics around school funding?** Every policymaker represents school districts, which can sometimes muddy the political coalitions that more typically fall along party lines. In addition, strongly held values (such as "local control") can make some policy recommendations non-starters.
+-   **What other contextual factors are in play?** Competing major policy initiatives (e.g. federal stimulus), state revenue conditions, and other factors can significantly affect what's possible.
 
-# Group Discussions
+## Bringing people along through complex policy considerations is critical
+
+Policy change doesn't happen in a spreadsheet. It's made by people. Ask yourself:
+
+-   **What is the base of understanding and how much groundwork needs to be done to educate policymakers**? Policymakers grapple with multiple complex issues, and often there are few members with deep understanding and expertise on school funding systems. Advocates will likely benefit from building the bench of knowledgeable policymakers and can have significant impact on how policymakers think about school finance.
+
+-   
+
+    # Group Discussions
 
 # Report Out and Closing
 
