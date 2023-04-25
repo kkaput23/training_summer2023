@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -34,8 +48,6 @@
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -322,7 +334,7 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-light nav-sidebar">
   <div class="reveal">
     <div class="slides">
 
@@ -399,7 +411,7 @@
 </section>
 <section id="how-are-we-defining-these-four-policies" class="slide level2">
 <h2>How are we defining these four policies?</h2>
-<table style="width:100%;">
+<table class="table">
 <colgroup>
 <col style="width: 3%">
 <col style="width: 32%">
@@ -438,7 +450,7 @@
 </section>
 <section id="there-are-3-major-types-of-funding-formulas-currently-used-by-states" class="slide level2">
 <h2>There are 3 major types of funding formulas currently used by states</h2>
-<table>
+<table class="table">
 <colgroup>
 <col style="width: 4%">
 <col style="width: 95%">
@@ -467,7 +479,7 @@
 </section>
 <section id="every-funding-formula-has-its-flaws-but-student-based-formulas-are-best-aligned-in-all-four-principles" class="slide level2">
 <h2>Every funding formula has its flaws, but student-based formulas are best-aligned in all four principles</h2>
-<table style="width:99%;">
+<table class="table">
 <colgroup>
 <col style="width: 5%">
 <col style="width: 31%">
@@ -543,7 +555,7 @@
 </section>
 <section id="the-type-of-student-characteristics-that-receive-weights-and-the-size-of-those-weights-vary-by-state" class="slide level2">
 <h2>The type of student characteristics that receive weights and the size of those weights vary by state</h2>
-<table>
+<table class="table">
 <colgroup>
 <col style="width: 15%">
 <col style="width: 84%">
@@ -607,7 +619,7 @@
 <li>Adjustments for small enrollment/sparsely populated districts designed to compensate for diseconomies of scale or disadvantage linked to sparseness or geographic remoteness</li>
 <li>Adjustments for Cost of Living differences within states</li>
 </ul>
-<table>
+<table class="table">
 <colgroup>
 <col style="width: 12%">
 <col style="width: 87%">
@@ -680,10 +692,10 @@
 <h2>States often have different funding rules for public schools of choice (e.g.&nbsp;charters &amp; magnets)</h2>
 <p>Funding policies for schools of choice a lot from state to state, and issues like facilities, transportation, and access to local funds can be highly contentious. Often one key factor is state authorizing laws – is the school its own LEA, is it authorized by a traditional district, or some other structure (multidistrict regional schools, etc.)?</p>
 <p>One advantage of a student-based weighted funding system for schools of choice is that they can usually be funded through the same student-based mechanisms. But, schools of choice don’t always have direct access to local revenue, and district/community-based measures like sparsity may not apply.</p>
-<table>
+<table class="table">
 <colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
+<col style="width: 8%">
+<col style="width: 91%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -708,7 +720,7 @@
 <tr class="odd">
 <td>Other Considerations</td>
 <td><ul>
-<li>Transportation and facilities funding are two common pain-points for schools of choice. If it's not feasible to apply a version of district rules, a programmatic fund might be a solution.</li>
+<li>Transportation and facilities funding are two common pain-points for schools of choice. If it’s not feasible to apply a version of district rules, a programmatic fund might be a solution.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -730,23 +742,58 @@
 
 </section>
 
+<section>
 <section id="advocacy-considerations" class="title-slide slide level1 center">
 <h1>Advocacy Considerations</h1>
+<p>Understanding context is essential. Advocates should consider the following questions:</p>
+<ul>
+<li><strong>What is driving the will to change?</strong> The circumstances may dictate what’s possible or what’s probable – a funding reform effort driven by a court mandate might look different than one that’s trying to stave off a lawsuit or one that’s driven by principle or availability of revenue to spend. The driver of change can affect the political will, timing and urgency, and magnitude of possible change.</li>
+<li><strong>What are the political dynamics around school funding?</strong> Every policymaker represents school districts, which can sometimes muddy the political coalitions that more typically fall along party lines. In addition, strongly held values (such as “local control”) can make some policy recommendations non-starters.</li>
+<li><strong>What other contextual factors are in play?</strong> Competing major policy initiatives (e.g.&nbsp;federal stimulus), state revenue conditions, and other factors can significantly affect what’s possible.</li>
+</ul>
+</section>
+<section id="bringing-people-along-through-complex-policy-considerations-is-critical" class="slide level2">
+<h2>Bringing people along through complex policy considerations is critical</h2>
+<p>Policy change doesn’t happen in a spreadsheet. It’s made by people. Ask yourself:</p>
+<ul>
+<li><p><strong>What is the base of understanding and how much groundwork needs to be done to educate policymakers</strong>? Policymakers grapple with multiple complex issues, and often there are few members with deep understanding and expertise on school funding systems. Advocates will likely benefit from building the bench of knowledgeable policymakers and can have significant impact on how policymakers think about school finance.</p></li>
+<li><p><strong>Where do stakeholder groups line up on your priority issues? Who are your partners in this work?</strong> Coalitions can be important in any policy advocacy work, but the broad impact of school funding, the political capital required to make hard tradeoffs, and the possibility of high costs make cultivating partners particularly critical. Consider including:</p>
+<ul>
+<li><p>Stakeholders likely to be most affected by change</p></li>
+<li><p>Groups who are trusted by various policymakers</p></li>
+<li><p>Cross-sector partnerships</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="prioritizing-realistically-and-considering-transition-strategies-can-improve-political-feasibility" class="slide level2">
+<h2>Prioritizing realistically and considering transition strategies can improve political feasibility</h2>
+<ul>
+<li><strong>What changes are the highest priority?</strong> There will be tradeoffs.</li>
+<li><strong>What strategies can be employed to transition systems?</strong> Phasing in change, creating temporary hold harmless provisions, and enacting comprehensive formula changes simultaneously with funding increases can all help ease changes that redistribute the allocation of school dollars.</li>
+<li><strong>What venue(s) should you prioritize?</strong> In some states, influencing legislative action may be the best course of action. Elsewhere, a legal battle may be needed to catalyze school finance reforms.</li>
+</ul>
+</section></section>
+<section>
+<section id="group-discussion" class="title-slide slide level1 center">
+<h1>Group Discussion</h1>
 
 </section>
-
-<section id="group-discussions" class="title-slide slide level1 center">
-<h1>Group Discussions</h1>
-
-</section>
-
-<section id="report-out-and-closing" class="title-slide slide level1 center">
-<h1>Report Out and Closing</h1>
-
-</section>
-
+<section id="small-group-discuss" class="slide level2">
+<h2>Small group discuss</h2>
+<p>Next week you’ll begin work to translate your state’s formula into R Code. This week, we want to jump start conversations within your state about what you may want to change and how to eventually present those potential changes in your simulator (part II of the course):</p>
+<ul>
+<li>Are within state teams (or other key partners) aligned on the highest priority changes for your state’s formula?</li>
+<li>Where would you expect to have alignment on principle (among policymakers and/or broader stakeholders)? Where might consensus be more challenging?</li>
+<li>How would you assess the “readiness” of your policy environment?
+<ul>
+<li>Is a more comprehensive education campaign needed or would you want to be more targeted?</li>
+</ul></li>
+<li>What are the biggest risks or barriers to reform, and how can you mitigate them?</li>
+</ul>
+</section></section>
 <section id="homework" class="title-slide slide level1 center">
 <h1>Homework</h1>
+<p>Submit a Quarto memo on the key factors that shape your state’s school funding landscape.</p>
 
 
 <img src="../../images/primary_full-color.png" class="slide-logo r-stretch"><div class="footer footer-default">
@@ -763,7 +810,6 @@
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -785,8 +831,7 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -957,7 +1002,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
