@@ -1,0 +1,85 @@
+---
+title: "Deep-dive on education finance and weighted student funding"
+date: "June 20, 2023"
+format: 
+  revealjs:
+    chalkboard: true
+execute:
+  freeze: auto
+  echo: false
+---
+
+# Homework Review
+
+## Solving a common problem with the homework
+
+# Reintroducations and Icebreaker 
+
+## Icebreaker 
+
+What is one interesting or weird thing you have learned about your state's funding formula recently? 
+
+What is one burning question or topic you hope we’ll delve into today?
+
+## Reintroducing Ourselves 
+
+- Bonnie O'Keefe, Senior Associate Partner and Instructor 
+- Jenn Schiess, Senior Partner and Instructor 
+
+# Today's Objectives 
+
+## Objectives 
+
+Our primary objective today is to go deeper on the policy dimensions of state funding formula structures. 
+
+- Discuss perspectives on what “good” looks like in principle and within your states of interest.
+- Think about key considerations for school funding advocacy at the state level.
+- Discuss how these policy dimensions might inform your policy goals and shape analysis and simulator design.
+
+# Key Principles for Assessing School Funding Policies 
+
+## Review: How can we assess state school funding policies? (1/2)
+
+School finance reform is often prompted by court action (or the potential for court action).
+
+School finance litigation has historically focused on one or both of two standards: 
+
+- Adequacy: Is there enough funding in the system to enable schools to meet the state's educational mandate? 
+- Equity: Are resources distributed fairly across communities? 
+
+## Review: How can we assess state school funding policies? (2/2)
+
+Our working framework for assessing state finance policies considers four principles: 
+
+- Adequacy 
+- Equity 
+- Responsibility 
+- Transparency 
+
+## How are we defining these four policies? (1/2)
+
+Adequacy: Is there enough money in the system? How do we know? 
+
+- An adequate school finance system provides sufficient funding through the state’s formula to support a rigorous, high-quality education for all students. 
+
+Equity: Is funding distributed fairly across communities? Is funding distributed through mechanisms that target more funding to greater student needs?
+
+- An equitable school finance system targets funding to districts based on the educational needs of students, resulting in comparable funding in districts with comparable student populations.
+
+## How are we defining these four policies? (1/2)
+
+Responsibility: Do local leaders have the responsibility for making the best spending decisions to meet student needs?
+
+# Good, Better, Best -- Common Features of Student-Based Funding Formulas 
+
+# Break 
+
+# Advocacy Considerations 
+
+# Group Discussions
+
+# Report Out and Closing
+
+# Homework 
+
+
