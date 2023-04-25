@@ -1,6 +1,6 @@
 ---
 title: "Week 02"
-subtitle: "Introduction to School Finance Equity"
+subtitle: "Basic data analysis and visualization in R"
 description: "June 13"
 author: ""
 date: ""
