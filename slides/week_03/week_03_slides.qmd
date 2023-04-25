@@ -13,111 +13,102 @@ execute:
 
 ## Solving a common problem with the homework
 
-# Reintroducations and Icebreaker 
+# Reintroducations and Icebreaker
 
-## Icebreaker 
+## Icebreaker
 
-What is one interesting or weird thing you have learned about your state's funding formula recently? 
+What is one interesting or weird thing you have learned about your state's funding formula recently?
 
-What is one burning question or topic you hope we’ll delve into today?
+What is one burning question or topic you hope we'll delve into today?
 
-## Reintroducing Ourselves 
+## Reintroducing Ourselves
 
-- Bonnie O'Keefe, Senior Associate Partner and Instructor 
-- Jenn Schiess, Senior Partner and Instructor 
+-   Bonnie O'Keefe, Senior Associate Partner and Instructor
+-   Jenn Schiess, Senior Partner and Instructor
 
-# Today's Objectives 
+# Today's Objectives
 
-## Objectives 
+## Objectives
 
-Our primary objective today is to go deeper on the policy dimensions of state funding formula structures. 
+Our primary objective today is to go deeper on the policy dimensions of state funding formula structures.
 
-- Discuss perspectives on what “good” looks like in principle and within your states of interest.
-- Think about key considerations for school funding advocacy at the state level.
-- Discuss how these policy dimensions might inform your policy goals and shape analysis and simulator design.
+-   Discuss perspectives on what "good" looks like in principle and within your states of interest.
+-   Think about key considerations for school funding advocacy at the state level.
+-   Discuss how these policy dimensions might inform your policy goals and shape analysis and simulator design.
 
-# Key Principles for Assessing School Funding Policies 
+# Key Principles for Assessing School Funding Policies
 
 ## How can we assess state school funding policies? (1/2)
 
 School finance reform is often prompted by court action (or the potential for court action).
 
-School finance litigation has historically focused on one or both of two standards: 
+School finance litigation has historically focused on one or both of two standards:
 
-- Adequacy: Is there enough funding in the system to enable schools to meet the state's educational mandate? 
-- Equity: Are resources distributed fairly across communities? 
+-   Adequacy: Is there enough funding in the system to enable schools to meet the state's educational mandate?
+-   Equity: Are resources distributed fairly across communities?
 
 ## How can we assess state school funding policies? (2/2)
 
-Our working framework for assessing state finance policies considers four principles: 
+Our working framework for assessing state finance policies considers four principles:
 
-- Adequacy 
-- Equity 
-- Responsibility 
-- Transparency 
+-   Adequacy
+-   Equity
+-   Responsibility
+-   Transparency
 
-## How are we defining these four policies? (1/2)
+## How are we defining these four policies?
 
-Adequacy: Is there enough money in the system? How do we know? 
+| Principle      | Key Question                                                                                                                                                                 | Detail                                                                                                                                                                                                                                                                                                                                              |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Adequacy       | Is there enough money in the system? How do we know?                                                                                                                         | An adequate school finance system provides sufficient funding through the state's formula to support a rigorous, high-quality education for all students.                                                                                                                                                                                           |
+| Equity         | Is funding distributed fairly across communities? Is funding distributed through mechanisms that target more funding to greater student needs?                               | An equitable school finance system targets funding to districts based on the educational needs of students, resulting in comparable funding in districts with comparable student populations.                                                                                                                                                       |
+| Responsibility | Do local leaders have the responsibility for making the best spending decisions to meet student needs? Are state leaders able to make needed adjustments with relative ease? | A state school finance system ensures that every district has the resources required to meet the needs of every student, but the responsibility for determining how to spend resources to meet those needs rests with district (and school) leaders, with accountability measures and guardrails to support success and protect equity.             |
+| Transparency   | Are formulas only as complex as they need to be? Does reporting of revenue and expenditures create a feedback loop between student needs and state funding?                  | If adequacy and equity criteria are met, then revenues should reflect student populations and needs. If the responsibility criterion is met, then expenditures should also track student need. Transparency ensures that reporting on both sides supports accountability at both the state and local levels and clarity for community stakeholders. |
 
-- An adequate school finance system provides sufficient funding through the state’s formula to support a rigorous, high-quality education for all students. 
+## There are 3 major types of funding formulas currently used by states
 
-Equity: Is funding distributed fairly across communities? Is funding distributed through mechanisms that target more funding to greater student needs?
+| Category       | Definition                                                                                                                                                                                                                                                                                                                                                   |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Student-Based  | School districts receive funding based on the number of students enrolled or in attendance. In many cases, districts may additionally receive funding weights or supplement based on anticipated student learning needs, with extra funds tied to characteristics of enrolled students, such as low income, disability, and/or status as an English learner. |
+| Resource-Based | School districts receive funding based on the anticipated cost of resources and inputs, such as staff salaries and instructional materials.                                                                                                                                                                                                                  |
+| Program-Based  | This system allocates dollars to school districts based on the cost of educational programs within those districts.                                                                                                                                                                                                                                          |
 
-- An equitable school finance system targets funding to districts based on the educational needs of students, resulting in comparable funding in districts with comparable student populations.
+## Every funding formula has its flaws, but student-based formulas are best-aligned in all four principles
 
-## How are we defining these four policies? (1/2)
+NEED TO ADD IN THE TABLE THAT IS ON SLIDE 11 of the DECK FROM LAST SUMMER
 
-Responsibility: Do local leaders have the responsibility for making the best spending decisions to meet student needs? Are state leaders able to make needed adjustments with relative ease?
-
-- A state school finance system ensures that every district has the resources required to meet the needs of every student, but the responsibility for determining how to spend resources to meet those needs rests with district (and school) leaders, with accountability measures and guardrails to support success and protect equity.
-
-Transparency: Are formulas only as complex as they need to be? Does reporting of revenue and expenditures create a feedback loop between student needs and state funding?
-
-- If adequacy and equity criteria are met, then revenues should reflect student populations and needs. If the responsibility criterion is met, then expenditures should also track student need. Transparency ensures that reporting on both sides supports accountability at both the state and local levels and clarity for community stakeholders.
-
-## There are 3 major types of funding formulas currently used by states 
-
-Student-Based: School districts receive funding based on the number of students enrolled or in attendance. In many cases, districts may additionally receive funding weights or supplement based on anticipated student learning needs, with extra funds tied to characteristics of enrolled students, such as low income, disability, and/or status as an English learner.
-
-Resource-Based: School districts receive funding based on the anticipated cost of resources and inputs, such as staff salaries and instructional materials. 
-
-Program-Based: This system allocates dollars to school districts based on the cost of educational programs within those districts. 
-
-## Every funding formula has its flaws, but student-based formulas are best-aligned in all four principles 
-
-NEED TO ADD IN THE TABLE THAT IS ON SLIDE 11 of the DECK FROM LAST SUMMER 
-
-# Good, Better, Best -- Common Features of Student-Based Funding Formulas 
+# Good, Better, Best -- Common Features of Student-Based Funding Formulas
 
 ## A strong weighted student formula addresses both how funding levels are set and the mix of state and local funds
 
-The primary elements of a weighted student formula typically include: 
+The primary elements of a weighted student formula typically include:
 
-- Base amount: Reflects the cost of educating a single student and should be uniform across the state. 
-- Student adjustments: Additional weights for student groups with extra learning needs. 
+-   Base amount: Reflects the cost of educating a single student and should be uniform across the state.
+-   Student adjustments: Additional weights for student groups with extra learning needs.
 
-Some formulas may also include district-level adjustments to account for community conditions that affect costs, such as sparsity or concentrated poverty. 
+Some formulas may also include district-level adjustments to account for community conditions that affect costs, such as sparsity or concentrated poverty.
 
-## State overview: Formula type and base funding 
+## State overview: Formula type and base funding
 
-THIS WILL NEED TO FILLED IN AS WE KNOW WHICH STATES ARE GOING TO BE IN THE COHORT. WE WILL WANT TO INCLUDE THE STATE, FORMULA TYPE, AND BASE FUNDING. 
+THIS WILL NEED TO FILLED IN AS WE KNOW WHICH STATES ARE GOING TO BE IN THE COHORT. WE WILL WANT TO INCLUDE THE STATE, FORMULA TYPE, AND BASE FUNDING.
 
-## The base amount is the foundational formula element 
+## The base amount is the foundational formula element
 
-The base amount should reflect the cost of educating a single student and should be uniform across the state. 
+The base amount should reflect the cost of educating a single student and should be uniform across the state.
 
-- If your state has a base funding amount, would you characterize it as adequate, inadequate, too generous?
-- How does it factor into funding policy conversations-- is it a “known” figure that features in debate/discussion or more of a “hidden” element?
+-   If your state has a base funding amount, would you characterize it as adequate, inadequate, too generous?
+-   How does it factor into funding policy conversations-- is it a "known" figure that features in debate/discussion or more of a "hidden" element?
 
-# Break 
+## The type of student characteristics that receive weights and the size of those weights vary by state
 
-# Advocacy Considerations 
+NEED TO ADD IN A TABLE FROM SLIDE 16 FROM LAST YEAR'S CLASS
+
+# Break
+
+# Advocacy Considerations
 
 # Group Discussions
 
 # Report Out and Closing
 
-# Homework 
-
-
+# Homework
