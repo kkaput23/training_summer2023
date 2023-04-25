@@ -1,7 +1,7 @@
 ---
 title: "Deep-dive on education finance and weighted student funding"
 date: "June 20, 2023"
-format: 
+format:
   revealjs:
     chalkboard: true
 execute:
@@ -251,10 +251,32 @@ Policy change doesn't happen in a spreadsheet. It's made by people. Ask yourself
 
 -   **What is the base of understanding and how much groundwork needs to be done to educate policymakers**? Policymakers grapple with multiple complex issues, and often there are few members with deep understanding and expertise on school funding systems. Advocates will likely benefit from building the bench of knowledgeable policymakers and can have significant impact on how policymakers think about school finance.
 
--   
+-   **Where do stakeholder groups line up on your priority issues? Who are your partners in this work?** Coalitions can be important in any policy advocacy work, but the broad impact of school funding, the political capital required to make hard tradeoffs, and the possibility of high costs make cultivating partners particularly critical. Consider including:
 
-    # Group Discussions
+    -   Stakeholders likely to be most affected by change
 
-# Report Out and Closing
+    -   Groups who are trusted by various policymakers
+
+    -   Cross-sector partnerships
+
+## Prioritizing realistically and considering transition strategies can improve political feasibility
+
+-   **What changes are the highest priority?** There will be tradeoffs.
+-   **What strategies can be employed to transition systems?** Phasing in change, creating temporary hold harmless provisions, and enacting comprehensive formula changes simultaneously with funding increases can all help ease changes that redistribute the allocation of school dollars.
+-   **What venue(s) should you prioritize?** In some states, influencing legislative action may be the best course of action. Elsewhere, a legal battle may be needed to catalyze school finance reforms.
+
+# Group Discussion
+
+## Small group discuss
+
+Next week you'll begin work to translate your state's formula into R Code. This week, we want to jump start conversations within your state about what you may want to change and how to eventually present those potential changes in your simulator (part II of the course):
+
+-   Are within state teams (or other key partners) aligned on the highest priority changes for your state's formula?
+-   Where would you expect to have alignment on principle (among policymakers and/or broader stakeholders)? Where might consensus be more challenging?
+-   How would you assess the "readiness" of your policy environment?
+    -   Is a more comprehensive education campaign needed or would you want to be more targeted?
+-   What are the biggest risks or barriers to reform, and how can you mitigate them?
 
 # Homework
+
+Submit a Quarto memo on the key factors that shape your state's school funding landscape.
