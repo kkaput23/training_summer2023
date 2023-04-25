@@ -4,7 +4,8 @@
     "items": [
       "/weeks/week_00.html",
       "/weeks/week_01.html",
-      "/weeks/week_02.html"
+      "/weeks/week_02.html",
+      "/weeks/week_03.html"
     ]
   },
   {
@@ -21,6 +22,15 @@
   },
   {
     "listing": "/weeks/week_02.html",
-    "items": []
+    "items": [
+      "/slides/week_02/week_02_ggplot_slides.html",
+      "/slides/week_02/week_02_slides.html"
+    ]
+  },
+  {
+    "listing": "/weeks/week_03.html",
+    "items": [
+      "/slides/week_03/week_03_slides.html"
+    ]
   }
 ]
