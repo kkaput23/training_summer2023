@@ -130,6 +130,14 @@ The **'tidycensus'** R package makes it easy to access, explore, and analyze Cen
 :::
 :::
 
+## To get started, you’ll need to sign up for an API key with the Census Bureau, then install the tidycensus package
+
+
+
 # In-class exercise
+
+## In-class coding example: clean_and_join.R
+
+
 
 # Homework assignment
