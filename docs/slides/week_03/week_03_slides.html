@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -48,6 +34,8 @@
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -334,7 +322,7 @@
     }
   </style>
 </head>
-<body class="quarto-light nav-sidebar">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -411,7 +399,7 @@
 </section>
 <section id="how-are-we-defining-these-four-policies" class="slide level2">
 <h2>How are we defining these four policies?</h2>
-<table class="table">
+<table style="width:100%;">
 <colgroup>
 <col style="width: 3%">
 <col style="width: 32%">
@@ -450,7 +438,7 @@
 </section>
 <section id="there-are-3-major-types-of-funding-formulas-currently-used-by-states" class="slide level2">
 <h2>There are 3 major types of funding formulas currently used by states</h2>
-<table class="table">
+<table>
 <colgroup>
 <col style="width: 4%">
 <col style="width: 95%">
@@ -479,7 +467,7 @@
 </section>
 <section id="every-funding-formula-has-its-flaws-but-student-based-formulas-are-best-aligned-in-all-four-principles" class="slide level2">
 <h2>Every funding formula has its flaws, but student-based formulas are best-aligned in all four principles</h2>
-<table class="table">
+<table style="width:99%;">
 <colgroup>
 <col style="width: 5%">
 <col style="width: 31%">
@@ -555,7 +543,7 @@
 </section>
 <section id="the-type-of-student-characteristics-that-receive-weights-and-the-size-of-those-weights-vary-by-state" class="slide level2">
 <h2>The type of student characteristics that receive weights and the size of those weights vary by state</h2>
-<table class="table">
+<table>
 <colgroup>
 <col style="width: 15%">
 <col style="width: 84%">
@@ -619,7 +607,7 @@
 <li>Adjustments for small enrollment/sparsely populated districts designed to compensate for diseconomies of scale or disadvantage linked to sparseness or geographic remoteness</li>
 <li>Adjustments for Cost of Living differences within states</li>
 </ul>
-<table class="table">
+<table>
 <colgroup>
 <col style="width: 12%">
 <col style="width: 87%">
@@ -692,7 +680,7 @@
 <h2>States often have different funding rules for public schools of choice (e.g.&nbsp;charters &amp; magnets)</h2>
 <p>Funding policies for schools of choice a lot from state to state, and issues like facilities, transportation, and access to local funds can be highly contentious. Often one key factor is state authorizing laws – is the school its own LEA, is it authorized by a traditional district, or some other structure (multidistrict regional schools, etc.)?</p>
 <p>One advantage of a student-based weighted funding system for schools of choice is that they can usually be funded through the same student-based mechanisms. But, schools of choice don’t always have direct access to local revenue, and district/community-based measures like sparsity may not apply.</p>
-<table class="table">
+<table>
 <colgroup>
 <col style="width: 8%">
 <col style="width: 91%">
@@ -810,6 +798,7 @@
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -831,7 +820,8 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1002,7 +992,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
