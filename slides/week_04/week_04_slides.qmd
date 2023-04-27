@@ -39,6 +39,8 @@ Tidy data follows three rules:
 
 ## In-class coding example: How to use **pivot_longer()**
 
+
+
 ## If your data includes data from a single observation spread across multiple rows, use **pivot_wider()**
 
 ![Source: R for Data Science](https://bcheggeseth.github.io/112_fall_2022/images/pivot_wider.png)
