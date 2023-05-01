@@ -38,9 +38,25 @@ Tidy data follows three rules:
 ![Source: R for Data Science](https://epirhandbook.com/en/images/pivoting/pivot_longer_new.png)
 
 ## In-class coding example: How to use **pivot_longer()**
+```{r}
 
+# State total Revenue data ----
+state_total_revenue_all <- app_08_20_data |>
+  select(state, state_revenue_2008, state_revenue_2009, state_revenue_2010, state_revenue_2011, 
+         state_revenue_2012, state_revenue_2013, state_revenue_2014, state_revenue_2015,
+         state_revenue_2016, state_revenue_2017, state_revenue_2018, state_revenue_2019, 
+         state_revenue_2020) |>
+pivot_longer(!state, names_to = "year", values_to = "state_total_revenue") 
 
+state_total_revenue_all$year <- gsub('state_revenue_', '', state_total_revenue_all$year)
 
+state_total_revenue_all <- state_total_revenue_all |>
+  mutate(year = as.numeric(year), 
+         year_2 = year - 1,
+         year = paste0(year_2, "-", year)) |>
+  select(-year_2)
+
+``` 
 ## If your data includes data from a single observation spread across multiple rows, use **pivot_wider()**
 
 ![Source: R for Data Science](https://bcheggeseth.github.io/112_fall_2022/images/pivot_wider.png)
