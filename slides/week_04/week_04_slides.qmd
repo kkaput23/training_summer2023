@@ -47,6 +47,25 @@ Tidy data follows three rules:
 
 ## In-class coding example: How to use **pivot_wider()**
 
+```{r}
+# clean special ed data ---------
+
+sch_sped <- sch_sped_raw |>
+  rename_with("tolower") |>
+  rename(dist_no = district_no,
+         sch_no = school_no,
+         schoolname = school_name,
+         enroll = "2022-23 i&s") |>
+  id_cleanr() |>
+  mutate(option_number = paste0("option", option_number, "_enroll")) |>
+  select(-dist_no, -sch_no)  |>
+  pivot_wider(names_from = option_number,
+              values_from = enroll) |>
+  select(sch_id, schoolname, 
+         option1_enroll, option2_enroll, option3_enroll, option4_enroll, option5_enroll,
+         option6_enroll, option7_enroll, option8_enroll, option9_enroll, option10_enroll) 
+
+``` 
 # Techniques to clean messy data
 
 ## Cleaning data can be challenging, but it's easier if you take a systematic approach to every raw data file
@@ -75,7 +94,45 @@ Tidy data follows three rules:
 
 ## In-class coding example: tennessee_clean.R
 
+```{r}
+# clean adm data ----------
+sch_adm_clean <- sch_adm_raw |>
+  # tidy column names
+  rename_with("tolower") |>
+  # rename_with( ~ str_replace_all(., "no", "id")) %>%
+  rename_with( ~ str_replace_all(., "district", "dist")) |>
+  rename_with( ~ str_replace_all(., "school", "sch"))  |> 
+  rename_with( ~ str_replace_all(., " ", "_")) |>
+  rename(voc_adm = "vocadm",
+         gr_n_adm = "n",
+         gr_k_adm = "k",
+         gr_1_adm = "1",
+         gr_2_adm = "2",
+         gr_3_adm = "3",
+         gr_4_adm = "4",
+         gr_5_adm = "5",
+         gr_6_adm = "6",
+         gr_7_adm = "7",
+         gr_8_adm = "8",
+         gr_9_adm = "9",
+         gr_10_adm = "10",
+         gr_11_adm = "11",
+         gr_12_adm = "12") |>
+  # create tidy sch_id var
+  mutate(dist_no = str_pad(dist_no, width = 3, side = "left", pad = "0"),
+         sch_no = str_pad(sch_no, width = 4, side = "left", pad = "0"), 
+         sch_id = paste0(dist_no, "-", sch_no)) |>
+  rename(tutoring_adm = "tcap_2019_-gr_3") |>
+  filter(total_adm > 0) |>
+  select(sch_id, dist_no,
+         dist_name, sch_name,charter, rural, 
+         gr_n_adm, gr_k_adm, gr_1_adm, gr_2_adm, gr_3_adm, gr_4_adm,
+         gr_5_adm, gr_6_adm, gr_7_adm, gr_8_adm, gr_9_adm, gr_10_adm,
+         gr_11_adm, gr_12_adm, total_adm, voc_adm, dyslexia, early_literacy,
+         tutoring_adm) |>
+  arrange(sch_id)
 
+``` 
 
 # Joining datasets
 
