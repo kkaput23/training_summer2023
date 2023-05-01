@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -364,18 +429,18 @@
 
 <img data-src="https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/08547/images/r4ds/tidy-1.png" class="r-stretch quarto-figure-center"><p class="caption">Source: R for Data Science</p></section>
 <section id="if-your-data-includes-a-variable-that-is-embedded-across-several-column-names-use-pivot_longer" class="slide level2">
-<h2>If your data includes a variable that is embedded across several column names, use pivot_longer()</h2>
+<h2>If your data includes a variable that is embedded across several column names, use <strong>pivot_longer()</strong></h2>
 
 <img data-src="https://epirhandbook.com/en/images/pivoting/pivot_longer_new.png" class="r-stretch quarto-figure-center"><p class="caption">Source: R for Data Science</p></section>
 <section id="in-class-coding-example-how-to-use-pivot_longer" class="slide level2">
-<h2>In-class coding example: How to use pivot_longer()</h2>
+<h2>In-class coding example: How to use <strong>pivot_longer()</strong></h2>
 </section>
 <section id="if-your-data-includes-data-from-a-single-observation-spread-across-multiple-rows-use-pivot_wider" class="slide level2">
-<h2>If your data includes data from a single observation spread across multiple rows, use pivot_wider()</h2>
+<h2>If your data includes data from a single observation spread across multiple rows, use <strong>pivot_wider()</strong></h2>
 
 <img data-src="https://bcheggeseth.github.io/112_fall_2022/images/pivot_wider.png" class="r-stretch quarto-figure-center"><p class="caption">Source: R for Data Science</p></section>
 <section id="in-class-coding-example-how-to-use-pivot_wider" class="slide level2">
-<h2>In-class coding example: How to use pivot_wider()</h2>
+<h2>In-class coding example: How to use <strong>pivot_wider()</strong></h2>
 </section></section>
 <section>
 <section id="techniques-to-clean-messy-data" class="title-slide slide level1 center">
@@ -452,7 +517,7 @@
 </ul>
 </section>
 <section id="there-are-different-ways-to-join-datasets-together-but-using-left_join-will-keep-your-work-consistent" class="slide level2">
-<h2>There are different ways to join datasets together, but using left_join() will keep your work consistent</h2>
+<h2>There are different ways to join datasets together, but using <strong>left_join()</strong> will keep your work consistent</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="column" style="width:50%;">
@@ -470,28 +535,251 @@
 </div>
 </section>
 <section id="in-class-coding-example-how-to-use-left_join" class="slide level2">
-<h2>In-class coding example: How to use left_join()</h2>
+<h2>In-class coding example: How to use <strong>left_join()</strong></h2>
 </section>
 <section id="as-you-use-left_join-to-merge-dataframes-together-its-helpful-to-use-anti-join-to-examine-missing-data." class="slide level2">
-<h2>As you use left_join() to merge dataframes together, it’s helpful to use anti-join to examine missing data.</h2>
+<h2>As you use <strong>left_join()</strong> to merge dataframes together, it’s helpful to use anti-join to examine missing data.</h2>
 <p>Using the <strong>anti_join()</strong> function from the <a href="https://dplyr.tidyverse.org/index.html">dplyr</a> package in R returns all rows in one data frame that do not have matching values in another data frame. Using anti_join() allows you to explore the incongruities in your data.</p>
 
-<img data-src="https://d33wubrfki0l68.cloudfront.net/f29a85efd53a079cc84c14ba4ba6894e238c3759/c1408/diagrams/join-anti.png" class="r-stretch quarto-figure-center"><p class="caption">Source: R for Data Science</p></section></section>
+<img data-src="https://d33wubrfki0l68.cloudfront.net/f29a85efd53a079cc84c14ba4ba6894e238c3759/c1408/diagrams/join-anti.png" class="r-stretch quarto-figure-center"><p class="caption">Source: R for Data Science</p></section>
+<section id="in-class-coding-example-how-to-use-anti_join" class="slide level2">
+<h2>In-class coding example: How to use <strong>anti_join()</strong></h2>
+</section></section>
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
 
 </section>
 
+<section>
 <section id="an-example-with-tidycensus" class="title-slide slide level1 center">
-<h1>An example with tidycensus</h1>
+<h1>An example with <strong>tidycensus</strong></h1>
 
 </section>
+<section id="the-tidycensus-package-can-provide-data-at-the-school-district-level-that-may-be-helpful-for-school-finance-analysis" class="slide level2">
+<h2>The <strong>‘tidycensus’</strong> package can provide data at the school district level that may be helpful for school finance analysis</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The Census Bureau collects a lot of information that is reported at the school district level. This includes information on topics that are relevant to school finance, like housing.</p>
+<p>The <strong>‘tidycensus’</strong> R package makes it easy to access, explore, and analyze Census Bureau data.</p>
+</div><div class="column" style="width:50%;">
 
+</div>
+</div>
+</section>
+<section id="to-get-started-youll-need-to-sign-up-for-an-api-key-with-the-census-bureau-then-install-the-tidycensus-package" class="slide level2">
+<h2>To get started, you’ll need to sign up for an API key with the Census Bureau, then install the tidycensus package</h2>
+</section></section>
+<section>
 <section id="in-class-exercise" class="title-slide slide level1 center">
 <h1>In-class exercise</h1>
 
 </section>
-
+<section id="in-class-coding-example-clean_and_join.r-13" class="slide level2">
+<h2>In-class coding example: clean_and_join.R (1/3)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># load -----------</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">options</span>(<span class="at">scipen =</span> <span class="dv">999</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(edbuildr)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># get your own api key from https://api.census.gov/data/key_signup.html</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="fu">census_api_key</span>(<span class="st">"e06cf35bdaf878b6e70975a941f787b2923e753b"</span>, <span class="at">install =</span> <span class="cn">TRUE</span>, <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "e06cf35bdaf878b6e70975a941f787b2923e753b"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># get edbuild data</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>edbuild_fy19 <span class="ot">&lt;-</span> <span class="fu">masterpull</span>(<span class="at">data_type =</span> <span class="st">"geo"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># load census variables from 2019 acs 5-year estimates</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>v19 <span class="ot">&lt;-</span> <span class="fu">load_variables</span>(<span class="dv">2019</span>, <span class="st">"acs5"</span>, <span class="at">cache =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># get mortgage data for unified school districts</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>mortgage_unified_raw <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(<span class="at">variables =</span> <span class="fu">c</span>(<span class="st">"B25101_001"</span>, <span class="co"># total households</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>                                              <span class="st">"B25101_002"</span>, <span class="co"># total with a mortgage</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>                                              <span class="st">"B25101_024"</span>), <span class="co"># total not mortgaged</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>                        <span class="at">geography =</span> <span class="st">"school district (unified)"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12"></a>                        <span class="at">state =</span> <span class="st">"MN"</span>, </span>
+<span id="cb3-13"><a href="#cb3-13"></a>                        <span class="at">year =</span> <span class="dv">2019</span>)</span>
+<span id="cb3-14"><a href="#cb3-14"></a></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="co"># get mortgage data for elementary school districts</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>mortgage_elementary_raw <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(<span class="at">variables =</span> <span class="fu">c</span>(<span class="st">"B25101_001"</span>, <span class="co"># total households</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>                                                  <span class="st">"B25101_002"</span>, <span class="co"># total with a mortgage</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a>                                                  <span class="st">"B25101_024"</span>), <span class="co"># total not mortgaged</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a>                                    <span class="at">geography =</span> <span class="st">"school district (elementary)"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20"></a>                                    <span class="at">state =</span> <span class="st">"MN"</span>, </span>
+<span id="cb3-21"><a href="#cb3-21"></a>                                    <span class="at">year =</span> <span class="dv">2019</span>)</span>
+<span id="cb3-22"><a href="#cb3-22"></a></span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="co"># get mortgage data for secondary school districts</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a>mortgage_secondary_raw <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(<span class="at">variables =</span> <span class="fu">c</span>(<span class="st">"B25101_001"</span>, <span class="co"># total households</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a>                                                  <span class="st">"B25101_002"</span>, <span class="co"># total with a mortgage</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a>                                                  <span class="st">"B25101_024"</span>), <span class="co"># total not mortgaged</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a>                                    <span class="at">geography =</span> <span class="st">"school district (secondary)"</span>,</span>
+<span id="cb3-28"><a href="#cb3-28"></a>                                    <span class="at">state =</span> <span class="st">"MN"</span>, </span>
+<span id="cb3-29"><a href="#cb3-29"></a>                                    <span class="at">year =</span> <span class="dv">2019</span>)</span>
+<span id="cb3-30"><a href="#cb3-30"></a></span>
+<span id="cb3-31"><a href="#cb3-31"></a></span>
+<span id="cb3-32"><a href="#cb3-32"></a><span class="co"># clean ------------</span></span>
+<span id="cb3-33"><a href="#cb3-33"></a></span>
+<span id="cb3-34"><a href="#cb3-34"></a><span class="co"># clean mortgage data for unified school districts</span></span>
+<span id="cb3-35"><a href="#cb3-35"></a>mortgage_pct_unified <span class="ot">&lt;-</span> mortgage_unified_raw <span class="sc">|&gt;</span> </span>
+<span id="cb3-36"><a href="#cb3-36"></a>  <span class="co"># replace vars with more descriptive names</span></span>
+<span id="cb3-37"><a href="#cb3-37"></a>  <span class="fu">mutate</span>(<span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable, <span class="st">"B25101_001"</span>, <span class="st">"households"</span>),</span>
+<span id="cb3-38"><a href="#cb3-38"></a>         <span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable,<span class="st">"B25101_002"</span>, <span class="st">"with_mortgage"</span>),</span>
+<span id="cb3-39"><a href="#cb3-39"></a>         <span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable,<span class="st">"B25101_024"</span>, <span class="st">"no_mortgage"</span>)</span>
+<span id="cb3-40"><a href="#cb3-40"></a>        ) <span class="sc">|&gt;</span>  <span class="co"># close mutate </span></span>
+<span id="cb3-41"><a href="#cb3-41"></a>  <span class="co"># remove margin of error column</span></span>
+<span id="cb3-42"><a href="#cb3-42"></a>  <span class="fu">select</span>(<span class="sc">-</span>moe) <span class="sc">|&gt;</span> </span>
+<span id="cb3-43"><a href="#cb3-43"></a>  <span class="co"># pivot variable column into distinct columns</span></span>
+<span id="cb3-44"><a href="#cb3-44"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> variable, <span class="at">values_from =</span> estimate) <span class="sc">|&gt;</span> </span>
+<span id="cb3-45"><a href="#cb3-45"></a>  <span class="co"># calculate percent of households within a school district with a mortgage</span></span>
+<span id="cb3-46"><a href="#cb3-46"></a>  <span class="fu">mutate</span>(<span class="at">mortgage_pct =</span> with_mortgage <span class="sc">/</span> households) </span>
+<span id="cb3-47"><a href="#cb3-47"></a></span>
+<span id="cb3-48"><a href="#cb3-48"></a><span class="co"># clean mortgage data for elementary school districts</span></span>
+<span id="cb3-49"><a href="#cb3-49"></a>mortgage_pct_elementary <span class="ot">&lt;-</span> mortgage_elementary_raw <span class="sc">|&gt;</span> </span>
+<span id="cb3-50"><a href="#cb3-50"></a>  <span class="fu">mutate</span>(<span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable, <span class="st">"B25101_001"</span>, <span class="st">"households"</span>),</span>
+<span id="cb3-51"><a href="#cb3-51"></a>         <span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable,<span class="st">"B25101_002"</span>, <span class="st">"with_mortgage"</span>),</span>
+<span id="cb3-52"><a href="#cb3-52"></a>         <span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable,<span class="st">"B25101_024"</span>, <span class="st">"no_mortgage"</span>)</span>
+<span id="cb3-53"><a href="#cb3-53"></a>  ) <span class="sc">|&gt;</span>  <span class="co"># close mutate </span></span>
+<span id="cb3-54"><a href="#cb3-54"></a>  <span class="fu">select</span>(<span class="sc">-</span>moe) <span class="sc">|&gt;</span> </span>
+<span id="cb3-55"><a href="#cb3-55"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> variable, <span class="at">values_from =</span> estimate) <span class="sc">|&gt;</span> </span>
+<span id="cb3-56"><a href="#cb3-56"></a>  <span class="fu">mutate</span>(<span class="at">mortgage_pct =</span> with_mortgage <span class="sc">/</span> households)</span>
+<span id="cb3-57"><a href="#cb3-57"></a></span>
+<span id="cb3-58"><a href="#cb3-58"></a><span class="co"># clean mortgage data for secondary school districts</span></span>
+<span id="cb3-59"><a href="#cb3-59"></a>mortgage_pct_secondary <span class="ot">&lt;-</span> mortgage_secondary_raw <span class="sc">|&gt;</span> </span>
+<span id="cb3-60"><a href="#cb3-60"></a>  <span class="fu">mutate</span>(<span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable, <span class="st">"B25101_001"</span>, <span class="st">"households"</span>),</span>
+<span id="cb3-61"><a href="#cb3-61"></a>         <span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable,<span class="st">"B25101_002"</span>, <span class="st">"with_mortgage"</span>),</span>
+<span id="cb3-62"><a href="#cb3-62"></a>         <span class="at">variable =</span> <span class="fu">str_replace_all</span>(variable,<span class="st">"B25101_024"</span>, <span class="st">"no_mortgage"</span>)</span>
+<span id="cb3-63"><a href="#cb3-63"></a>  ) <span class="sc">|&gt;</span>  <span class="co"># close mutate </span></span>
+<span id="cb3-64"><a href="#cb3-64"></a>  <span class="fu">select</span>(<span class="sc">-</span>moe) <span class="sc">|&gt;</span> </span>
+<span id="cb3-65"><a href="#cb3-65"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> variable, <span class="at">values_from =</span> estimate) <span class="sc">|&gt;</span> </span>
+<span id="cb3-66"><a href="#cb3-66"></a>  <span class="fu">mutate</span>(<span class="at">mortgage_pct =</span> with_mortgage <span class="sc">/</span> households)</span>
+<span id="cb3-67"><a href="#cb3-67"></a><span class="co"># </span><span class="al">NOTE</span><span class="co">: this data isn't really that useful for mn!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="in-class-coding-example-clean_and_join.r-23" class="slide level2">
+<h2>In-class coding example: clean_and_join.R (2/3)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># join ----------</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># join unified and elementary data by binding rows</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>mortgage_pct_mn <span class="ot">&lt;-</span> mortgage_pct_unified <span class="sc">|&gt;</span> </span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">bind_rows</span>(mortgage_pct_elementary) <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="co"># filter out summary row</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="fu">filter</span>(GEOID <span class="sc">!=</span> <span class="st">"2199999"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-8"><a href="#cb4-8"></a>  <span class="co"># arrange from largest to smallest district</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>households)</span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co"># join edbuild and census data using left_join</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>edbuild_mortgage_mn <span class="ot">&lt;-</span> edbuild_fy19 <span class="sc">|&gt;</span> </span>
+<span id="cb4-13"><a href="#cb4-13"></a>  <span class="fu">filter</span>(State <span class="sc">==</span> <span class="st">"Minnesota"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-14"><a href="#cb4-14"></a>  <span class="fu">left_join</span>(mortgage_pct_mn, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"NCESID"</span> <span class="ot">=</span> <span class="st">"GEOID"</span>))</span>
+<span id="cb4-15"><a href="#cb4-15"></a></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="co"># do the join again, but this time select for the columns we want to keep</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="co"># to avoid duplicates like district.x and district.y</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a>edbuild_mortgage_mn <span class="ot">&lt;-</span> edbuild_fy19 <span class="sc">|&gt;</span> </span>
+<span id="cb4-19"><a href="#cb4-19"></a>  <span class="fu">filter</span>(State <span class="sc">==</span> <span class="st">"Minnesota"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-20"><a href="#cb4-20"></a>  <span class="fu">left_join</span>(mortgage_pct_mn <span class="sc">|&gt;</span> </span>
+<span id="cb4-21"><a href="#cb4-21"></a>              <span class="fu">select</span>(GEOID, households, with_mortgage, mortgage_pct),</span>
+<span id="cb4-22"><a href="#cb4-22"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"NCESID"</span> <span class="ot">=</span> <span class="st">"GEOID"</span>))</span>
+<span id="cb4-23"><a href="#cb4-23"></a></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="co"># use anti_join() to check for districts with no mortgage data</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a>edbuild_mortgage_mn_no_match <span class="ot">&lt;-</span> edbuild_fy19 <span class="sc">|&gt;</span> </span>
+<span id="cb4-26"><a href="#cb4-26"></a>  <span class="fu">filter</span>(State <span class="sc">==</span> <span class="st">"Minnesota"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-27"><a href="#cb4-27"></a>  <span class="fu">anti_join</span>(mortgage_pct_mn <span class="sc">|&gt;</span> </span>
+<span id="cb4-28"><a href="#cb4-28"></a>              <span class="fu">select</span>(GEOID,households, with_mortgage, mortgage_pct),</span>
+<span id="cb4-29"><a href="#cb4-29"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"NCESID"</span> <span class="ot">=</span> <span class="st">"GEOID"</span>))</span>
+<span id="cb4-30"><a href="#cb4-30"></a></span>
+<span id="cb4-31"><a href="#cb4-31"></a><span class="co"># run the reverse anti_join to see if the census data has </span></span>
+<span id="cb4-32"><a href="#cb4-32"></a><span class="co">#  districts not included in the edbuild table</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a>mortgage_edbuild_mn_no_match <span class="ot">&lt;-</span> mortgage_pct_mn <span class="sc">|&gt;</span> </span>
+<span id="cb4-34"><a href="#cb4-34"></a>  <span class="fu">select</span>(GEOID,households, with_mortgage, mortgage_pct) <span class="sc">|&gt;</span> </span>
+<span id="cb4-35"><a href="#cb4-35"></a>  <span class="fu">anti_join</span>(edbuild_fy19 <span class="sc">|&gt;</span> </span>
+<span id="cb4-36"><a href="#cb4-36"></a>              <span class="fu">filter</span>(State <span class="sc">==</span> <span class="st">"Minnesota"</span>) ,</span>
+<span id="cb4-37"><a href="#cb4-37"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"GEOID"</span> <span class="ot">=</span> <span class="st">"NCESID"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="in-class-coding-example-clean_and_join.r-33" class="slide level2">
+<h2>In-class coding example: clean_and_join.R (3/3)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># plot -----------</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># first plot of the joined dataset</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="fu">ggplot</span>(edbuild_mortgage_mn) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> MHI, <span class="at">y =</span> mortgage_pct, </span>
+<span id="cb5-6"><a href="#cb5-6"></a>                 <span class="at">color =</span> StPovRate, <span class="at">size =</span> ENROLL),</span>
+<span id="cb5-7"><a href="#cb5-7"></a>             <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">10</span>, <span class="at">labels =</span> <span class="fu">label_comma</span>()) <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>()) <span class="sc">+</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"MHI"</span>, <span class="at">y =</span> <span class="st">"Percent of households with a mortgage"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13"></a>       <span class="at">color =</span> <span class="st">"Poverty rate"</span>, <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="week_04_slides_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># facet by sdType</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">ggplot</span>(edbuild_mortgage_mn) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> MHI, <span class="at">y =</span> mortgage_pct, </span>
+<span id="cb6-4"><a href="#cb6-4"></a>                 <span class="at">color =</span> StPovRate, <span class="at">size =</span> ENROLL),</span>
+<span id="cb6-5"><a href="#cb6-5"></a>             <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">10</span>, <span class="at">labels =</span> <span class="fu">label_comma</span>()) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>()) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"MHI"</span>, <span class="at">y =</span> <span class="st">"Percent of households with a mortgage"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11"></a>       <span class="at">color =</span> <span class="st">"Poverty rate"</span>, <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sdType) <span class="sc">+</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="week_04_slides_files/figure-revealjs/unnamed-chunk-3-2.png" width="960"></p>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># filter out secondary districts and create better labels for </span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="co"># elementary and unified districts</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="fu">ggplot</span>(edbuild_mortgage_mn <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a href="#cb7-4"></a>         <span class="fu">filter</span>(sdType <span class="sc">!=</span> <span class="st">"secon"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5"></a>         <span class="fu">mutate</span>(<span class="at">sdType =</span> <span class="fu">case_when</span>(sdType <span class="sc">==</span> <span class="st">"elem"</span> <span class="sc">~</span> <span class="st">"Elementary"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6"></a>                                   sdType <span class="sc">==</span> <span class="st">"uni"</span> <span class="sc">~</span> <span class="st">"Unified"</span>))) <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> MHI, <span class="at">y =</span> mortgage_pct, </span>
+<span id="cb7-8"><a href="#cb7-8"></a>                 <span class="at">color =</span> StPovRate, <span class="at">size =</span> ENROLL),</span>
+<span id="cb7-9"><a href="#cb7-9"></a>             <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>  <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">10</span>, <span class="at">labels =</span> <span class="fu">label_comma</span>()) <span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>()) <span class="sc">+</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"MHI"</span>, <span class="at">y =</span> <span class="st">"Percent of households with a mortgage"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15"></a>       <span class="at">color =</span> <span class="st">"Poverty rate"</span>, <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sdType) <span class="sc">+</span></span>
+<span id="cb7-17"><a href="#cb7-17"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="week_04_slides_files/figure-revealjs/unnamed-chunk-3-3.png" width="960"></p>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># same chart, but filter  allow for free x+y axis scales</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">ggplot</span>(edbuild_mortgage_mn <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3"></a>         <span class="fu">filter</span>(sdType <span class="sc">!=</span> <span class="st">"secon"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-4"><a href="#cb8-4"></a>         <span class="fu">mutate</span>(<span class="at">sdType =</span> <span class="fu">case_when</span>(sdType <span class="sc">==</span> <span class="st">"elem"</span> <span class="sc">~</span> <span class="st">"Elementary"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>                                   sdType <span class="sc">==</span> <span class="st">"uni"</span> <span class="sc">~</span> <span class="st">"Unified"</span>))) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> MHI, <span class="at">y =</span> mortgage_pct, </span>
+<span id="cb8-7"><a href="#cb8-7"></a>                 <span class="at">color =</span> StPovRate, <span class="at">size =</span> ENROLL),</span>
+<span id="cb8-8"><a href="#cb8-8"></a>             <span class="at">alpha =</span> .<span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>  <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">10</span>, <span class="at">labels =</span> <span class="fu">label_comma</span>()) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>()) <span class="sc">+</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a>  <span class="fu">scale_color_viridis</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"MHI"</span>, <span class="at">y =</span> <span class="st">"Percent of households with a mortgage"</span>,</span>
+<span id="cb8-14"><a href="#cb8-14"></a>       <span class="at">color =</span> <span class="st">"Poverty rate"</span>, <span class="at">size =</span> <span class="st">"Enrollment"</span>) <span class="sc">+</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sdType, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="week_04_slides_files/figure-revealjs/unnamed-chunk-3-4.png" width="960"></p>
+</div>
+</div>
+</section></section>
 <section id="homework-assignment" class="title-slide slide level1 center">
 <h1>Homework assignment</h1>
 
@@ -713,6 +1001,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
