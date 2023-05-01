@@ -73,7 +73,9 @@ Tidy data follows three rules:
 | 4.  Missing data and outliers | Identify where in your dataset there are missing variables and/or outliers - this may be more of an iterative process as your explore your data.                       |
 +-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-## In-class coding example: minnesota_clean.R
+## In-class coding example: tennessee_clean.R
+
+
 
 # Joining datasets
 
