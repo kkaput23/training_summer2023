@@ -182,6 +182,10 @@ This will keep the number of rows (e.g. districts or schools) consistent as you 
 
 ## In-class coding example: How to use **left_join()**
 
+```{r}
+
+```
+
 ## As you use **left_join()** to merge dataframes together, it's helpful to use anti-join to examine missing data.
 
 Using the **anti_join()** function from the [dplyr](https://dplyr.tidyverse.org/index.html) package in R returns all rows in one data frame that do not have matching values in another data frame. Using anti_join() allows you to explore the incongruities in your data.
@@ -189,6 +193,10 @@ Using the **anti_join()** function from the [dplyr](https://dplyr.tidyverse.org/
 ![Source: R for Data Science](https://d33wubrfki0l68.cloudfront.net/f29a85efd53a079cc84c14ba4ba6894e238c3759/c1408/diagrams/join-anti.png)
 
 ## In-class coding example: How to use **anti_join()**
+```{r}
+
+```
+
 
 # Break
 
@@ -216,6 +224,8 @@ The **'tidycensus'** R package makes it easy to access, explore, and analyze Cen
 ## In-class coding example: clean_and_join.R (1/3)
 
 ```{r}
+
+
 #| echo: true
 
 # load -----------
