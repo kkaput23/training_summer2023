@@ -13,13 +13,159 @@ execute:
 
 ## Solving a common problem with the homework
 
-# Making maps with edbuildmapr 
+# What should the future of school finance equity look like? 
 
-## Much like 'edbuildr', the 'edbuildmapr' package makes it eaier to perform spatial analysis of education data 
+## The variability in policies and context within and among states makes it impossible to set many hard-and-fast rules. Below are a couple of recommendations.
 
-# Setting up your data processing project 
+- A **student-based state school funding formula** is the best starting point for transparency and equity.
+- Formulas should have **weights that allocate additional funding** for students with disabilities, English
+language learners, and low-income students, as well as other mechanisms to allocate funding toward
+school districts serving students with additional educational needs. 
+
+## Using local property tax revenue as the primary method for funding local schools sets inequity into the core of school funding, and ties school funding to the real estate market.
+
+This is not the only way to fund schools. If a state uses local tax revenue as part of its education finance system, there must be strong equity-driven policies in place to balance revenue scales for lower-wealth districts, such as county level revenue pooling for states with smaller districts, and caps, supplementation, or redistributive
+policies on local tax revenue to counteract inequities created by local funding and to prevent runaway
+local spending in high-wealth districts. 
+
+## Questions for Advocates 
+
+Understand your state education finance system 
+- What data can you use to show how state funding lines up with student needs, especially for low-income students, students with disabilities, and English language learners?
+- What kind of school funding formula does your state use?
+- If your state does not currently have a student-based formula, how (if at all) does the existing formula consider students’ different learning needs?
+- If your state includes weights in its funding formula, how are those weights structured and determined?
+- If a student is eligible to receive multiple weights, does your state’s funding formula provide for that?
+- How much does total funding per student vary among school districts? What differences among districts influence funding the most?
+- How do districts in your state allocate funding to individual schools?
+- Does your state have a process to conduct resource or needs assessments? Can this process be used at the district level?
+- How have lawsuits shaped the school finance landscape in your state?
+- Is there current school finance litigation in your state? If so, what are the primary arguments, what is the anticipated timeline for a ruling, and what has been the reaction of policymakers to the suit?
+
+# Making maps with edbuildmapr
+
+## Much like 'edbuildr', the 'edbuildmapr' package makes it eaier to perform spatial analysis of education data
+
+-   R can use objects called "shapfiles" to create maps
+-   The 'edbuildmapr' package makes it easy to produce high-quality maps as you analyze school finance data.
+-   To get started, you will need to install two packages:
+    -   **edbuildmapr**: Simplifies the use of school district shapefiles.
+
+    -   **sf:** Standardizes how to encode spatial vector data.
+
+## LIVE CODING EXAMPLE: Making maps with edbuildmapr
+
+```{r}
+# load -------
+
+options(scipen = 999)
+
+library(tidyverse)
+library(edbuildmapr)
+library(sf)
+library(scales)
+library(viridis)
+
+sd_map_raw <- sd_shapepull(data_year = "2019", with_data = TRUE)
+
+# clean ----------
+
+mn_map_raw <- sd_map_raw |> 
+  # tidy up colnames
+  rename_with(tolower) |> 
+  filter(state == "Minnesota")
+
+str(mn_map_raw)
+
+# plot -------------
+
+# plot a basic map
+ggplot(mn_map_raw) +
+  geom_sf()
+
+# use theme void to clean it up
+ggplot(mn_map_raw) +
+  geom_sf() +
+  theme_void()
+
+# add a variable to fill shapes
+ggplot(mn_map_raw) +
+  geom_sf(aes(fill = stpovrate)) +
+  scale_fill_viridis(labels = label_percent()) +
+  labs(fill = "Census poverty rate") +
+  theme_void()
+
+# change border colors
+ggplot(mn_map_raw) +
+  geom_sf(aes(fill = stpovrate),
+          color = "grey86") +
+  scale_fill_viridis(labels = label_percent()) +
+  labs(fill = "Census poverty rate") +
+  theme_void()
+
+# plot nonwhite enrollment
+ggplot(mn_map_raw) +
+  geom_sf(aes(fill = pctnw),
+          color = "grey76") +
+  scale_fill_viridis(labels = label_percent()) +
+  labs(fill = "Percent nonwhite\nstudents") +
+  theme_void()
+
+# filtering these dfs works as you would expect
+ggplot(mn_map_raw |> 
+         filter(county == "Hennepin County")) +
+  geom_sf(aes(fill = pctnw),
+          color = "grey76") +
+  scale_fill_viridis(labels = label_percent()) +
+  labs(fill = "Percent nonwhite\nstudents") +
+  theme_void()
 
 
-# Homework 
 
-# State team meetings 
+# plot state and local revenue per pupil
+ggplot(mn_map_raw) +
+  geom_sf(aes(fill = slrpp),
+          color = "grey76") +
+  scale_fill_viridis(labels = label_dollar()) +
+  labs(fill = "State and local\revenue per pupil") +
+  theme_void()
+
+# plot a discrete variable as the fill 
+ggplot(mn_map_raw) +
+  geom_sf(aes(fill = urb),
+          color = "grey76") +
+  scale_fill_viridis_d() +
+  labs(fill = "NCES Urbanicity") +
+  theme_void()
+
+
+```
+
+# Setting up your data processing project
+
+## Before you start cleaning your state's data, set yourseful up for a successful, reproducible analysis project
+
+-   Every new data analysis proejct shoudl live in its own RStudio project
+-   File -\> New Project...
+
+![](https://bookdown.org/gmli64/do_a_data_science_project_in_10_days/Capture/NewProject.png)
+
+## Remember: After you've created a project, use a consistent folder structure to keep your analysis organized
+
+![](https://i.stack.imgur.com/AlNMJ.png)
+
+## Another layer of organization: Keep your raw data and your processed data separate!
+
+-   Use sub-folders within your "data" folder to keep your raw data files separated from any processed data files you produce during your analysis.
+-   This creates additional procedural barrier to accidentally over-writing your raw data.
+-   Use the "processed" data folder for exporting clean data or results of your analysis, like summary tables.
+
+![](https://image.slidesharecdn.com/analysinggithubcommitswithr-150510082035-lva1-app6892/95/analysing-github-commits-with-r-5-638.jpg?cb=1431246219)
+
+## R Markdown is a special file type that allows you to combine code with plain text to create reports
+
+![](https://shiny.rstudio.com/images/rmdint-template.png)
+
+# Homework
+
+# State team meetings
