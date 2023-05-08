@@ -8,3 +8,18 @@ execute:
   freeze: auto
   echo: false
 ---
+
+# Homework Review
+
+## Solving a common problem with the homework
+
+# Making maps with edbuildmapr 
+
+## Much like 'edbuildr', the 'edbuildmapr' package makes it eaier to perform spatial analysis of education data 
+
+# Setting up your data processing project 
+
+
+# Homework 
+
+# State team meetings 
