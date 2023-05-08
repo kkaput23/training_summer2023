@@ -13,34 +13,20 @@ execute:
 
 ## Solving a common problem with the homework
 
-# What should the future of school finance equity look like? 
+# What should the future of school finance equity look like?
 
 ## The variability in policies and context within and among states makes it impossible to set many hard-and-fast rules. Below are a couple of recommendations.
 
-- A **student-based state school funding formula** is the best starting point for transparency and equity.
-- Formulas should have **weights that allocate additional funding** for students with disabilities, English
-language learners, and low-income students, as well as other mechanisms to allocate funding toward
-school districts serving students with additional educational needs. 
+-   A **student-based state school funding formula** is the best starting point for transparency and equity.
+-   Formulas should have **weights that allocate additional funding** for students with disabilities, English language learners, and low-income students, as well as other mechanisms to allocate funding toward school districts serving students with additional educational needs.
 
 ## Using local property tax revenue as the primary method for funding local schools sets inequity into the core of school funding, and ties school funding to the real estate market.
 
-This is not the only way to fund schools. If a state uses local tax revenue as part of its education finance system, there must be strong equity-driven policies in place to balance revenue scales for lower-wealth districts, such as county level revenue pooling for states with smaller districts, and caps, supplementation, or redistributive
-policies on local tax revenue to counteract inequities created by local funding and to prevent runaway
-local spending in high-wealth districts. 
+This is not the only way to fund schools. If a state uses local tax revenue as part of its education finance system, there must be strong equity-driven policies in place to balance revenue scales for lower-wealth districts, such as county level revenue pooling for states with smaller districts, and caps, supplementation, or redistributive policies on local tax revenue to counteract inequities created by local funding and to prevent runaway local spending in high-wealth districts.
 
-## Questions for Advocates 
+## Questions for Advocates
 
-Understand your state education finance system 
-- What data can you use to show how state funding lines up with student needs, especially for low-income students, students with disabilities, and English language learners?
-- What kind of school funding formula does your state use?
-- If your state does not currently have a student-based formula, how (if at all) does the existing formula consider students’ different learning needs?
-- If your state includes weights in its funding formula, how are those weights structured and determined?
-- If a student is eligible to receive multiple weights, does your state’s funding formula provide for that?
-- How much does total funding per student vary among school districts? What differences among districts influence funding the most?
-- How do districts in your state allocate funding to individual schools?
-- Does your state have a process to conduct resource or needs assessments? Can this process be used at the district level?
-- How have lawsuits shaped the school finance landscape in your state?
-- Is there current school finance litigation in your state? If so, what are the primary arguments, what is the anticipated timeline for a ruling, and what has been the reaction of policymakers to the suit?
+Understand your state education finance system - What data can you use to show how state funding lines up with student needs, especially for low-income students, students with disabilities, and English language learners? - What kind of school funding formula does your state use? - If your state does not currently have a student-based formula, how (if at all) does the existing formula consider students' different learning needs? - If your state includes weights in its funding formula, how are those weights structured and determined? - If a student is eligible to receive multiple weights, does your state's funding formula provide for that? - How much does total funding per student vary among school districts? What differences among districts influence funding the most? - How do districts in your state allocate funding to individual schools? - Does your state have a process to conduct resource or needs assessments? Can this process be used at the district level? - How have lawsuits shaped the school finance landscape in your state? - Is there current school finance litigation in your state? If so, what are the primary arguments, what is the anticipated timeline for a ruling, and what has been the reaction of policymakers to the suit?
 
 # Making maps with edbuildmapr
 
@@ -165,6 +151,19 @@ ggplot(mn_map_raw) +
 ## R Markdown is a special file type that allows you to combine code with plain text to create reports
 
 ![](https://shiny.rstudio.com/images/rmdint-template.png)
+
+## R Markdown combines "chunks" of R code with blocks of text that can be formatted using R Mardown
+
+R code chunks in R Markdown are contained within a pair of triple backticks that include a curly brace that indicates the section contains r code:
+
+```{r}
+<code goes here>
+  
+```
+
+Markdown is a *really* easy way to format text. For more, visit [Markdown Guide.](https://bookdown.org/yihui/rmarkdown/)
+
+For more on using R Markdown documents, check out [RStudio's resources her](https://rmarkdown.rstudio.com/)e.
 
 # Homework
 
