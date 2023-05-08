@@ -38,6 +38,7 @@ Tidy data follows three rules:
 ![Source: R for Data Science](https://epirhandbook.com/en/images/pivoting/pivot_longer_new.png)
 
 ## In-class coding example: How to use **pivot_longer()**
+
 ```{r}
 
 # State total Revenue data ----
@@ -56,7 +57,8 @@ state_total_revenue_all <- state_total_revenue_all |>
          year = paste0(year_2, "-", year)) |>
   select(-year_2)
 
-``` 
+```
+
 ## If your data includes data from a single observation spread across multiple rows, use **pivot_wider()**
 
 ![Source: R for Data Science](https://bcheggeseth.github.io/112_fall_2022/images/pivot_wider.png)
@@ -81,7 +83,8 @@ sch_sped <- sch_sped_raw |>
          option1_enroll, option2_enroll, option3_enroll, option4_enroll, option5_enroll,
          option6_enroll, option7_enroll, option8_enroll, option9_enroll, option10_enroll) 
 
-``` 
+```
+
 # Techniques to clean messy data
 
 ## Cleaning data can be challenging, but it's easier if you take a systematic approach to every raw data file
@@ -148,7 +151,7 @@ sch_adm_clean <- sch_adm_raw |>
          tutoring_adm) |>
   arrange(sch_id)
 
-``` 
+```
 
 # Joining datasets
 
@@ -193,10 +196,10 @@ Using the **anti_join()** function from the [dplyr](https://dplyr.tidyverse.org/
 ![Source: R for Data Science](https://d33wubrfki0l68.cloudfront.net/f29a85efd53a079cc84c14ba4ba6894e238c3759/c1408/diagrams/join-anti.png)
 
 ## In-class coding example: How to use **anti_join()**
+
 ```{r}
 
 ```
-
 
 # Break
 
@@ -215,9 +218,7 @@ The **'tidycensus'** R package makes it easy to access, explore, and analyze Cen
 :::
 :::
 
-## To get started, you’ll need to sign up for an API key with the Census Bureau, then install the tidycensus package
-
-
+## To get started, you'll need to sign up for an API key with the Census Bureau, then install the tidycensus package
 
 # In-class exercise
 
@@ -313,6 +314,7 @@ mortgage_pct_secondary <- mortgage_secondary_raw |>
 ```
 
 ## In-class coding example: clean_and_join.R (2/3)
+
 ```{r}
 #| echo: true
 
@@ -356,6 +358,7 @@ mortgage_edbuild_mn_no_match <- mortgage_pct_mn |>
 
 
 ```
+
 ## In-class coding example: clean_and_join.R (3/3)
 
 ```{r}
@@ -425,6 +428,5 @@ ggplot(edbuild_mortgage_mn |>
   theme_bw()
 
 ```
-
 
 # Homework assignment
