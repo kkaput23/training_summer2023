@@ -1,0 +1,10 @@
+---
+title: "Reproducible data analysis in R"
+date: "July 11, 2023"
+format:
+  revealjs:
+    chalkboard: true
+execute:
+  freeze: auto
+  echo: false
+---
