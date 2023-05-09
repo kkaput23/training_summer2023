@@ -145,11 +145,13 @@ The two mapping systems:
     -   **addProviderTiles():** Adds a basemap 
     -   **addCirclemarker():** and **addMarker():** Adds a point layer 
     -   **addPolylines():** Adds a line layer 
-    -   **addPolygones():** Add a polygon layer 
+    -   **addPolygons():** Add a polygon layer 
     
-    
+## Map location with **leaflet** 
+Once a year is added, the map will automatically zoom to the boundaries of the data you've included in your layer. This is also referred to as the extent of the layer. 
 
-# Load -----
+- To change the boundaries you've included in your layer
+- To center the map on a point and define the zoom level 
 
 # Small group mapping
 
