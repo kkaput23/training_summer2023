@@ -249,6 +249,73 @@ ky_sd_map <- sd_map_raw |>
 
 ```{r}
 
+# load ---------------
+
+# this will prevent r code chunks from printing to final doc
+knitr::opts_chunk$set(echo = FALSE)
+
+
+options(scipen = 999)
+
+library(tidyverse)
+library(sf)
+library(viridis)
+library(scales)
+
+source("edbuild_clean.R")
+source("edbuild_map_data.R")
+
+
+# clean -----------
+
+mn_dist_map <- mn_sd_map |> 
+  merge(mn_dist, by.x = "geoid", by.y = "ncesid")
+
+## Overview of Minnesota district data
+summary(mn_dist_map)
+
+## Mapping Minnesota data 
+
+# Student Poverty 
+ggplot(mn_dist_map, aes(fill = stpovrate)) +
+  geom_sf() + 
+  scale_fill_viridis(labels = label_percent()) +
+  labs(fill = "Census poverty rate") +
+  theme_void()
+
+# Urbanicity 
+ggplot(mn_dist_map, aes(fill = durbanicity)) +
+  geom_sf() + 
+  scale_fill_viridis_d() +
+  labs(fill = "NCES Urbanicity") +
+  theme_void()
+
+# If we simplifiy to four urbanicity categories, the high frequency of rural districts becomes more apparent.
+
+ggplot(mn_dist_map, aes(fill = urbanicity)) +
+  geom_sf() + 
+  scale_fill_viridis_d() +
+  labs(fill = "Simplified Urbanicity") +
+  theme_void()
+
+## Local Revenue 
+ggplot(mn_dist_map, aes(fill = lrpp)) +
+  geom_sf()+
+  scale_fill_viridis(labels = label_dollar()) +
+  labs(fill = "Local Revenue Per-Pupil")+
+  theme_void()
+
+## Urbanicity and local revenue 
+urban_rev_summary <- mn_dist |> 
+  # get average local revenue per pupil by urbanicity
+  group_by(urbanicity) |> 
+  summarise(lrpp_avg = mean(lrpp, na.rm = T)) |> 
+  # format summary as currency, rounded to the nearest dollar
+  mutate(lrpp_avg = dollar(lrpp_avg, accuracy = 1)) |> 
+  rename(Urbanicity = urbanicity,
+         `Average Local Rev. Per-Pupil` = lrpp_avg)
+
+
 ```
 
 # Homework
