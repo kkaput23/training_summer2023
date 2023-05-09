@@ -304,7 +304,7 @@ mn_shp <- sd_map_raw |>
 
 ```{r}
 ### import the Minnesota
-mn_data <- edbuildr::masterpull(data_year = "2019", data_type = "geo") %>% 
+mn_data <- edbuildr::masterpull(data_year = "2019", data_type = "geo") |>
   filter(State == "Minnesota") |>
   rename(ncesid = NCESID, 
          fips = STATE_FIPS, 
@@ -331,8 +331,96 @@ mn_data <- edbuildr::masterpull(data_year = "2019", data_type = "geo") %>%
 
 ## In-class exercise: Building a Minnesota map with **edbuildr** data (3/6)
 **STEP 4:** Join the **mn_shp** and the **mn_data** 
+```{r}
+### join state summary stats to state data
+mn_shp <- mn_shp |> # IMPORTANT! You MUST put the data set with the coordinates FIRST and then join 
+  left_join(mn_data, by = "ncesid") |>
+  # I removed districts that didn't have any enrollment 
+  filter(ncesid != 2727001) |>
+  filter(ncesid != 2727002) |>
+  filter(ncesid != 2727003) |>
+  filter(ncesid != 2727004) |>
+  filter(ncesid != 2727005) |>
+  filter(ncesid != 2727006) |>
+  filter(ncesid != 2799001) |>
+  select(ncesid, name, pct_bipoc, pct_lr, pct_sr, everything())
 
+```
+
+## In-class exercise: Building a Minnesota map with **edbuildr** data (4/6)
+**STEP 5:** Plot the Minnesota map! 
+
+While the map looks ok, there is a lot we can improve! Intuitively, it makes more sense for the color to get darker as the concentrations increase. In the next iteration, I am going to reverse the direction of the color scale, change the line colors to white, and add a title and a source. 
+```{r}
+# Plot the map
+ggplot()  + 
+  geom_sf(data = mn_shp, mapping = aes(fill = pct_sr)) + 
+  #Coloring the map with the percent of K-12 district funding fromt the data 
+  theme_void()
+```
+
+## In-class exercise: Building a Minnesota map with **edbuildr** data (5/6)
+**STEP 6:** Make several aesthetic changes: 
+
+- Change the color of the lies to white within **geom_sf()** 
+- Reverse the direction of the color scale within **scale_fill_viridis()** 
+- Add a title, subtitle, and a source caption within **label()** 
+```{r}
+# Make several aesthetic changes
+ggplot()  + 
+  geom_sf(data = mn_shp, 
+          mapping = aes(fill = pct_sr),
+          color = "#ffffff") +
+  theme_void() +
+  scale_fill_viridis(name="Percent K-12 Budget from State Revenue(%)",
+                     labels=percent_format(accuracy = 1L), 
+                     direction=-1) +
+  labs(
+    title = "Minnesota School Districts",
+    subtitle = "Percent of District K-12 Revenue From State (2019)",
+    caption = "Source: EdBuildr Data, 2019")
+
+```
+
+## In-class exercise: Building a Minnesota map with **edbuildr** data (6/6)
+**STEP 7:** Make your own color palette and create bins to more clearly break up the data! 
+```{r}
+# Create your own color palette to style it and create breaks in the data! 
+
+bw_state_revenue <- c("#F0DEC1","#BEC6CE", "#FFC762", "#007786", "#212B46", "#6D1E4A")
+
+# State Revenue 
+
+ggplot()  + 
+  geom_sf(data = mn_shp, mapping = aes(fill = pct_sr),
+          color = "#ffffff") +
+  theme_void() +
+  scale_fill_stepsn(breaks=c(.5, .6, .7, .8, .9, 1),
+                    colors = bw_state_revenue, 
+                    name="State K-12 Revenue (%)",
+                    labels=percent_format(accuracy = 1L)) + 
+  labs(
+    title = "Minnesota School Districts",
+    subtitle = "Percent of District K-12 Revenue From State (2019)",
+    caption = "Source: EdBuildr Data, 2019")
+
+```
 
 # Small group mapping
 
+## State Group Activity: Making maps with **edbuildr** data! 
+
+- In your state teams, pull the data from **edbuildr** and **edbuildmapr** for your state and create a map! 
+- Play around with the colors, fills, and sizing. 
+- Be prepared for at least one person in your group to share their map! 
+
+Alex and Krista will be circulating to answer questions! Feel free to also come back into the main room if you have questions!
+
 # Homework
+
+## Homework for next class 
+
+- Create at least three production style maps for your state. 
+- You can use school level data or district data. At least one of the maps must include state per-pupil funding. 
+- Play around with different sizing, colors, etc. 
+- Submit the homework to Alex and Kirsta by noon on Monday, July 17! 
