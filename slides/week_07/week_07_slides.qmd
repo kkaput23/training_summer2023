@@ -104,9 +104,9 @@ options(scipen = 999)
 
 # Convert to sf object for mapping! 
 
-mn_schools_shp <- st_as_sf(mn_schools,
-                           coords = c("long", "lat"),
-                           crs = st_crs(4326))
+# mn_schools_shp <- st_as_sf(mn_schools,
+#                            coords = c("long", "lat"),
+#                            crs = st_crs(4326))
 
 
 ```
@@ -124,9 +124,9 @@ Note: the **sf** data frame looks like a regular data frame except:
 ```{r}
 # Check the projection of your objects using the st_crs() function 
 
-st_crs(mn_schools)
-
-st_crs(mn_schools_shp)
+# st_crs(mn_schools)
+# 
+# st_crs(mn_schools_shp)
 ```
 
 The two mapping systems:
@@ -142,118 +142,196 @@ The two mapping systems:
 -   Based on **leaflet.js**, which is a javascript library
     -   Most common library for making web maps
 -   You can add elements to the map canvas using the generic **addControl()** function:
-    -   **addProviderTiles():** Adds a basemap 
-    -   **addCirclemarker():** and **addMarker():** Adds a point layer 
-    -   **addPolylines():** Adds a line layer 
-    -   **addPolygons():** Add a polygon layer 
-    
-## Map location with **leaflet** 
-Once a year is added, the map will automatically zoom to the boundaries of the data you've included in your layer. This is also referred to as the extent of the layer. 
+    -   **addProviderTiles():** Adds a basemap
+    -   **addCirclemarker():** and **addMarker():** Adds a point layer
+    -   **addPolylines():** Adds a line layer
+    -   **addPolygons():** Add a polygon layer
 
-- To change the boundaries you've included in your layer
-- To center the map on a point and define the zoom level 
+## Map location with **leaflet**
 
-## In-class exercise: View Minnesota schools on a map with **leaflet** (1/5) 
-**STEP 1:** At the top of your script make sure that **tidyverse**, **sf**, and **leaflet** are all installed and loaded. 
+Once a year is added, the map will automatically zoom to the boundaries of the data you've included in your layer. This is also referred to as the extent of the layer.
+
+-   To change the boundaries you've included in your layer
+-   To center the map on a point and define the zoom level
+
+## In-class exercise: View Minnesota schools on a map with **leaflet** (1/5)
+
+**STEP 1:** At the top of your script make sure that **tidyverse**, **sf**, and **leaflet** are all installed and loaded.
 
 **STEP 2:** Create leaflet map wtih a baselayer
+
 ```{r}
 # Create a leaflet map with a baselayer 
-leaflet() |>
-  addProviderTiles(provider = "CartoDB.Positron") 
+# leaflet() |>
+#   addProviderTiles(provider = "CartoDB.Positron") 
 ```
 
-## In-class exercise: View Minnesota schools on a map with **leaflet** (2/5) 
-**STEP 3:** Add Minnesota schools to the map and let the map define the view by the extent to the point layer. 
+## In-class exercise: View Minnesota schools on a map with **leaflet** (2/5)
+
+**STEP 3:** Add Minnesota schools to the map and let the map define the view by the extent to the point layer.
+
 ```{r}
 # Add Minnesota schools to the map and let the map define 
 # the view by the extent of the point layer 
 
-leaflet() |>
-  addProviderTiles(provider = "CartoDB.Positron") |>
-  addCircleMarkers(data = mn_schools_shp)
+# leaflet() |>
+#   addProviderTiles(provider = "CartoDB.Positron") |>
+#   addCircleMarkers(data = mn_schools_shp)
 ```
 
-## In-class exercise: View Minnesota schools on a map with **leaflet** (3/5) 
+## In-class exercise: View Minnesota schools on a map with **leaflet** (3/5)
+
 **STEP 4:** Define the size of the circles by enrollment
+
 ```{r}
-# Define the size of the circles by enrollment 
-leaflet() |>
-  addProviderTiles(provider = "CartoDB.Positron") |>
-                     addCircleMarkers(data = mn_schools_shp,
-                                      radius = ~ total_enroll/300)
-# Notice the variation in format with the "~" in the front of the "=" 
+# # Define the size of the circles by enrollment 
+# leaflet() |>
+#   addProviderTiles(provider = "CartoDB.Positron") |>
+#                      addCircleMarkers(data = mn_schools_shp,
+#                                       radius = ~ total_enroll/300)
+# # Notice the variation in format with the "~" in the front of the "=" 
 ```
 
-## In-class exercise: View Minnesota schools on a map with **leaflet** (4/5) 
-**STEP 5:** Color the points by Title 1 school status 
+## In-class exercise: View Minnesota schools on a map with **leaflet** (4/5)
+
+**STEP 5:** Color the points by Title 1 school status
+
 ```{r}
 # Color the points by Title I school status 
-leaflet() |>
-  addProviderTiles(provider = "CartoDB.Positron") |>
-  addCircleMarkers(data = mn_schools_shp,
-                   radius = ~ total_enroll/300,
-                   color = ~ case_when(title_1_school_status == "2-Title I targeted assistance school" ~ "#5ab4ac",
-                                       title_1_school_status == "5-Title I schoolwide school" ~ "#3288bd",
-                                       title_1_school_status == "6-Not a Title I school" ~ "#fc8d59",
-                                       TRUE ~ "#e5e5e5"))
-# Again, note the variation in format with the "~" in the front of the "=" 
+# leaflet() |>
+#   addProviderTiles(provider = "CartoDB.Positron") |>
+#   addCircleMarkers(data = mn_schools_shp,
+#                    radius = ~ total_enroll/300,
+#                    color = ~ case_when(title_1_school_status == "2-Title I targeted assistance school" ~ "#5ab4ac",
+#                                        title_1_school_status == "5-Title I schoolwide school" ~ "#3288bd",
+#                                        title_1_school_status == "6-Not a Title I school" ~ "#fc8d59",
+#                                        TRUE ~ "#e5e5e5"))
+# # Again, note the variation in format with the "~" in the front of the "=" 
 ```
 
-## There are many other parameters you can use to style your **leaflet** map 
+## There are many other parameters you can use to style your **leaflet** map
 
-- **stroke:** Outline of the circles or polygons 
-- **color:** Outline color 
-- **weight:** Thickness of the outline 
-- **opacity:** Transparency of the outline - 0 (transparent) to 1 (opaque)
-- **fill:** Inside of the circle or polygon 
-- **fillcolor:** Inside color 
+-   **stroke:** Outline of the circles or polygons
+-   **color:** Outline color
+-   **weight:** Thickness of the outline
+-   **opacity:** Transparency of the outline - 0 (transparent) to 1 (opaque)
+-   **fill:** Inside of the circle or polygon
+-   **fillcolor:** Inside color
 
 You can define colors with the hex code or by calling one of the color names included in base R
 
-## Adding a popup to your **leaflet** map 
-The **popup** parameter defines the text that displays when you clock on an object in your **leaflet** map 
-- Combine it with the text using **paste()** function 
+## Adding a popup to your **leaflet** map
 
-## There are a few considersations when adding the **popup** parameter 
+The **popup** parameter defines the text that displays when you clock on an object in your **leaflet** map - Combine it with the text using **paste()** function
 
-- Make usre tha tyou put the text within quotes 
-- Use **dataframe$** to call the variables you want to use
-- **<br>** is the break html tag, which starts a new line 
+## There are a few considersations when adding the **popup** parameter
 
+-   Make usre tha tyou put the text within quotes
+-   Use **dataframe\$** to call the variables you want to use
+-   <br> is the break html tag, which starts a new line
 
-## In-class exercise: View Minnesota schools on a map with **leaflet** (5/5) 
-**STEP 6:** Add a **popup** with the schoo name to your Georgia leaflet 
+## In-class exercise: View Minnesota schools on a map with **leaflet** (5/5)
+
+**STEP 6:** Add a **popup** with the schoo name to your Georgia leaflet
+
 ```{r}
 # Add a pop up to your leaflet ---
-leaflet() |>
-  addProviderTiles(provider = "CartoDB.Positron") |>
-  addCircleMarkers(data = mn_schools_shp,
-                   radius = ~ total_enroll/300,
-                   ## This is the code for the popup! 
-                   popup = paste("School: ",
-                                 mn_schools_shp$school, 
-                                 "<br> Enrollment: ", 
-                                 mn_schools_shp$total_enroll),
-                   color = ~ case_when(title_1_school_status == "2-Title I targeted assistance school" ~ "#5ab4ac",
-                                       title_1_school_status == "5-Title I schoolwide school" ~ "#3288bd",
-                                       title_1_school_status == "6-Not a Title I school" ~ "#fc8d59",
-                                       TRUE ~ "#e5e5e5"))
+# leaflet() |>
+#   addProviderTiles(provider = "CartoDB.Positron") |>
+#   addCircleMarkers(data = mn_schools_shp,
+#                    radius = ~ total_enroll/300,
+#                    ## This is the code for the popup! 
+#                    popup = paste("School: ",
+#                                  mn_schools_shp$school, 
+#                                  "<br> Enrollment: ", 
+#                                  mn_schools_shp$total_enroll),
+#                    color = ~ case_when(title_1_school_status == "2-Title I targeted assistance school" ~ "#5ab4ac",
+#                                        title_1_school_status == "5-Title I schoolwide school" ~ "#3288bd",
+#                                        title_1_school_status == "6-Not a Title I school" ~ "#fc8d59",
+#                                        TRUE ~ "#e5e5e5"))
 ```
 
 # Small group mapping
 
-## State Group Activity: Making maps in **leaflet**!! 
+## State Group Activity: Making maps in **leaflet**!!
 
-- In your state teams, use the cleaned data in the folder to create a leaflet map for your state! 
-- Play around with the colors, sizing, and popups. 
-- Be prepared for at least one person in your group to share their map! 
+-   In your state teams, use the cleaned data in the folder to create a leaflet map for your state!
+-   Play around with the colors, sizing, and popups.
+-   Be prepared for at least one person in your group to share their map!
 
-Alex and Krista will be circulating to answer questions! Feel free to also cme back into the main room if you have questions! 
+Alex and Krista will be circulating to answer questions! Feel free to also come back into the main room if you have questions!
 
 # Break
 
 # Making maps with edbuildr data
+
+## Overview of **edbuildr**
+
+-   The goal of **edbuildr** is to import EdBuild's master data set that includes school district finance, student demographics, and community economic indicators for every school district in the United States.
+-   The master data set is available for any school year from 2013-2019 or longitudinally for all years 2013-2019.
+    -   School year is identified by the end year. For example, the 2018-19 school year is 2019.
+-   The master data set is built from the:
+    -   US Census,
+
+    -   Annual Survey of School System Finances (F33), and
+
+    -   joins data from the National Center for Education Statistics, Common Core of Data, Small Area Income and Poverty Estimates, and Education Demographic and Geographic Estimates.
+    
+## In-class exercise: Building a Minnesota map with **edbuildr** data (1/6)
+
+**STEP 1:** Load in the **edbuildr** and **edbuildmapr** packages. 
+
+**STEP 2:** Pull the school district mapping data and filter out the data for Minnesota. 
+
+```{r}
+# Let's load in the edbuildr and edbuildmapr packages!
+library(edbuildr)
+library(edbuildmapr)
+
+# Load in the school district mapping data 
+sd_map_raw <- edbuildmapr::sd_shapepull(data_year = "2019", with_data = TRUE)
+
+# Pull out the Minnesota mapping data 
+mn_shp <- sd_map_raw |> 
+  # tidy up colnames
+  rename_with(tolower) |> 
+  filter(state == "Minnesota") |>
+  rename(ncesid = geoid)
+```
+
+## In-class exercise: Building a Minnesota map with **edbuildr** data (2/6)
+**STEP 3:** Pull and clean the Minnesota data from the **edbuildr** data 
+
+```{r}
+### import the Minnesota
+mn_data <- edbuildr::masterpull(data_year = "2019", data_type = "geo") %>% 
+  filter(State == "Minnesota") |>
+  rename(ncesid = NCESID, 
+         fips = STATE_FIPS, 
+         district = NAME,
+         st_pov_rate = StPovRate) |>
+  mutate(local_rev_pp = as.numeric(LRPP, na.rm = TRUE), 
+         state_rev_pp = as.numeric(SRPP, na.rm = TRUE),
+         total_rev_pp = as.numeric(SLRPP, na.rm = TRUE),
+         dlep = as.numeric(dLEP, na.rm = TRUE),
+         enroll = as.numeric(ENROLL),
+         local_rev_total = LR, na.rm = TRUE,
+         state_rev_total = SR, na.rm = TRUE, 
+         total_revenue = SLR, na.rm = TRUE,
+         pct_bipoc = pctNonwhite, na.rm = TRUE,
+         pct_lr = round(LR/SLR, 3),
+         pct_sr = round(SR/SLR, 3),
+         pct_lep = dlep/enroll, na.rm = TRUE,
+         pct_loc_rev = local_rev_total/total_revenue, 
+         pct_state_rev = state_rev_total/total_revenue) |>
+  select(ncesid, fips, district, enroll, dlep, local_rev_pp, state_rev_pp, total_rev_pp, 
+         local_rev_total, state_rev_total, total_revenue, pct_lr, pct_sr, pct_lep, pct_loc_rev, 
+         pct_state_rev, pct_bipoc, st_pov_rate)
+```
+
+## In-class exercise: Building a Minnesota map with **edbuildr** data (3/6)
+**STEP 4:** Join the **mn_shp** and the **mn_data** 
+
 
 # Small group mapping
 
