@@ -1,0 +1,162 @@
+---
+title: "Analyzing state education funding data with plotly"
+date: "June 27, 2023"
+format:
+  revealjs:
+    chalkboard: true
+execute:
+  freeze: auto
+  echo: false
+---
+
+# Homework Review
+
+## Overview of Homework
+
+# Introduction to sf and leaflet
+
+## Overview of **sf** package
+
+-   There are many R packages that handle spatial data. However, **sf** is the most modern and easy-to-use package.
+-   In the **sf** package, spatial data is represented as a simple feature:
+    -   A set of standards on how to store spatial objects.
+-   Spatial data is represented as a data frame with:
+    -   A geometry column that lists all the coordinates that make up the shape.
+
+    -   Slots that hold spatial information.
+
+*You can learn more about simple features and the **sf** package [here.](https://r-spatial.github.io/sf/articles/sf1.html)*
+
+## Reading and writing functions in **sf**
+
+-   **sf** uses the Geospatial Data Abstraction Library (GDAL)
+-   Use **st_read** to import all spatial data
+-   Use **st_write** to export all spatial data
+-   The filetype indicates the type of file you want to write to your computer - called the driver
+    -   This will most likely be either a shapefile (.shp) or geojson (.geojson)
+
+```{r}
+# st_read function 
+
+# dataframe <- st_read("filepath.filetype")
+
+#st_write function 
+# st_write(dataframe, "filepath.filetype")
+
+```
+
+## Conversion function in **sf**
+
+Convert a data frame with x and y to a **simple feature** using **st_as_sf()**
+
+-   **dataframe**
+-   **coords**: The columns that define x (latitude) and y (longtitude)
+-   **crs**: The coordinate system that translates x and y to a location on Earth
+
+```{r}
+
+# example <- st_as_sf(dataframe = df, coords = c("lat", "long"), crs = 4236)
+
+```
+
+# Let's use **sf** together! In-class exercise Use simple feature objects with **sf** (1/3)
+
+**STEP 1:** At the top of your script, load the **sf** package into your environment.
+
+```{r}
+
+# Load -----
+library(tidyverse)
+library(edbuildmapr)
+
+library(scales)
+library(viridis)
+library(devtools)
+library(ggplot2)
+library(sf)
+library(edbuildr)
+library(tmap)
+library(tmaptools)
+library(svglite)
+library(leaflet)
+library(tidycensus)
+library(geojsonio)
+library(rgdal)
+
+# Let's load in sf! 
+library(sf)
+
+options(scipen = 999)
+
+# Load in the Minnesota schools data 
+
+# mn_schools <- read_csv("course_2_mapping/course 2, class 2 mapping /data/processed/mn_schools_clean.csv")
+
+```
+
+**Note:** GEOS and GDAL are loaded when you load **sf** into your environment. They are the backbone spatial analysis and visualization in R.
+
+# Let's use **sf** together! In-class exercise Use simple feature objects with **sf** (2/3)
+
+**STEP 2:** Turn the Minnesota schools csv file into an sf object using the st_as_sf() function.
+
+```{r}
+
+# Convert to sf object for mapping! 
+
+mn_schools_shp <- st_as_sf(mn_schools,
+                           coords = c("long", "lat"),
+                           crs = st_crs(4326))
+
+
+```
+
+Note: the **sf** data frame looks like a regular data frame except:
+
+-   The lat and long colums have become one geometry column
+-   Two slots have been added: **sf_column** and **agr**
+    -   These define the geomtry column and how it relates to the attributes
+
+# Let's use **sf** together! In-class exercise Use simple feature objects with **sf** (3/3)
+
+**Step 3:** Check the projection of your objects using the **st_crs()** function. This returns the coordinate system that R has assumed.
+
+```{r}
+# Check the projection of your objects using the st_crs() function 
+
+st_crs(mn_schools)
+
+st_crs(mn_schools_shp)
+```
+
+The two mapping systems:
+
+-   **World Geodetic System of 1984:** Most common and good for mapping global data.
+-   **North American Datum of 1983:** Good for mapping in the United States.
+
+## Overview of **leaflet** package
+
+**leaflet** is an interactive mapping package
+
+-   The **leaflet()** function creates a blank, interactive map canvas in your RStudio viewer pane
+-   Based on **leaflet.js**, which is a javascript library
+    -   Most common library for making web maps
+-   You can add elements to the map canvas using the generic **addControl()** function:
+    -   **addProviderTiles():** Adds a basemap 
+    -   **addCirclemarker():** and **addMarker():** Adds a point layer 
+    -   **addPolylines():** Adds a line layer 
+    -   **addPolygones():** Add a polygon layer 
+    
+    
+
+# Load -----
+
+# Small group mapping
+
+# Break
+
+# Making maps with edbuildr data
+
+# Small group mapping
+
+# Homework
