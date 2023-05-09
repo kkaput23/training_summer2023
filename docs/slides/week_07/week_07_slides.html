@@ -531,7 +531,7 @@
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Reading layer `shapefile_1819' from data source 
-  `/private/var/folders/25/5vf1tf0164x0sv9_4xgtq9040000gn/T/Rtmpc2kOZA/filebf6939e13149/shapefile_1819.shp' 
+  `/private/var/folders/25/5vf1tf0164x0sv9_4xgtq9040000gn/T/Rtmp5iL66N/filec0cf5e791d1a/shapefile_1819.shp' 
   using driver `ESRI Shapefile'
 Simple feature collection with 13315 features and 6 fields
 Geometry type: MULTIPOLYGON
@@ -544,7 +544,27 @@ Geodetic CRS:  NAD83</code></pre>
 <section id="in-class-exercise-building-a-minnesota-map-with-edbuildr-data-26" class="slide level2">
 <h2>In-class exercise: Building a Minnesota map with <strong>edbuildr</strong> data (2/6)</h2>
 <p><strong>STEP 3:</strong> Pull and clean the Minnesota data from the <strong>edbuildr</strong> data</p>
-</section></section>
+</section>
+<section id="in-class-exercise-building-a-minnesota-map-with-edbuildr-data-36" class="slide level2">
+<h2>In-class exercise: Building a Minnesota map with <strong>edbuildr</strong> data (3/6)</h2>
+<p><strong>STEP 4:</strong> Join the <strong>mn_shp</strong> and the <strong>mn_data</strong></p>
+</section>
+<section id="in-class-exercise-building-a-minnesota-map-with-edbuildr-data-46" class="slide level2">
+<h2>In-class exercise: Building a Minnesota map with <strong>edbuildr</strong> data (4/6)</h2>
+<p><strong>STEP 5:</strong> Plot the Minnesota map!</p>
+<p>While the map looks ok, there is a lot we can improve! Intuitively, it makes more sense for the color to get darker as the concentrations increase. In the next iteration, I am going to reverse the direction of the color scale, change the line colors to white, and add a title and a source.</p>
+
+<img data-src="week_07_slides_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="in-class-exercise-building-a-minnesota-map-with-edbuildr-data-56" class="slide level2">
+<h2>In-class exercise: Building a Minnesota map with <strong>edbuildr</strong> data (5/6)</h2>
+<p><strong>STEP 6:</strong> Make several aesthetic changes:</p>
+<ul>
+<li>Change the color of the lies to white within <strong>geom_sf()</strong></li>
+<li>Reverse the direction of the color scale within <strong>scale_fill_viridis()</strong></li>
+<li>Add a title, subtitle, and a source caption within <strong>label()</strong></li>
+</ul>
+
+<img data-src="week_07_slides_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section></section>
 <section id="small-group-mapping-1" class="title-slide slide level1 center">
 <h1>Small group mapping</h1>
 
