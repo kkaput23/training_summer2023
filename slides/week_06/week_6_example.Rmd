@@ -1,0 +1,124 @@
+---
+title: "Edbuild Minnesota Analysis"
+author: "Krista Kaput"
+date: '`r Sys.Date()`'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+# load ---------------
+
+# this will prevent r code chunks from printing to final doc
+knitr::opts_chunk$set(echo = FALSE)
+
+
+options(scipen = 999)
+
+library(tidyverse)
+library(sf)
+library(viridis)
+library(scales)
+
+source("edbuild_clean.R")
+source("edbuild_map_data.R")
+
+
+# clean -----------
+
+mn_dist_map <- mn_sd_map |> 
+  merge(mn_dist, by.x = "geoid", by.y = "ncesid")
+
+```
+
+## Data Sources
+
+The EdBuild data for Minnesota was pulled from the `edbuildr` package on 2023-05-08.
+
+Map data for Minnesota districts was pulled from the `edbuilmapr` package on 2023-05-08.
+
+More detail on both packages can be found on [EdBuild's website](http://viz.edbuild.org/workshops/edbuildr/).
+
+## Overview of Minnesota district data
+
+Using the `summary()` function, we can see a quick preview of the district data from the `edbuildr` package.
+
+```{r mn-summary}
+summary(mn_dist_map)
+```
+
+## Mapping Minnesota data
+
+
+### Poverty 
+
+The distrcts with the highest poverty rates in Minnesota are in the Twin Cities and on reservations. 
+
+```{r mn-poverty}
+
+ggplot(mn_dist_map, aes(fill = stpovrate)) +
+  geom_sf() + 
+  scale_fill_viridis(labels = label_percent()) +
+  labs(fill = "Census poverty rate") +
+  theme_void()
+
+```
+
+### Urbanicity
+
+The NCES urbanicity definitions are *pretty* granular.
+
+```{r mn-urban}
+
+ggplot(mn_dist_map, aes(fill = durbanicity)) +
+  geom_sf() + 
+  scale_fill_viridis_d() +
+  labs(fill = "NCES Urbanicity") +
+  theme_void()
+
+```
+
+If we **simplifiy** to four urbanicity categories, the high frequency of rural districts becomes more apparent.
+
+```{r mn-simple-urban}
+
+ggplot(mn_dist_map, aes(fill = urbanicity)) +
+  geom_sf() + 
+  scale_fill_viridis_d() +
+  labs(fill = "Simplified Urbanicity") +
+  theme_void()
+
+```
+
+
+## Local Revenue
+
+There aren't any clear outliers. However, local per-pupil revenues greatly varies from 701 in Red Lake Public Schools to 10,416 in Ivanhoe Public School District. 
+```{r local-rev}
+ggplot(mn_dist_map, aes(fill = lrpp)) +
+  geom_sf()+
+  scale_fill_viridis(labels = label_dollar()) +
+  labs(fill = "Local Revenue Per-Pupil")+
+  theme_void()
+
+```
+
+
+## Urbanicity and local revenue
+
+Rural districts generate **significantly** less revenue than urban or suburban districts in Minnesota. 
+
+```{r local-rev-urban}
+
+urban_rev_summary <- mn_dist |> 
+  # get average local revenue per pupil by urbanicity
+  group_by(urbanicity) |> 
+  summarise(lrpp_avg = mean(lrpp, na.rm = T)) |> 
+  # format summary as currency, rounded to the nearest dollar
+  mutate(lrpp_avg = dollar(lrpp_avg, accuracy = 1)) |> 
+  rename(Urbanicity = urbanicity,
+         `Average Local Rev. Per-Pupil` = lrpp_avg)
+
+knitr::kable(urban_rev_summary)
+
+```
