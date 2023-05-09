@@ -1,0 +1,18 @@
+{
+  "hash": "90976acf9b62823adec848dc45441cbd",
+  "result": {
+    "markdown": "---\ntitle: \"Analyzing state education funding data with plotly\"\ndate: \"June 27, 2023\"\nformat:\n  revealjs:\n    chalkboard: true\nexecute:\n  freeze: auto\n  echo: false\n---\n\n\n# Homework Review\n\n## Overview of Homework\n\n# Introduction to sf and leaflet\n\n## Overview of **sf** package\n\n-   There are many R packages that handle spatial data. However, **sf** is the most modern and easy-to-use package.\n-   In the **sf** package, spatial data is represented as a simple feature:\n    -   A set of standards on how to store spatial objects.\n-   Spatial data is represented as a data frame with:\n    -   A geometry column that lists all the coordinates that make up the shape.\n\n    -   Slots that hold spatial information.\n\n*You can learn more about simple features and the **sf** package [here.](https://r-spatial.github.io/sf/articles/sf1.html)*\n\n## Reading and writing functions in **sf**\n\n-   **sf** uses the Geospatial Data Abstraction Library (GDAL)\n-   Use **st_read** to import all spatial data\n-   Use **st_write** to export all spatial data\n-   The filetype indicates the type of file you want to write to your computer - called the driver\n    -   This will most likely be either a shapefile (.shp) or geojson (.geojson)\n\n\n::: {.cell}\n\n:::\n\n\n## Conversion function in **sf**\n\nConvert a data frame with x and y to a **simple feature** using **st_as_sf()** \n\n- **dataframe**\n- **coords**: The columns that define x (latitude) and y (longtitude)\n- **crs**: The coordinate system that translates x and y to a location on Earth \n\n\n::: {.cell}\n\n:::\n\n\n# Let's use **sf** together! In-class exercise Use simple feature objects with **sf** (1/3)\n\n**STEP 1:** At the top of your script, load the **sf** package into your environment. \n\n**Note:** GEOS and GDAL are loaded when you load **sf** into your environment. They are the backbone spatial analysis and visualization in R. \n\n::: {.cell}\n\n:::\n\n\n# Let's use **sf** together! In-class exercise Use simple feature objects with **sf** (2/3)\n\n::: {.cell}\n\n:::\n\n\n# Load -----\n\n# Small group mapping\n\n# Break\n\n# Making maps with edbuildr data\n\n# Small group mapping\n\n# Homework\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
