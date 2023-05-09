@@ -157,13 +157,99 @@ ggplot(mn_map_raw) +
 R code chunks in R Markdown are contained within a pair of triple backticks that include a curly brace that indicates the section contains r code:
 
 ```{r}
-<code goes here>
+# <code goes here>
   
 ```
 
 Markdown is a *really* easy way to format text. For more, visit [Markdown Guide.](https://bookdown.org/yihui/rmarkdown/)
 
-For more on using R Markdown documents, check out [RStudio's resources her](https://rmarkdown.rstudio.com/)e.
+For more on using R Markdown documents, check out [RStudio's resources her](https://rmarkdown.rstudio.com/)
+
+## LIVE CODING EXAMPLE: Minnesota EdBuild Data Analysis (1/3)
+
+```{r}
+# edbuild_clean.R
+# 2023-07-11
+
+# load ---------
+
+options(scipen = 999)
+
+library(tidyverse)
+library(edbuildr)
+
+dist_geo_raw <- masterpull(data_year = "2019", data_type = "geo")
+
+# clean -----------
+
+# create tidyer edbuild df w/ only mn districts
+mn_dist_raw <- dist_geo_raw |> 
+  # change colnames to lowercase
+  rename_with(tolower) |> 
+  # select ky districts
+  filter(state == "Minnesota") 
+
+# create df of outlier districts to exclude from analysis
+mn_dist_na_schools <- ky_dist_raw |>
+  # only keep districts that have no schools
+  filter(is.na(doperational_schools))
+
+# create df of mn districts for analysis
+mn_dist <- mn_dist_raw |>
+  # only keep districts that actually have schools
+  filter(!is.na(doperational_schools)) |> 
+  # create simplified urbanicity 
+  mutate(urbanicity = fct_collapse(as.factor(durbanicity),
+                                   City = c("11-City: Large", 
+                                            "12-City: Mid-size",
+                                            "13-City: Small"),
+                                   Suburb = c("21-Suburb: Large",
+                                              "22-Suburb: Mid-size",
+                                              "23-Suburb: Small"),
+                                   Town = c("31-Town: Fringe",
+                                            "32-Town: Distant",
+                                            "33-Town: Remote"),
+                                   Rural = c("41-Rural: Fringe",
+                                             "42-Rural: Distant",
+                                             "43-Rural: Remote")))
+  
+```
+
+## LIVE CODING EXAMPLE: Minnesota EdBuild Data Analysis (2/3)
+
+```{r}
+
+# edbuild_map_data.r
+# 2022-07-19
+
+# load ---------
+
+options(scipen = 999)
+
+library(tidyverse)
+library(edbuildmapr)
+library(sf)
+
+sd_map_raw <- sd_shapepull(data_year = "2019")
+
+# clean -----------
+
+# create df of ky district shapes
+ky_sd_map <- sd_map_raw |> 
+  # tidy colnames
+  rename_with(tolower) |> 
+  # only keep ky districts
+  filter(state == "Kentucky") |> 
+  # keep relevant columns for analysis
+  select(geoid, geometry)
+
+```
+
+## LIVE CODING EXAMPLE: Minnesota EdBuild Data Analysis (3/3)
+
+```{r}
+
+```
 
 # Homework
 
