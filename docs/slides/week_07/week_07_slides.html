@@ -392,29 +392,159 @@
 
 <section id="lets-use-sf-together-in-class-exercise-use-simple-feature-objects-with-sf-23" class="title-slide slide level1 center">
 <h1>Let’s use <strong>sf</strong> together! In-class exercise Use simple feature objects with <strong>sf</strong> (2/3)</h1>
-
+<p><strong>STEP 2:</strong> Turn the Minnesota schools csv file into an sf object using the st_as_sf() function.</p>
+<p>Note: the <strong>sf</strong> data frame looks like a regular data frame except:</p>
+<ul>
+<li>The lat and long colums have become one geometry column</li>
+<li>Two slots have been added: <strong>sf_column</strong> and <strong>agr</strong>
+<ul>
+<li>These define the geomtry column and how it relates to the attributes</li>
+</ul></li>
+</ul>
 </section>
 
-<section id="load" class="title-slide slide level1 center">
-<h1>Load —–</h1>
-
+<section>
+<section id="lets-use-sf-together-in-class-exercise-use-simple-feature-objects-with-sf-33" class="title-slide slide level1 center">
+<h1>Let’s use <strong>sf</strong> together! In-class exercise Use simple feature objects with <strong>sf</strong> (3/3)</h1>
+<p><strong>Step 3:</strong> Check the projection of your objects using the <strong>st_crs()</strong> function. This returns the coordinate system that R has assumed.</p>
+<p>The two mapping systems:</p>
+<ul>
+<li><strong>World Geodetic System of 1984:</strong> Most common and good for mapping global data.</li>
+<li><strong>North American Datum of 1983:</strong> Good for mapping in the United States.</li>
+</ul>
 </section>
-
+<section id="overview-of-leaflet-package" class="slide level2">
+<h2>Overview of <strong>leaflet</strong> package</h2>
+<p><strong>leaflet</strong> is an interactive mapping package</p>
+<ul>
+<li>The <strong>leaflet()</strong> function creates a blank, interactive map canvas in your RStudio viewer pane</li>
+<li>Based on <strong>leaflet.js</strong>, which is a javascript library
+<ul>
+<li>Most common library for making web maps</li>
+</ul></li>
+<li>You can add elements to the map canvas using the generic <strong>addControl()</strong> function:
+<ul>
+<li><strong>addProviderTiles():</strong> Adds a basemap</li>
+<li><strong>addCirclemarker():</strong> and <strong>addMarker():</strong> Adds a point layer</li>
+<li><strong>addPolylines():</strong> Adds a line layer</li>
+<li><strong>addPolygons():</strong> Add a polygon layer</li>
+</ul></li>
+</ul>
+</section>
+<section id="map-location-with-leaflet" class="slide level2">
+<h2>Map location with <strong>leaflet</strong></h2>
+<p>Once a year is added, the map will automatically zoom to the boundaries of the data you’ve included in your layer. This is also referred to as the extent of the layer.</p>
+<ul>
+<li>To change the boundaries you’ve included in your layer</li>
+<li>To center the map on a point and define the zoom level</li>
+</ul>
+</section>
+<section id="in-class-exercise-view-minnesota-schools-on-a-map-with-leaflet-15" class="slide level2">
+<h2>In-class exercise: View Minnesota schools on a map with <strong>leaflet</strong> (1/5)</h2>
+<p><strong>STEP 1:</strong> At the top of your script make sure that <strong>tidyverse</strong>, <strong>sf</strong>, and <strong>leaflet</strong> are all installed and loaded.</p>
+<p><strong>STEP 2:</strong> Create leaflet map wtih a baselayer</p>
+</section>
+<section id="in-class-exercise-view-minnesota-schools-on-a-map-with-leaflet-25" class="slide level2">
+<h2>In-class exercise: View Minnesota schools on a map with <strong>leaflet</strong> (2/5)</h2>
+<p><strong>STEP 3:</strong> Add Minnesota schools to the map and let the map define the view by the extent to the point layer.</p>
+</section>
+<section id="in-class-exercise-view-minnesota-schools-on-a-map-with-leaflet-35" class="slide level2">
+<h2>In-class exercise: View Minnesota schools on a map with <strong>leaflet</strong> (3/5)</h2>
+<p><strong>STEP 4:</strong> Define the size of the circles by enrollment</p>
+</section>
+<section id="in-class-exercise-view-minnesota-schools-on-a-map-with-leaflet-45" class="slide level2">
+<h2>In-class exercise: View Minnesota schools on a map with <strong>leaflet</strong> (4/5)</h2>
+<p><strong>STEP 5:</strong> Color the points by Title 1 school status</p>
+</section>
+<section id="there-are-many-other-parameters-you-can-use-to-style-your-leaflet-map" class="slide level2">
+<h2>There are many other parameters you can use to style your <strong>leaflet</strong> map</h2>
+<ul>
+<li><strong>stroke:</strong> Outline of the circles or polygons</li>
+<li><strong>color:</strong> Outline color</li>
+<li><strong>weight:</strong> Thickness of the outline</li>
+<li><strong>opacity:</strong> Transparency of the outline - 0 (transparent) to 1 (opaque)</li>
+<li><strong>fill:</strong> Inside of the circle or polygon</li>
+<li><strong>fillcolor:</strong> Inside color</li>
+</ul>
+<p>You can define colors with the hex code or by calling one of the color names included in base R</p>
+</section>
+<section id="adding-a-popup-to-your-leaflet-map" class="slide level2">
+<h2>Adding a popup to your <strong>leaflet</strong> map</h2>
+<p>The <strong>popup</strong> parameter defines the text that displays when you clock on an object in your <strong>leaflet</strong> map - Combine it with the text using <strong>paste()</strong> function</p>
+</section>
+<section id="there-are-a-few-considersations-when-adding-the-popup-parameter" class="slide level2">
+<h2>There are a few considersations when adding the <strong>popup</strong> parameter</h2>
+<ul>
+<li>Make usre tha tyou put the text within quotes</li>
+<li>Use <strong>dataframe$</strong> to call the variables you want to use</li>
+<li><br> is the break html tag, which starts a new line</li>
+</ul>
+</section>
+<section id="in-class-exercise-view-minnesota-schools-on-a-map-with-leaflet-55" class="slide level2">
+<h2>In-class exercise: View Minnesota schools on a map with <strong>leaflet</strong> (5/5)</h2>
+<p><strong>STEP 6:</strong> Add a <strong>popup</strong> with the schoo name to your Georgia leaflet</p>
+</section></section>
+<section>
 <section id="small-group-mapping" class="title-slide slide level1 center">
 <h1>Small group mapping</h1>
 
 </section>
-
+<section id="state-group-activity-making-maps-in-leaflet" class="slide level2">
+<h2>State Group Activity: Making maps in <strong>leaflet</strong>!!</h2>
+<ul>
+<li>In your state teams, use the cleaned data in the folder to create a leaflet map for your state!</li>
+<li>Play around with the colors, sizing, and popups.</li>
+<li>Be prepared for at least one person in your group to share their map!</li>
+</ul>
+<p>Alex and Krista will be circulating to answer questions! Feel free to also come back into the main room if you have questions!</p>
+</section></section>
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
 
 </section>
 
+<section>
 <section id="making-maps-with-edbuildr-data" class="title-slide slide level1 center">
 <h1>Making maps with edbuildr data</h1>
 
 </section>
-
+<section id="overview-of-edbuildr" class="slide level2">
+<h2>Overview of <strong>edbuildr</strong></h2>
+<ul>
+<li>The goal of <strong>edbuildr</strong> is to import EdBuild’s master data set that includes school district finance, student demographics, and community economic indicators for every school district in the United States.</li>
+<li>The master data set is available for any school year from 2013-2019 or longitudinally for all years 2013-2019.
+<ul>
+<li>School year is identified by the end year. For example, the 2018-19 school year is 2019.</li>
+</ul></li>
+<li>The master data set is built from the:
+<ul>
+<li><p>US Census,</p></li>
+<li><p>Annual Survey of School System Finances (F33), and</p></li>
+<li><p>joins data from the National Center for Education Statistics, Common Core of Data, Small Area Income and Poverty Estimates, and Education Demographic and Geographic Estimates.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="in-class-exercise-building-a-minnesota-map-with-edbuildr-data-16" class="slide level2">
+<h2>In-class exercise: Building a Minnesota map with <strong>edbuildr</strong> data (1/6)</h2>
+<p><strong>STEP 1:</strong> Load in the <strong>edbuildr</strong> and <strong>edbuildmapr</strong> packages.</p>
+<p><strong>STEP 2:</strong> Pull the school district mapping data and filter out the data for Minnesota.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `shapefile_1819' from data source 
+  `/private/var/folders/25/5vf1tf0164x0sv9_4xgtq9040000gn/T/Rtmpc2kOZA/filebf6939e13149/shapefile_1819.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 13315 features and 6 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -179.1686 ymin: -14.54858 xmax: 179.7487 ymax: 71.38961
+Geodetic CRS:  NAD83</code></pre>
+</div>
+</div>
+</section>
+<section id="in-class-exercise-building-a-minnesota-map-with-edbuildr-data-26" class="slide level2">
+<h2>In-class exercise: Building a Minnesota map with <strong>edbuildr</strong> data (2/6)</h2>
+<p><strong>STEP 3:</strong> Pull and clean the Minnesota data from the <strong>edbuildr</strong> data</p>
+</section></section>
 <section id="small-group-mapping-1" class="title-slide slide level1 center">
 <h1>Small group mapping</h1>
 
